@@ -78,7 +78,7 @@ yyyy-mm-dd
 2018-01-02
 --------------------------------------------------------------
 eric :: brainstormed ideas; added classes/instance variables
-<Member> :: <Thing member did.>
+susan :: brainstormed ideas; added instantiation values for attributes
 <Member> :: <Thing member did.>
 ==============================================================
 
