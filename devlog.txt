@@ -6,8 +6,6 @@ Eric Wong
 pd 02
 ---------------------
 Freshman Frenzy
-
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 USAGE:
 * Replace all fields, angle brackets included, with specified info.
@@ -76,7 +74,6 @@ yyyy-mm-dd
 <Member> :: <Thing member did.>
 <Member> :: <Thing member did.>
 ==============================================================
-<<<<<<< HEAD
 
 2018-01-02
 --------------------------------------------------------------
