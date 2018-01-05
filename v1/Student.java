@@ -1,5 +1,5 @@
 public abstract class Student extends Character {
-    protected static int intelligence;
+    protected static int intel;
     protected static int friendCount;
     protected static double average;
     protected static double sleep;
@@ -9,7 +9,7 @@ public abstract class Student extends Character {
     
     public String toString() {
 	String ans = "";
-	ans += "intelligence: " + intelligence + "\n";
+	ans += "intelligence: " + intel + "\n";
 	ans += "friend count: " + friendCount + "\n";
 	ans += "average: " + average + "\n";
 	ans += "sleep: " + sleep + "\n";
