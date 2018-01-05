@@ -1,6 +1,6 @@
-public abstract class Character {
-    protected static String name ;
-    protected static int grade;
-    protected static int charisma;
+public class Character {
+    public String name ;
+    public int grade;
+    public int charisma;
     
 } 
