@@ -79,6 +79,10 @@ yyyy-mm-dd
 --------------------------------------------------------------
 eric :: brainstormed ideas; added classes/instance variables
 susan :: brainstormed ideas; added instantiation values for attributes
-<Member> :: <Thing member did.>
 ==============================================================
 
+2018-01-04
+--------------------------------------------------------------
+eric :: revised proposal accordingly; started uml diagram 
+susan :: revised proposal accordingly; uploaded uml to repo
+==============================================================
