@@ -1,5 +1,5 @@
 public class NPC extends Character{
-    protected static int friendship;
+    public int friendship;
 
     public int getFriendship(){
 	return friendship;
