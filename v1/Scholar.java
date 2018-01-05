@@ -6,5 +6,6 @@ public class Jock extends Student {
 	sleep = 40;
 	mental = 75;
 	physical = 25;
+
     }
  }

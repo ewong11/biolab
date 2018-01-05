@@ -5,6 +5,7 @@ public abstract class Student extends Character {
     protected static double sleep;
     protected static int mental;
     protected static int physical;
+    protected static String[] schedule;
     //protected static String[] badges;
 
     public String toString() {
