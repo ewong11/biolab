@@ -6,7 +6,7 @@ public abstract class Student extends Character {
     protected static int mental;
     protected static int physical;
     protected static String[] schedule;
-    //protected static String[] badges;
+    protected static String[] badges;
 
     public String toString() {
 	String ans = "";
@@ -30,41 +30,41 @@ public abstract class Student extends Character {
 
     //sets sleep to new number
     //returns old sleep
-    public double setSleep(double new) {
-	double old = sleep;
-	sleep = new;
-	return old;
+  public double setSleep(double s) {
+	   double old = sleep;
+	   sleep = s;
+	     return old;
     }
 
     //sets average to new number
     //returns old average
-    public double setAverage(double new) {
+    public double setAverage(double newAvg) {
 	double old = average;
-	average = new;
+	average = newAvg;
 	return old;
     }
 
     //sets friendCount to new number
     //returns old friendCount
-    public int setFriends(int new) {
+    public int setFriends(int a) {
 	int old = friendCount;
-	friendCount = new;
+	friendCount = a;
 	return old;
     }
 
     //sets mental to new number
     //returns old mental
-    public int setMental(int new) {
+    public int setMental(int newMen) {
 	int old = mental;
-	mental = new;
+	mental = newMen;
 	return old;
     }
 
     //sets physical to new number
     //returns old physical
-    public int setPhysical(int new) {
+    public int setPhysical(int newPhys) {
 	int old = physical;
-	physical = new;
+	physical = newPhys;
 	return old;
     }
 
@@ -78,5 +78,12 @@ public abstract class Student extends Character {
 
     //adds a badge to the array
     public void setBadges(String a) {
+    }
+
+    public String getSched() {
+      String ans = "Schedule: [";
+    	for (String a: schedule)
+    	    ans += a + ", ";
+    	return ans + "]";
     }
 }
