@@ -2,7 +2,7 @@
 class Bee extends Student
 **********************************/
 public class Normal extends Student{
-    public Normal() {
+    public Normal(String s) {
 	intel = 50;
 	friendCount = 5;
 	average = 100.0;
@@ -10,5 +10,6 @@ public class Normal extends Student{
 	mental = 75;
 	physical = 50;
   charisma = 50;
+  name = s;
     }
 }
