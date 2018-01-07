@@ -86,3 +86,11 @@ susan :: brainstormed ideas; added instantiation values for attributes
 eric :: revised proposal accordingly; started uml diagram 
 susan :: revised proposal accordingly; uploaded uml to repo
 ==============================================================
+
+2018-01-05
+--------------------------------------------------------------
+eric :: created subclasses of Student.java
+susan :: created Student.java and Character.java
+kaitlin :: created NPC.java
+==============================================================
+
