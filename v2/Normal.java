@@ -1,14 +1,14 @@
 /*********************************
 class Bee extends Student
 **********************************/
-public class Bee extends Student{
-    public Bee() {
-	intel = 30;
-	friendCount = 7;
+public class Normal extends Student{
+    public Normal() {
+	intel = 50;
+	friendCount = 5;
 	average = 100.0;
 	sleep = 75.0;
-	mental = 40;
-	physical = 75;
-  charisma = 30;
+	mental = 75;
+	physical = 50;
+  charisma = 50;
     }
 }
