@@ -55,10 +55,15 @@ public class FindClass {
     input = in.readLine();
   }
     catch ( IOException e ) {}
+    
       for (int x =0 ; x < 5; x ++) {
       if (input == "a") {
         if (randX - 1 < 0) {
           System.out.println("Error. You can't go into a wall");
+          return;
+        }
+	else if (map[randX][randY] == "X") {
+          System.out.println("whoa you won!");
           return;
         }
         swap(randY, randX, randY, randX-1 );
@@ -69,6 +74,10 @@ public class FindClass {
           System.out.println("Error. You can't go into a wall");
           return;
         }
+	else if (map[randX][randY] == "X") {
+          System.out.println("whoa you won!");
+          return;
+	}
         swap(randY, randX, randY + 1, randX );
         randY += 1;
       }
@@ -77,6 +86,10 @@ public class FindClass {
           System.out.println("Error. You can't go into a wall");
           return;
         }
+	else if (map[randX][randY] == "X") {
+          System.out.println("whoa you won!");
+          return;
+	} 
         swap(randY, randX, randY -1, randX );
         randY -= 1;
       }
@@ -85,11 +98,15 @@ public class FindClass {
           System.out.println("Error. You can't go into a wall");
           return;
         }
+	else if (map[randX][randY] == "X") {
+	    System.out.println("whoa you won!");
+	    return;
+	} 
         swap(randY, randX, randY, randX+1 );
         randX += 1;
       }
       else {
-        System.out.println("Bro, you're late! Get moving!");
+	  System.out.println("Bro, you're late! Get moving!");
       }
 
 
