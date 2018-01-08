@@ -14,7 +14,7 @@ public class Woo {
     private InputStreamReader isr;
     private BufferedReader in;
 
-    final String[] NAMES = {"Joe", "Gabby"}; //possible names for NPCS
+    final String[] NAMES = {"Joe", "Gaby"}; //possible names for NPCS
 
 //---------------------------------------------------------
 
