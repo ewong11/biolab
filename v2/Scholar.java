@@ -8,11 +8,13 @@ public class Scholar extends Student {
 	physical = 25;
 	charisma = 25;
 	name = s;
-	schedule = {"Honors Geometry", "APHUG", "Honors Biology",
-		    "PE", "Freshman Composition",
-		    "Symphonic Orchestra","Math Research"}; 
-    }
+	schedule = new String[]{
+    "Honors Geometry",
+    "APHUG", "Honors Biology",
+    "PE", "Freshman Composition",
+    "Symphonic Orchestra","Math Research"};
 
 
 
  }
+}

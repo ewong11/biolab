@@ -1,5 +1,5 @@
 /*********************************
-class Bee extends Student
+class Normal extends Student
 **********************************/
 public class Normal extends Student{
     public Normal(String s) {
@@ -11,8 +11,8 @@ public class Normal extends Student{
 	physical = 50;
 	charisma = 50;
 	name = s;
-  	schedule = {"Geometry", "World History", "Biology",
+  	schedule = new String[]{"Geometry", "World History", "Biology",
 		    "PE", "Freshman Composition",
-		    "Art Appreciation", "Math Research"}; 
+		    "Art Appreciation", "Math Research"};
     }
 }

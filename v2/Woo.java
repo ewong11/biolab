@@ -33,7 +33,7 @@ public class Woo {
 	//these variables will determine the type of person you are
 	int intelligence = 0;
 	int social = 0;
-	int normal = 0; 
+	int normal = 0;
 	s = "Welcome to StuyLife: Freshman Frenzy! \n";
 	s += "But first, let us know your name: ";
 	System.out.println(s);
@@ -64,10 +64,10 @@ public class Woo {
 	    else if (ans == 2)
 		social += 1;
 	    else
-		normal += 1; 
+		normal += 1;
 	}
 	catch ( IOException e ) { }
-  
+
 	ans = 0;
 	s = "Pick your afterschool club \n";
 	s += "\t1: the Spectator or Speech/Debate \n";
@@ -83,7 +83,7 @@ public class Woo {
 	    else if (ans == 2)
 		social += 1;
 	    else
-		normal += 1; 
+		normal += 1;
 	}
 	catch ( IOException e ) { }
 	ans = 0;
@@ -101,7 +101,7 @@ public class Woo {
 	    else if (ans == 2)
 		social += 1;
 	    else
-		normal += 1; 
+		normal += 1;
 	}
 	catch ( IOException e ) { }
 
@@ -120,31 +120,38 @@ public class Woo {
 	    else if (ans == 2)
 		social += 1;
 	    else
-		normal += 1; 
+		normal += 1;
 	}
 	catch ( IOException e ) { }
 
-  
-	// makes the player one of three characters
-	int highest = Math.max(intelligence, Math.max(normal, social)); 
 
+	// makes the player one of three characters
+	int highest = Math.max(intelligence, Math.max(normal, social));
 	if(highest == intelligence && !(highest == social || highest == normal)) {
 	    player = new Scholar(name);
-	    System.out.println("congrats! You're a scholar\n"); 
+	    System.out.println("congrats! You're a scholar\n");
 	}
 	else if(highest == social && !(highest == intelligence || highest == normal)) {
 	    player = new Popular(name);
-	    System.out.println("congrats! You're a popular person\n"); 
+	    System.out.println("congrats! You're a popular person\n");
 	}
 	else {
 	    player = new Normal(name);
-	    System.out.println("congrats! You're just normal\n"); 
+	    System.out.println("congrats! You're just normal\n");
 	}
     }
     //sims a day, out of a possible 180 - we can put the methods in another class
     public void simDay() {
-	luck = (int) (Math.random() * 5);
+      int DayCounter = 1;
+
+      while(DayCounter <= 180){
+        //if(!player.isDead()){
+        luck = (int) (Math.random() * 5);
+      //}
+
+
     }
+  }
 
     public static double getLuck() {
 	return luck;

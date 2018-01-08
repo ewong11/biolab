@@ -8,8 +8,8 @@ public class Popular extends Student{
 	physical = 90;
 	charisma = 90;
 	name = s;
-	schedule = {"Algebra", "World History", "Biology",
+	schedule = new String[]{"Algebra", "World History", "Biology",
 		    "PE", "Freshman Composition",
-		    "Music Appreciation", "Math Team"}; 
+		    "Music Appreciation", "Math Team"};
     }
  }

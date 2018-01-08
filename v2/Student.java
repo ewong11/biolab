@@ -19,13 +19,15 @@ public abstract class Student extends Character {
 	return ans;
     }
 
-    //returns if player is dead
-    public boolean notDead() {
-	return sleep == 0 ||
-	    mental == 0 ||
-	    physical == 0 ||
-	    average == 0 ||
-	    friendCount == 0;
+    //When any characteristic of the Student
+    //is below zero, then the Student is dead
+    // Returns true if dead!
+    public boolean isDead() {
+	     return sleep == 0 ||
+       mental == 0 ||
+       physical == 0 ||
+       average == 0 ||
+       friendCount == 0;
     }
 
     //sets sleep to new number
