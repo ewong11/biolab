@@ -1,5 +1,6 @@
 public class NPC extends Character{
     public int friendship;
+    public int health;
 
     public int getFriendship(){
 	return friendship;
@@ -9,6 +10,9 @@ public class NPC extends Character{
 	friendship = n;
     }
 
+    public boolean isDead(){
+      return health <= 0;
+    }
     public String friendLev() {
 	if (friendship == 0)
 	    return "stranger";
@@ -19,8 +23,8 @@ public class NPC extends Character{
 	else if (friendship == 3)
 	    return "best fwend";
 	else
-	    return "blood bonded sibwings"; 
-    } 
+	    return "blood bonded sibwings";
+    }
 
-    
+
 }

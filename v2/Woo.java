@@ -129,15 +129,15 @@ public class Woo {
 	int highest = Math.max(intelligence, Math.max(normal, social));
 	if(highest == intelligence && !(highest == social || highest == normal)) {
 	    player = new Scholar(name);
-	    System.out.println("congrats! You're a scholar\n");
+	    System.out.println("Congrats " + name +"! You're a scholar\n");
 	}
 	else if(highest == social && !(highest == intelligence || highest == normal)) {
 	    player = new Popular(name);
-	    System.out.println("congrats! You're a popular person\n");
+	    System.out.println("Congrats " + name +"! You're a popular person\n");
 	}
 	else {
 	    player = new Normal(name);
-	    System.out.println("congrats! You're just normal\n");
+	    System.out.println("Congrats " + name +"! You're just normal\n");
 	}
     }
     //sims a day, out of a possible 180 - we can put the methods in another class
@@ -145,9 +145,9 @@ public class Woo {
       int DayCounter = 1;
 
       while(DayCounter <= 180){
-        //if(!player.isDead()){
+        if(!player.isDead()){
         luck = (int) (Math.random() * 5);
-      //}
+      }
 
 
     }
