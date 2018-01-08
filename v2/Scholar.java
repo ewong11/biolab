@@ -6,8 +6,11 @@ public class Scholar extends Student {
 	sleep = 40;
 	mental = 75;
 	physical = 25;
-  charisma = 25;
-  name = s;
+	charisma = 25;
+	name = s;
+	schedule = {"Honors Geometry", "APHUG", "Honors Biology",
+		    "PE", "Freshman Composition",
+		    "Symphonic Orchestra","Math Research"}; 
     }
 
 

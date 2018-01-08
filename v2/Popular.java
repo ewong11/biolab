@@ -6,7 +6,10 @@ public class Popular extends Student{
 	sleep = 75;
 	mental = 75;
 	physical = 90;
-  charisma = 90;
-  name = s;
+	charisma = 90;
+	name = s;
+	schedule = {"Algebra", "World History", "Biology",
+		    "PE", "Freshman Composition",
+		    "Music Appreciation", "Math Team"}; 
     }
  }

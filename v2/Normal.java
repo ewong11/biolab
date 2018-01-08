@@ -9,7 +9,10 @@ public class Normal extends Student{
 	sleep = 75.0;
 	mental = 75;
 	physical = 50;
-  charisma = 50;
-  name = s;
+	charisma = 50;
+	name = s;
+  	schedule = {"Geometry", "World History", "Biology",
+		    "PE", "Freshman Composition",
+		    "Art Appreciation", "Math Research"}; 
     }
 }
