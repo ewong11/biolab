@@ -33,6 +33,7 @@ public void newGame() {
   //these variables will determine the type of person you are
   int intelligence = 0;
   int social = 0;
+  int normal = 0; 
   s = "Welcome to StuyLife: Freshman Frenzy! \n";
   s += "But first, let us know your name: ";
   System.out.println(s);
@@ -61,7 +62,9 @@ public void newGame() {
       if (ans == 1)
 	  intelligence += 1;
       else if (ans == 2)
-	  social += 1;	  
+	  social += 1;
+      else
+	  normal += 1; 
   }
   catch ( IOException e ) { }
   
@@ -78,7 +81,9 @@ public void newGame() {
       if (ans == 1)
 	  intelligence += 1;
       else if (ans == 2)
-	  social += 1;	  
+	  social += 1;
+      else
+	  normal += 1; 
   }
   catch ( IOException e ) { }
   ans = 0;
@@ -94,7 +99,9 @@ public void newGame() {
       if (ans == 1)
 	  intelligence += 1;
       else if (ans == 2)
-	  social += 1;	  
+	  social += 1;
+      else
+	  normal += 1; 
   }
   catch ( IOException e ) { }
 
@@ -111,18 +118,21 @@ public void newGame() {
       if (ans == 1)
 	  intelligence += 1;
       else if (ans == 2)
-	  social += 1;	  
+	  social += 1;
+      else
+	  normal += 1; 
   }
   catch ( IOException e ) { }
 
   
   // makes the player one of three characters
+  int highest = Math.max(intelligence, Math.max(normal, social)); 
 
-  if(Math.max(intelligence, social) == intelligence && !(social == intelligence)) {
+  if(highest == intelligence && !(highest == social || highest == normal)) {
       player = new Scholar(name);
       System.out.println("congrats! You're a scholar\n"); 
   }
-  else if(Math.max(intelligence, social) == social && !(social == intelligence)) {
+else if(highest == social && !(highest == intelligence || highest == normal)) {
       player = new Popular(name);
       System.out.println("congrats! You're a popular person\n"); 
   }
