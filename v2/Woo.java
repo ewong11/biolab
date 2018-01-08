@@ -63,9 +63,12 @@ public void newGame() {
 }
 //sims a day, out of a possible 180 - we can put the methods in another class
 public void simDay() {
-
+  luck = (int) (Math.random() * 5);
 }
 
+public double getLuck() {
+  return luck;
+}
 
     public static void main(String[] args) {
       Woo game = new Woo();
