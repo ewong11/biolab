@@ -64,7 +64,8 @@ public void newGame() {
 	  social += 1;	  
   }
   catch ( IOException e ) { }
-
+  
+  ans = 0;
   s = "Pick your afterschool club \n";
   s += "\t1: the Spectator or Speech/Debate \n";
   s += "\t2: Sports or Red Cross/Key CLub or maybe even slime club :)) \n";
@@ -80,20 +81,54 @@ public void newGame() {
 	  social += 1;	  
   }
   catch ( IOException e ) { }
+  ans = 0;
+  s = "What are your plans on a Friday Night? \n";
+  s += "\t1: Study for my Math Test\n";
+  s += "\t2: Go out to a PARTY! \n";
+  s += "\t3: Watch Breaking Bad \n";
+  s += "Selection: ";
+  System.out.println(s);
+
+  try {
+      ans = Integer.parseInt( in.readLine() );
+      if (ans == 1)
+	  intelligence += 1;
+      else if (ans == 2)
+	  social += 1;	  
+  }
+  catch ( IOException e ) { }
+
+  ans = 0;
+  s = " You see a person crying in the hallway. What do you do? \n";
+  s += "\t1: Pretend you didn't see. \n";
+  s += "\t2: Give them a BIG HUG! \n";
+  s += "\t3: \"Are you ok\" \n";
+  s += "Selection: ";
+  System.out.println(s);
+
+  try {
+      ans = Integer.parseInt( in.readLine() );
+      if (ans == 1)
+	  intelligence += 1;
+      else if (ans == 2)
+	  social += 1;	  
+  }
+  catch ( IOException e ) { }
+
   
   // makes the player one of three characters
 
   if(Math.max(intelligence, social) == intelligence && !(social == intelligence)) {
       player = new Scholar(name);
-      System.out.println("congrats! you're a scholar\n"); 
+      System.out.println("congrats! You're a scholar\n"); 
   }
   else if(Math.max(intelligence, social) == social && !(social == intelligence)) {
       player = new Popular(name);
-      System.out.println("congrats! you're a popular person\n"); 
+      System.out.println("congrats! You're a popular person\n"); 
   }
   else {
     player = new Normal(name);
-    System.out.println("congrats! you're just normal\n"); 
+    System.out.println("congrats! You're just normal\n"); 
   }
 }
 //sims a day, out of a possible 180 - we can put the methods in another class
