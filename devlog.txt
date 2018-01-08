@@ -97,8 +97,8 @@ kaitlin :: created NPC.java
 
 --------------------------------------------------------------
 eric :: started skeleton on Woo and started work on 2D array minigame
-susan :: took a nap
+susan :: began character quiz 
 kaitlin :: worked on storyline
 ==============================================================
 
-
+s
