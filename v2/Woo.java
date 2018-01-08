@@ -142,22 +142,25 @@ public class Woo {
     }
     //sims a day, out of a possible 180 - we can put the methods in another class
     public void simDay() {
-      int DayCounter = 1;
-
-      while(DayCounter <= 180){
         if(!player.isDead()){
         luck = (int) (Math.random() * 5);
+        System.out.println("Good Morning " + player.name + "!");
       }
 
 
     }
-  }
+
 
     public static double getLuck() {
 	return luck;
     }
 
     public static void main(String[] args) {
-	Woo game = new Woo();
+	     Woo game = new Woo();
+       int days = 0;
+
+       //while(days <= 180){
+         //if(!game)
+       //}
     }
 }
