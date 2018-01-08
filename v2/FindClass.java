@@ -9,7 +9,7 @@ public class FindClass {
   int randX = (int) (Math.random() * 5);
   int randY = (int) (Math.random() * 5);
 
-  int time = (int) (Math.random() * Woo.getLuck())
+  int time = (int) (Math.random() * Woo.getLuck());
 
   private InputStreamReader isr;
   private BufferedReader in;
@@ -64,7 +64,7 @@ public class FindClass {
         swap(randY, randX, randY, randX-1 );
         randX -= 1;
       }
-      if (input == "w") {
+      else if (input == "w") {
         if (randY + 1 < 0) {
           System.out.println("Error. You can't go into a wall");
           return;
@@ -72,21 +72,24 @@ public class FindClass {
         swap(randY, randX, randY + 1, randX );
         randY += 1;
       }
-      if (input == "s") {
+      else if (input == "s") {
         if (randY - 1 < 0) {
           System.out.println("Error. You can't go into a wall");
-          return
+          return;
         }
         swap(randY, randX, randY -1, randX );
         randY -= 1;
       }
-      if (input == "d") {
+      else if (input == "d") {
         if (randX + 1 < 0) {
           System.out.println("Error. You can't go into a wall");
           return;
         }
         swap(randY, randX, randY, randX+1 );
         randX += 1;
+      }
+      else {
+        System.out.println("Bro, you're late! Get moving!");
       }
 
 

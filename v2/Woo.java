@@ -8,7 +8,7 @@ public class Woo {
     private NPC npc1;
 
     public int days;
-    public double luck;
+    public static double luck;
     private int score;
 
     private InputStreamReader isr;
@@ -66,7 +66,7 @@ public void simDay() {
   luck = (int) (Math.random() * 5);
 }
 
-public double getLuck() {
+public static double getLuck() {
   return luck;
 }
 
