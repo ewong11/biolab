@@ -49,10 +49,10 @@ public void newGame() {
 
   //ADD QUIZ HERE----------------------------------------------
   int ans = 0;
-  s = "What class did you like most? \n";
-  s += "\t1: Science or Math or CS\n";
-  s += "\t2: PE or the Humanities \n";
-  s += "\t3: I hated all of them \n";
+  s = "What is your favorite aspect of school? \n";
+  s += "\t1: I like Homework!\n";
+  s += "\t2: I like friends! \n";
+  s += "\t3: I'm just here. \n";
   s += "Selection: ";
   System.out.println(s);
 
