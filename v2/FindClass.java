@@ -49,14 +49,6 @@ public class FindClass {
     map[y1][x1] = temp;
     System.out.println(map);
   }
-
-  public void move() {
-    try {
-    input = in.readLine();
-  }
-    catch ( IOException e ) {}
-    
-      for (int x =0 ; x < 5; x ++) {
       if (input == "a") {
         if (randX - 1 < 0) {
           System.out.println("Error. You can't go into a wall");
@@ -111,7 +103,6 @@ public class FindClass {
 
 
   }
-}
 
   public String toString() {
     String a = "";
