@@ -106,12 +106,19 @@ eric :: created subclasses of Student.java
 susan :: created Student.java and Character.java
 kaitlin :: created NPC.java
 ==============================================================
-2018-01-05
 
+2018-01-07
 --------------------------------------------------------------
 eric :: started skeleton on Woo and started work on 2D array minigame
 susan :: began character quiz
 kaitlin :: worked on storyline
 ==============================================================
 
-s
+2018-01-08
+--------------------------------------------------------------
+eric :: took a nap
+susan :: fixed fundamental misunderstanding in Woo 
+kaitlin :: worked on compilability of Woo
+==============================================================
+
+
