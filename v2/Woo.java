@@ -4,7 +4,7 @@ import java.util.*;
 public class Woo {
 
     // instance variables -----------------------------------
-    private Character player;
+    private Student player;
     private NPC npc1;
 
     public int days;
@@ -139,6 +139,8 @@ public class Woo {
 	    player = new Normal(name);
 	    System.out.println("Congrats " + name +"! You're just normal\n");
 	}
+
+	System.out.println(player.getSched());
     }
     //sims a day, out of a possible 180 - we can put the methods in another class
     public void simDay() {

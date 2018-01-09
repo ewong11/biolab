@@ -1,8 +1,6 @@
 public abstract class Character {
-    public String name ;
-    public int grade;
-    public int charisma;
-
-    abstract boolean isDead();
+    protected static String name ;
+    protected static int grade;
+    protected static int charisma;
 
 }

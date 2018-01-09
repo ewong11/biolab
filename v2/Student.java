@@ -84,8 +84,12 @@ public abstract class Student extends Character {
 
     public String getSched() {
       String ans = "Schedule: [";
-    	for (String a: schedule)
-    	    ans += a + ", ";
+      for (int x = 0; x < schedule.length; x++) {
+	  if (x == schedule.length - 1)
+	      ans += schedule[x];
+	  else 
+    	    ans += schedule[x] + ", ";
+      } 
     	return ans + "]";
     }
 }
