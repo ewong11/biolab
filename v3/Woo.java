@@ -143,12 +143,14 @@ public class Woo {
 	System.out.println(player.getSched());
     }
     //sims a day, out of a possible 180 - we can put the methods in another class
-    public void simDay() {
+    public boolean simDay() {
         if(!player.isDead()){
         luck = (int) (Math.random() * 5);
         System.out.println("Good Morning " + player.name + "!");
-      }
+        return true;
 
+      }
+      return false;
 
     }
 
@@ -161,8 +163,12 @@ public class Woo {
 	     Woo game = new Woo();
        int days = 0;
 
-       //while(days <= 180){
-         //if(!game)
+       while(days <= 180){
+         if(!game.simDay())
+           break;
+           days++;
+           System.out.println("");
+         }
        //}
     }
 }
