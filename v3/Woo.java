@@ -144,6 +144,10 @@ public class Woo {
     }
     //sims a day, out of a possible 180 - we can put the methods in another class
     public boolean simDay() {
+        Lunch lunch = new Lunch();
+        Events event = new Events();
+        event.impressCrush(player);
+        lunch.play(player);
         if(!player.isDead()){
         luck = (int) (Math.random() * 5);
         System.out.println("Good Morning " + player.name + "!");
