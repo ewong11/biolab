@@ -12,7 +12,7 @@ public class FindClass {
     int coordY = (int) (Math.random() * 4);
 
     int time = (int) (Math.random() * Woo.getLuck());
-  
+
 
     private InputStreamReader isr;
     private BufferedReader in;
@@ -46,64 +46,85 @@ public class FindClass {
     }
     */
 
-    public void swap(int y1, int x1, int y2, int x2) {
+  public void swap(int y1, int x1, int y2, int x2) {
 	String temp = map[y2][x2];
 	map[y2][x2] = map[y1][x1];
 	map[y1][x1] = temp;
 	System.out.println(map);
     }
 
-    public void finder() {
+    public void finder(Student a) {
 	int counter = 0;
 	while (counter < time) {
-	    if (input == "a") {
-		if (randX - 1 < 0) {
-		    System.out.println("Error. You can't go into a wall");
-		    
-		    
+	  if (input == "a") {
+		    if (randX - 1 < 0) {
+		        System.out.println("Error. You can't go into a wall");
 		}
-		swap(randY, randX, randY, randX-1 );
-		randX -= 1;
-		if (randX == coordX || randY == coordY) {
+		  swap(randY, randX, randY, randX-1 );
+		  randX -= 1;
+		  if (randX == coordX && randY == coordY) {
 		    System.out.println("Hey, you made it on time!");
+        break;
 		}
+    else {
+      counter += 1;
+    }
+  }
+
 		else if (input == "w") {
 		    if (randY + 1 < 0) {
-			System.out.println("Error. You can't go into a wall");
-			return;
+			       System.out.println("Error. You can't go into a wall");
+			       counter += 1;
 		    }
-		    swap(randY, randX, randY + 1, randX );
-		    randY += 1;
-		    if (randX == coordX || randY == coordY) {
-			System.out.println("Hey, you made it on time!");
+		      swap(randY, randX, randY + 1, randX );
+		      randY += 1;
+		    if (randX == coordX && randY == coordY) {
+			    System.out.println("Hey, you made it on time!");
+          break;
 		    }
+        else {
+          counter += 1;
+        }
 		}
+
 		else if (input == "s") {
 		    if (randY - 1 < 0) {
-			System.out.println("Error. You can't go into a wall");
-			return;
+			       System.out.println("Error. You can't go into a wall");
+			       counter += 1;
 		    }
 		    swap(randY, randX, randY -1, randX );
 		    randY -= 1;
-		    if (randX == coordX || randY == coordY) {
-			System.out.println("Hey, you made it on time!");
+		    if (randX == coordX && randY == coordY) {
+			       System.out.println("Hey, you made it on time!");
+             break;
 		    }
+        else {
+          counter += 1;
+        }
 		}
 		else if (input == "d") {
 		    if (randX + 1 < 0) {
-			System.out.println("Error. You can't go into a wall");
-			return;
+			        System.out.println("Error. You can't go into a wall");
+			        counter += 1;
 		    }
 		    swap(randY, randX, randY, randX+1 );
 		    randX += 1;
-		    if (randX == coordX || randY == coordY) {
-			System.out.println("Hey, you made it on time!");
+		    if (randX == coordX && randY == coordY) {
+			       System.out.println("Hey, you made it on time!");
+             break;
 		    }
+        else {
+          counter += 1;
+        }
 		}
 		else {
 		    System.out.println("Bro, you're late! Get moving!");
+        counter += 1;
 		}
-		
+    System.out.println("You're late and you're teacher hates you! Minus 1 to your average!");
+    a.average -= 1;
+  }
+
 
 
 	    }
@@ -126,4 +147,3 @@ public class FindClass {
 		System.out.println(a);
 	    }
 	}
-    }
