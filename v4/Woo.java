@@ -163,13 +163,13 @@ public class Woo {
 
       	try {
       	    ans = Integer.parseInt( in.readLine() );
-            char let;
+            String let;
       	    if (ans == 1){
               System.out.println(player);
               System.out.println("Would you like a fortune? (Y/N)");
-              let = in.readChar();
-              if(let == 'Y'){
-                System.println("Fortune: ");
+              let = in.readLine();
+              if(let == "Y"){
+                System.out.println("Fortune: ");
               }
 
             }
