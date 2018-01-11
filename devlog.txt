@@ -121,4 +121,18 @@ susan :: fixed fundamental misunderstanding in Woo
 kaitlin :: worked on compilability of Woo
 ==============================================================
 
+2018-01-09
+--------------------------------------------------------------
+eric :: created basic flowchart 
+susan :: took a nap 
+kaitlin :: fixed UML 
+==============================================================
+
+2018-01-10 
+--------------------------------------------------------------
+eric :: planned events with SUsan  
+susan :: made better flowchart and planned events with eRic 
+kaitlin :: took a nap 
+==============================================================
+
 
