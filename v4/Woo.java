@@ -193,7 +193,6 @@ public class Woo {
 
        while(days <= 180){
          System.out.println("Day " + days);
-         System.out.println(game.player);
          if(!game.simDay())
            break;
            days++;
