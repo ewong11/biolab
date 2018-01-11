@@ -163,10 +163,19 @@ public class Woo {
 
       	try {
       	    ans = Integer.parseInt( in.readLine() );
-      	    if (ans == 1)
+            char let;
+      	    if (ans == 1){
               System.out.println(player);
-      	    else if (ans == 2)
+              System.out.println("Would you like a fortune? (Y/N)");
+              let = in.readChar();
+              if(let == 'Y'){
+                System.println("Fortune: ");
+              }
+
+            }
+      	    else if (ans == 2){
               System.out.println("Fortune: ");
+            }
               //IMPLEMENT LATER :))
       	    else
               System.out.println("Packing your turtle shell...");
@@ -174,6 +183,7 @@ public class Woo {
       	catch ( IOException e ) { }
 
         System.out.println("OK HERE WE GO");
+
 
         return true;
 
