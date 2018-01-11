@@ -67,44 +67,25 @@ LESSONS LEARNED
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-yyyy-mm-dd
+2018-01-10
 --------------------------------------------------------------
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
+eric :: planned events with Susan
+susan :: made better flowchart and planned events with Eric
+kaitlin :: took a nap
 ==============================================================
 
-yyyy-mm-dd
+2018-01-09
 --------------------------------------------------------------
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
+eric :: created basic flowchart
+susan :: took a nap
+kaitlin :: fixed UML
 ==============================================================
 
 2018-01-08
 --------------------------------------------------------------
+eric :: took a nap
+susan :: fixed fundamental misunderstanding in Woo
 kaitlin:: fixed all classes; created start game
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
-==============================================================
-
-2018-01-02
---------------------------------------------------------------
-eric :: brainstormed ideas; added classes/instance variables
-susan :: brainstormed ideas; added instantiation values for attributes
-==============================================================
-
-2018-01-04
---------------------------------------------------------------
-eric :: revised proposal accordingly; started uml diagram
-susan :: revised proposal accordingly; uploaded uml to repo
-==============================================================
-
-2018-01-05
---------------------------------------------------------------
-eric :: created subclasses of Student.java
-susan :: created Student.java and Character.java
-kaitlin :: created NPC.java
 ==============================================================
 
 2018-01-07
@@ -114,25 +95,21 @@ susan :: began character quiz
 kaitlin :: worked on storyline
 ==============================================================
 
-2018-01-08
+2018-01-05
 --------------------------------------------------------------
-eric :: took a nap
-susan :: fixed fundamental misunderstanding in Woo 
-kaitlin :: worked on compilability of Woo
+eric :: created subclasses of Student.java
+susan :: created Student.java and Character.java
+kaitlin :: created NPC.java
 ==============================================================
 
-2018-01-09
+2018-01-04
 --------------------------------------------------------------
-eric :: created basic flowchart 
-susan :: took a nap 
-kaitlin :: fixed UML 
+eric :: revised proposal accordingly; started uml diagram
+susan :: revised proposal accordingly; uploaded uml to repo
 ==============================================================
 
-2018-01-10 
+2018-01-02
 --------------------------------------------------------------
-eric :: planned events with SUsan  
-susan :: made better flowchart and planned events with eRic 
-kaitlin :: took a nap 
+eric :: brainstormed ideas; added classes/instance variables
+susan :: brainstormed ideas; added instantiation values for attributes
 ==============================================================
-
-
