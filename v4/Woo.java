@@ -130,17 +130,21 @@ public class Woo {
 	if(highest == intelligence && !(highest == social || highest == normal)) {
 	    player = new Scholar(name);
 	    System.out.println("Congrats " + name +"! You're a scholar\n");
+
 	}
 	else if(highest == social && !(highest == intelligence || highest == normal)) {
 	    player = new Popular(name);
 	    System.out.println("Congrats " + name +"! You're a popular person\n");
+
 	}
 	else {
 	    player = new Normal(name);
 	    System.out.println("Congrats " + name +"! You're just normal\n");
+
 	}
 
 	System.out.println(player.getSched());
+  System.out.println("==================");
     }
     //sims a day, out of a possible 180 - we can put the methods in another class
     public boolean simDay() {
@@ -149,7 +153,8 @@ public class Woo {
         //event.impressCrush(player);
         //lunch.play(player);
         if(!player.isDead()){
-        luck = (int) (Math.random() * 5);
+        maxE = (int)(Math.random() * 5);
+        System.out.println(luck);
         System.out.println("Good Morning " + player.name + "!");
         System.out.println("Please select one of the following:");
 
@@ -184,17 +189,63 @@ public class Woo {
 
         System.out.println("OK HERE WE GO");
 
+        //Starting school
+        int eNum = 0;
+        double luck = Math.random();
+        while(eNum <= maxE){
+        if (luck < 0.2){
+          //No events
+          break;
+        }
+        else if (luck < 0.4){
+          //Academic
+          if(luck < 0.25){
+            Academic.test();
+          }
+          else if (luck < 0.3) {
+            Academic.quiz();
+          }
+          else if (luck < 0.35) {
+            Academic.project();
+          }
+          else{
+            Academic.sleep();
+          }
+        }
+
+        else if (luck < 0.6){
+          //Social
+            //friend // eatOut // brithday // rumors
+          if(luck < 0.45){
+            Social.friend();
+          }
+          else if (luck < 0.5) {
+            Social.eatOut();
+          }
+          else if (luck < 0.55) {
+            Social.brithday();
+          }
+          else{
+            Social.rumors();
+          }
+        }
+        else if (luck < 0.8){
+          //Personal
+        }
+        else{
+          //Other
+          //Randomly gets an event
+        }
+      }
 
         return true;
-
       }
       return false;
-
     }
 
 
     public static double getLuck() {
-	return luck;
+	     return luck;
     }
 
     public static void main(String[] args) {
