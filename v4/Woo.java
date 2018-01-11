@@ -144,7 +144,7 @@ public class Woo {
     }
     //sims a day, out of a possible 180 - we can put the methods in another class
     public boolean simDay() {
-        Lunch lunch = new Lunch();
+        //Lunch lunch = new Lunch();
         Events event = new Events();
         event.impressCrush(player);
         lunch.play(player);
