@@ -145,12 +145,36 @@ public class Woo {
     //sims a day, out of a possible 180 - we can put the methods in another class
     public boolean simDay() {
         //Lunch lunch = new Lunch();
-        Events event = new Events();
-        event.impressCrush(player);
-        lunch.play(player);
+        //Events event = new Events();
+        //event.impressCrush(player);
+        //lunch.play(player);
         if(!player.isDead()){
         luck = (int) (Math.random() * 5);
         System.out.println("Good Morning " + player.name + "!");
+        System.out.println("Please select one of the following:");
+
+        int ans = 0;
+        String s = "";
+      	s += "\t1: Show Your Status\n";
+      	s += "\t2: Fortune Me! \n";
+      	s += "\t3: INTO THE FRAY! \n";
+      	s += "Selection: ";
+      	System.out.println(s);
+
+      	try {
+      	    ans = Integer.parseInt( in.readLine() );
+      	    if (ans == 1)
+              System.out.println(player);
+      	    else if (ans == 2)
+              System.out.println("Fortune: ");
+              //IMPLEMENT LATER :))
+      	    else
+              System.out.println("Packing your turtle shell...");
+      	}
+      	catch ( IOException e ) { }
+
+        System.out.println("OK HERE WE GO");
+
         return true;
 
       }
@@ -165,7 +189,7 @@ public class Woo {
 
     public static void main(String[] args) {
 	     Woo game = new Woo();
-       int days = 0;
+       int days = 1;
 
        while(days <= 180){
          System.out.println("Day " + days);
