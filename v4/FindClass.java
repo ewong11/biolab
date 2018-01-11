@@ -53,9 +53,18 @@ public class FindClass {
 	System.out.println(map);
     }
 
-    public void finder(Student a) {
+  public void finder() {
 	int counter = 0;
-	while (counter < time) {
+  isr = new InputStreamReader( System.in );
+  in = new BufferedReader( isr );
+
+	//while (counter < 5) {
+    //System.out.println(map);
+    try {
+      input = in.readLine();
+    }
+    catch(IOException e) {}
+
 	  if (input == "a") {
 		    if (randX - 1 < 0) {
 		        System.out.println("Error. You can't go into a wall");
@@ -64,7 +73,7 @@ public class FindClass {
 		  randX -= 1;
 		  if (randX == coordX && randY == coordY) {
 		    System.out.println("Hey, you made it on time!");
-        break;
+        //break;
 		}
     else {
       counter += 1;
@@ -80,7 +89,7 @@ public class FindClass {
 		      randY += 1;
 		    if (randX == coordX && randY == coordY) {
 			    System.out.println("Hey, you made it on time!");
-          break;
+          //break;
 		    }
         else {
           counter += 1;
@@ -96,7 +105,7 @@ public class FindClass {
 		    randY -= 1;
 		    if (randX == coordX && randY == coordY) {
 			       System.out.println("Hey, you made it on time!");
-             break;
+            // break;
 		    }
         else {
           counter += 1;
@@ -111,7 +120,7 @@ public class FindClass {
 		    randX += 1;
 		    if (randX == coordX && randY == coordY) {
 			       System.out.println("Hey, you made it on time!");
-             break;
+             //break;
 		    }
         else {
           counter += 1;
@@ -122,14 +131,14 @@ public class FindClass {
         counter += 1;
 		}
     System.out.println("You're late and you're teacher hates you! Minus 1 to your average!");
-    a.average -= 1;
+    //a.average -= 1;
   }
 
 
 
-	    }
+	  //  }
 
-	    public String toString() {
+	public String toString() {
 		String a = "";
 		for(int y = 0; y < size; y++) {
 		    a += "|";
@@ -141,9 +150,14 @@ public class FindClass {
 		return a;
 	    }
 
-	    public static void main(String[] args) {
+	public static void main(String[] args) {
 		FindClass a = new FindClass();
+    int y = 0;
 		a.populate();
-		System.out.println(a);
+    while (y < 5) {
+        System.out.println(a);
+		    a.finder();
+        y++;
 	    }
 	}
+}
