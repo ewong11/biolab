@@ -7,5 +7,4 @@ public class Social {
     }
     public static void rumors() {
     }
-    
 } 
