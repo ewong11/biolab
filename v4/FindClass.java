@@ -124,13 +124,14 @@ public class FindClass {
 		    }
         else {
           counter += 1;
+          return map;
         }
 		}
 		else {
 		    System.out.println("Bro, you're late! Get moving!");
         counter += 1;
 		}
-    System.out.println("You're late and you're teacher hates you! Minus 1 to your average!");
+    //System.out.println("You're late and you're teacher hates you! Minus 1 to your average!");
     //a.average -= 1;
   }
 
@@ -159,5 +160,6 @@ public class FindClass {
 		    a.finder();
         y++;
 	    }
+
 	}
 }
