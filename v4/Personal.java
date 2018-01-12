@@ -1,11 +1,11 @@
 public class Personal {
-    public void netflix() {
+    public static void netflix() {
     }
-    public void blindDate() {
+    public static void blindDate() {
     }
-    public void sick() {
+    public static void sick() {
     }
-    public void nap() {
+    public static void nap() {
     }
     
 } 

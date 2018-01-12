@@ -1,11 +1,11 @@
 public class Social {
-    public void friend() {
+    public static void friend() {
     }
-    public void eatOut() {
+    public static void eatOut() {
     }
-    public void birthday() {
+    public static void birthday() {
     }
-    public void rumors() {
+    public static void rumors() {
     }
     
 } 

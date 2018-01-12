@@ -10,6 +10,7 @@ public class Woo {
     public int days;
     public static double luck;
     private int score;
+    public static int maxE; 
 
     private InputStreamReader isr;
     private BufferedReader in;
@@ -20,6 +21,7 @@ public class Woo {
 
     public Woo() {
 	days = 0;
+	maxE = (int)(Math.random() * 5);
 
 	isr = new InputStreamReader( System.in );
 	in = new BufferedReader( isr );
@@ -144,7 +146,7 @@ public class Woo {
 	}
 
 	System.out.println(player.getSched());
-  System.out.println("==================");
+	System.out.println("==================");
     }
     //sims a day, out of a possible 180 - we can put the methods in another class
     public boolean simDay() {
@@ -152,113 +154,119 @@ public class Woo {
         //Events event = new Events();
         //event.impressCrush(player);
         //lunch.play(player);
+	luck = Math.random();
         if(!player.isDead()){
-        maxE = (int)(Math.random() * 5);
-        System.out.println(luck);
-        System.out.println("Good Morning " + player.name + "!");
-        System.out.println("Please select one of the following:");
+	    System.out.println(luck);
+	    System.out.println("Good Morning " + player.name + "!");
+	    System.out.println("Please select one of the following:");
 
-        int ans = 0;
-        String s = "";
-      	s += "\t1: Show Your Status\n";
-      	s += "\t2: Fortune Me! \n";
-      	s += "\t3: INTO THE FRAY! \n";
-      	s += "Selection: ";
-      	System.out.println(s);
+	    int ans = 0;
+	    String s = "";
+	    s += "\t1: Show Your Status\n";
+	    s += "\t2: Fortune Me! \n";
+	    s += "\t3: INTO THE FRAY! \n";
+	    s += "Selection: ";
+	    System.out.println(s);
 
-      	try {
-      	    ans = Integer.parseInt( in.readLine() );
-            String let;
-      	    if (ans == 1){
-              System.out.println(player);
-              System.out.println("Would you like a fortune? (Y/N)");
-              let = in.readLine();
-              if(let == "Y"){
-                System.out.println("Fortune: ");
-              }
+	    try {
+		ans = Integer.parseInt( in.readLine() );
+		String let;
+		if (ans == 1){
+		    System.out.println(player);
+		    System.out.println("Would you like a fortune? (Y/N)");
+		    let = in.readLine();
+		    if(let == "Y"){
+			System.out.println("Fortune: ");
+		    }
 
-            }
-      	    else if (ans == 2){
-              System.out.println("Fortune: ");
-            }
-              //IMPLEMENT LATER :))
-      	    else
-              System.out.println("Packing your turtle shell...");
-      	}
-      	catch ( IOException e ) { }
+		}
+		else if (ans == 2){
+		    System.out.println("Fortune: ");
+		}
+		//IMPLEMENT LATER :))
+		else
+		    System.out.println("Packing your turtle shell...");
+	    }
+	    catch ( IOException e ) { }
 
-        System.out.println("OK HERE WE GO");
+	    System.out.println("OK HERE WE GO");
+	    //Starting school
+	    int eNum = 0;
+	    while(eNum <= maxE){
+		if (luck < 0.2){
+		    //No events
+		    break;
+		}
+		else if (luck < 0.4){
+		    //Academic
+		    if(luck < 0.25)
+			Academic.test();
+		    else if (luck < 0.3) 
+			Academic.quiz();
+		    else if (luck < 0.35) 
+			Academic.project();
+		    else
+			Academic.sleep();
+		}
 
-        //Starting school
-        int eNum = 0;
-        double luck = Math.random();
-        while(eNum <= maxE){
-        if (luck < 0.2){
-          //No events
-          break;
-        }
-        else if (luck < 0.4){
-          //Academic
-          if(luck < 0.25){
-            Academic.test();
-          }
-          else if (luck < 0.3) {
-            Academic.quiz();
-          }
-          else if (luck < 0.35) {
-            Academic.project();
-          }
-          else{
-            Academic.sleep();
-          }
-        }
+		else if (luck < 0.6){
+		    //Social
+		    //friend // eatOut // brithday // rumors
+		    if(luck < 0.45)
+			Social.friend();
+		    else if (luck < 0.5) 
+			Social.eatOut();
+		    else if (luck < 0.55) 
+			Social.birthday();
+		    else
+			Social.rumors();
+		}
+		else if (luck < 0.8){
+		    //Personal
+		    if(luck < 0.65)
+			Personal.netflix();
+		    else if (luck < 0.7) 
+			Personal.blindDate();
+		    else if (luck < 0.75) 
+			Personal.sick();
+		    else
+			Personal.nap();
+		}
+		else{
+		    //Other
+		    if(luck < 0.85)
+			Other.MTA();
+		    else if (luck < 0.9) 
+			Other.allNighter();
+		    else if (luck < 0.95) 
+			Other.soulCycle();
+		    else
+			Other.urbex();
+		}
+		eNum+= 1;
+	    }
 
-        else if (luck < 0.6){
-          //Social
-            //friend // eatOut // brithday // rumors
-          if(luck < 0.45){
-            Social.friend();
-          }
-          else if (luck < 0.5) {
-            Social.eatOut();
-          }
-          else if (luck < 0.55) {
-            Social.brithday();
-          }
-          else{
-            Social.rumors();
-          }
-        }
-        else if (luck < 0.8){
-          //Personal
-        }
-        else{
-          //Other
-          //Randomly gets an event
-        }
-      }
-
-        return true;
-      }
-      return false;
+	    return true;
+	}
+	return false;
     }
 
-
+    
     public static double getLuck() {
-	     return luck;
+	return luck;
     }
 
     public static void main(String[] args) {
-	     Woo game = new Woo();
-       int days = 1;
+	Woo game = new Woo();
+	int days = 1;
 
-       while(days <= 180){
-         System.out.println("Day " + days);
-         if(!game.simDay())
-           break;
-           days++;
-           System.out.println("");
-         }
-       //}
+	while(days <= 180){
+	    System.out.println("Day " + days);
+	    if(!game.simDay())
+		break;
+	    days++;
+	    System.out.println("");
+	}
+	//}
     }
 }
