@@ -1,0 +1,37 @@
+biolab: Kaitlin Wan, Eric Wong, Susan Lin
+APCS1 PD2
+2018-01-12
+Old Final Practice!!
+
+1. C
+You can trace it ~10 times to find the reoccurring value of n
+2. B
+3. D
+[1,2]
+[2,1,2]
+x = 2
+y = 1
+4. B
+[Atlanta, Boston]
+[Atlanta, +, Boston]
+5. C
+6. C
+Interfacea obj = new ClassB();
+this one is tricky :(
+7. A
+8. D
+9. C
+10. D
+
+11. Write method nextTankToFill
+returns index of the next nextTankToFill
+
+public int nextTankToFill(int threshold){
+  int smallestTank;
+  smallestTank = threshold;
+  for(int i = 0; i < tanks.length(); i++){
+    if (List.get(i) < smallestTank){
+      smallestTank = i;
+    }
+  }
+}
