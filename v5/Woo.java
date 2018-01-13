@@ -4,7 +4,8 @@ import java.util.*;
 public class Woo {
 
   // instance variables -----------------------------------
-  protected Student player;
+  private Student player;
+  private Crush crush;
   private NPC npc1;
 
   public int days;
@@ -22,7 +23,6 @@ public class Woo {
   public Woo() {
     days = 0;
     maxE = (int)(Math.random() * 5);
-
     isr = new InputStreamReader( System.in );
     in = new BufferedReader( isr );
     newGame();
@@ -32,6 +32,7 @@ public class Woo {
   public void newGame() {
     String s;
     String name = "";
+    String cname = "";
     //these variables will determine the type of person you are
     int intelligence = 0;
     int social = 0;
@@ -44,6 +45,19 @@ public class Woo {
       name = in.readLine();
     }
     catch ( IOException e ) { }
+
+    s = "Everyone has a crush, who's yours?";
+    System.out.println(s);
+
+    try {
+      cname = in.readLine();
+    }
+    catch ( IOException e ) { }
+
+    crush = new Crush(cname);
+
+    System.out.println("your name: " + name);
+    System.out.println(crush.name);
 
     //we can add a check here at the end aka "are you sure?"
     System.out.println("Cool, nice to meet you, " + name + "!");
@@ -126,6 +140,8 @@ public class Woo {
     }
     catch ( IOException e ) { }
 
+    System.out.println(crush.name);
+
 
     // makes the player one of three characters
     int highest = Math.max(intelligence, Math.max(normal, social));
@@ -147,10 +163,13 @@ public class Woo {
 
     System.out.println(player.getSched());
     System.out.println("==================");
+    System.out.println(crush.name);
   }
   //sims a day, out of a possible 180 - we can put the methods in another class
   public boolean simDay() {
     luck = Math.random();
+    Personal Personal = new Personal();
+    Personal.netflix(player, crush);
     //System.out.println(player.average);
     //Lunch lunch = new Lunch();
     //Events event = new Events();
@@ -159,7 +178,7 @@ public class Woo {
     //FindClass run = new FindClass();
     //run.runToClass(player);
     //System.out.println(player.average);
-    
+
     if(!player.isDead()){
       System.out.println(luck);
       System.out.println("Good Morning " + player.name + "!");
@@ -229,7 +248,7 @@ public class Woo {
         else if (luck < 0.8){
           //Personal
           if(luck < 0.65)
-          Personal.netflix();
+          Personal.netflix(player, crush);
           else if (luck < 0.7)
           Personal.blindDate();
           else if (luck < 0.75)
