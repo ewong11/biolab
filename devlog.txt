@@ -66,6 +66,16 @@ LESSONS LEARNED
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
+<<<<<<< HEAD
+2018-01-11
+--------------------------------------------------------------
+eric :: worked on FindClass
+{Eric missed CSDojo bc practice he doesn't want to get cut :( }
+susan :: worked on Events w/ Kaitlin @CSDojo
+kaitlin :: worked on Events w/ Susan @CsDojo
+==============================================================
+
+=======
 2018-01-12
 --------------------------------------------------------------
 eric :: fixed FindClass and fixed indentation in all classes
@@ -74,6 +84,7 @@ kaitlin :: took a nap
 ==============================================================
 
 
+>>>>>>> d3fdee9325622a1f08619a8464733692caaefabf
 2018-01-10
 --------------------------------------------------------------
 eric :: planned events with Susan
