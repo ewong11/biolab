@@ -1,8 +1,4 @@
 public class NPC extends Character{
-    public double friendship;
-    public int health;
-
-    public double getFriendship(){
 
     public NPC(){
     }
@@ -17,6 +13,7 @@ public class NPC extends Character{
     public double friendship;
     public int health;
 
+
     public String getName(){
       return name;
     }
@@ -29,7 +26,7 @@ public class NPC extends Character{
 	return friendship;
     }
 
-    public void setFriendship(int n){
+    public void setFriendship(double n){
 	friendship = n;
     }
 

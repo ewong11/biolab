@@ -166,6 +166,10 @@ public class Woo {
 
     System.out.println(player.getSched());
     System.out.println("==================");
+<<<<<<< HEAD
+    System.out.println(crush.name);
+=======
+>>>>>>> d59da3d986067ca2c3e008c444f5bc8f98a9e99c
     System.out.println("=====================");
     //Making Friends
     int friendgen = (int)(Math.random() * 6);
@@ -176,6 +180,10 @@ public class Woo {
     yourFriends[0] = friend1;
     yourFriends[1] = friend2;
     yourFriends[2] = friend3;
+<<<<<<< HEAD
+
+=======
+>>>>>>> d59da3d986067ca2c3e008c444f5bc8f98a9e99c
   }
   //sims a day, out of a possible 180 - we can put the methods in another class
   public boolean simDay() {
