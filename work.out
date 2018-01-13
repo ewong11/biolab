@@ -23,13 +23,24 @@ this one is tricky :(
 9. C
 10. D
 
+<<<<<<< HEAD
+11. Write method nextTankToFill
+=======
 11a. Write method nextTankToFill
+>>>>>>> d3fdee9325622a1f08619a8464733692caaefabf
 returns index of the next nextTankToFill
 
 public int nextTankToFill(int threshold){
   int smallestTank;
   smallestTank = threshold;
   for(int i = 0; i < tanks.length(); i++){
+<<<<<<< HEAD
+    if (List.get(i) < smallestTank){
+      smallestTank = i;
+    }
+  }
+}
+=======
     if (tanks.get(i) < smallestTank){
       smallestTank = i;
     }
@@ -73,3 +84,4 @@ public void moveToLocation(int locIndex){
   }
 
   12a.
+>>>>>>> d3fdee9325622a1f08619a8464733692caaefabf
