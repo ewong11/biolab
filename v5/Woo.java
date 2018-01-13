@@ -12,10 +12,10 @@ public class Woo {
   public static double luck;
   private int score;
   public static int maxE;
-  public static NPC[] yourFriends;
-  public NPC friend1;
-  public NPC friend2;
-  public NPC friend3;
+  public static Friend[] yourFriends;
+  public Friend friend1;
+  public Friend friend2;
+  public Friend friend3;
 
   private InputStreamReader isr;
   private BufferedReader in;
@@ -170,10 +170,10 @@ public class Woo {
     System.out.println("=====================");
     //Making friends
     int friendgen = (int)(Math.random() * 6);
-    friend1 = new NPC(NAMES[friendgen]);
-    friend2 = new NPC(NAMES[friendgen]);
-    friend2 = new NPC(NAMES[friendgen]);
-    yourFriends = new NPC[3];
+    friend1 = new Friend(NAMES[friendgen]);
+    friend2 = new Friend(NAMES[friendgen]);
+    friend2 = new Friend(NAMES[friendgen]);
+    yourFriends = new Friend[3];
     yourFriends[0] = friend1;
     yourFriends[1] = friend2;
     yourFriends[2] = friend3;
@@ -181,8 +181,6 @@ public class Woo {
   //sims a day, out of a possible 180 - we can put the methods in another class
   public boolean simDay() {
     luck = Math.random();
-    Personal Personal = new Personal();
-    Personal.netflix(player, crush);
     //System.out.println(player.average);
     //Lunch lunch = new Lunch();
     //Events event = new Events();
@@ -204,6 +202,7 @@ public class Woo {
       s += "\t3: INTO THE FRAY! \n";
       s += "Selection: ";
       System.out.println(s);
+
 
       try {
         ans = Integer.parseInt( in.readLine() );
@@ -229,6 +228,8 @@ public class Woo {
       System.out.println("OK HERE WE GO");
       //Starting school
       int eNum = 0;
+
+      Social.friend(player);
       while(eNum <= maxE){
         if (luck < 0.2){
           //No events
@@ -250,13 +251,13 @@ public class Woo {
           //Social
           //friend // eatOut // brithday // rumors
           if(luck < 0.45)
-          Social.friend();
+          Social.friend(player);
           else if (luck < 0.5)
-          Social.eatOut();
+          Social.eatOut(player);
           else if (luck < 0.55)
-          Social.birthday();
+          Social.birthday(player);
           else
-          Social.rumors();
+          Social.rumors(player);
         }
         else if (luck < 0.8){
           //Personal
@@ -280,8 +281,8 @@ public class Woo {
           else
           Other.urbex();
         }
-        luck = Math.random();
         eNum+= 1;
+        luck = Math.random();
       }
 
       return true;
