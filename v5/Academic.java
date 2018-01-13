@@ -342,6 +342,158 @@ public class Academic {
     public static void sleep(Student a) {
 	isr = new InputStreamReader(System.in);
 	in = new BufferedReader( isr);
-    }
-    
+	String out = "";
+	int ans = 0;
+
+	out = "After a long day at school, you come back to home sweet home\n";
+	out += "For a snack to eat while doing hw, what do you pick?";
+	out += "\t1: cookies and hot cocoa\n";
+	out += "\t2: some kbbq chickpeas and aloe vera\n";
+	out += "\t3: earl grey tea and scones\n";
+
+	try {
+	    ans = Integer.parseInt( in.readLine() ); 
+	}
+	catch (IOException e) { }
+	
+	if (ans == 1) {
+	    out = "you fell straight asleep. uh oh.";
+	    out += "you wake up at 4AM. bless your soul. which hw do you do first? " ;
+	    out += "\t1: Geometry\n";
+	    out += "\t2: Biology\n";
+	    out += "\t3: History\n";
+	    
+	    try {
+		ans = Integer.parseInt( in.readLine() ); 
+	    }
+	    catch (IOException e) { }
+
+	    if (ans == 1) {
+		out = "yikes. it takes you two hours. now you have to go to school.";
+		out += "you catch the express. which hw do you do on the train?\n" ;
+		out += "\t1: Biology\n";
+		out += "\t2: History\n";
+		out += "\t3: English\n";
+	    
+		try {
+		    ans = Integer.parseInt( in.readLine() ); 
+		}
+		catch (IOException e) { }
+
+		if (ans == 1){ 
+		    System.out.println("woo! you can do the rest at lunch. congrats, you've survived\n");
+		    a.sleep += 6; 
+		} 
+		else if (ans == ) {
+		    System.out.println("oh no, your other classes came first\n");
+		    a.average -= 1;
+		    a.sleep += 4; 
+		}
+		else {
+		    System.out.println("okay, you barely manage by skimming, but it works and you finish everything and sprinting to school\n");
+		    a.mental += 1;
+		    a.physical += 1;
+		    a.sleep += 4; 
+		} 	    
+	    }
+	    else if (ans == 2) {
+		out = "olay olay. you get it done but realize you have spanish hw too.\n";
+		out += "when do you do it?\n";
+		out += "\t1: during Biology\n";
+		out += "\t2: during lunch\n";
+		out += "\t3: in the hallways\n";
+
+		try {
+		    ans = Integer.parseInt( in.readLine() ); 
+		}
+		catch (IOException e) { }
+
+		if (ans == 1) {
+		    System.out.println("yikes you got caught red handed. your average goes down.\n");
+		    a.average -=1;
+		    a.sleep += 6; 
+		}
+		else if (ans == 2) {
+		    System.out.println("okay. it's done. but you're starving. your physical strength decreases.");
+		    a.physical -= 1;
+		    a.sleep += 6; 
+		}
+		else {
+		    System.out.println("unfortunately, your teacher actually grades the hw. it's shoddy work at best. shame on you.");
+		    a.average -= 1;
+		    a.sleep += 6; 
+		}
+	    }
+	    else{
+		System.out.println("you end up not doing any hw and eat breakfast instead");
+		a.physical += 1;
+		a.mental += 1;
+		a.average -= 1;
+		a.sleep += 8; 
+	    }  
+	}
+	else if (ans == 2) {
+	    out = "okay, you solid. you finish all your hw and decide to go out for breakfast the next day.";
+	    out += "where do you go?\n";
+	    out += "\t1: the breakfast cart for coffee\n";
+	    out += "\t2: zuckers for a bagel\n";
+	    out += "\t3: ferry's for a bacon chiptole avocado on a roll\n";
+
+	    try {
+		ans = Integer.parseInt( in.readLine() ); 
+	    }
+	    catch (IOException e) { }
+
+	    if (ans == 1) {
+		System.out.println("oh no. the coffee makes you want to pee and you had no fiber so you end up with a tummy ache. you miss class. your teacher thinks you cut");
+		a.average -= 1;
+		a.physical -= 1;
+		a.sleep += 6; 
+	    }
+	    else if (ans == 2) {
+		System.out.println("the everything bagel with scallions sets you right for the day. what a great day.");
+		a.mental += 1;
+		a.charisma += 1;
+		a.sleep += 6; 
+	    }
+	    else {
+		System.out.println("the BAC makes you happy but super full and you end up falling asleep. you get don't get caught but miss the lesson.");	
+		a.intel -= 1;
+		a.mental += 1;
+		a.sleep += 1;
+		a.physical += 1; 
+	    } 
+	}
+	else {
+	    out = "the tea gives you insomnia and you stay awake thinking about ducks. you get work done... \n";
+	    out += "but no sleep feels terrible the next day. what do you do?";
+	    out += "\t1: play hooky\n";
+	    out += "\t2: go to school. power to the player!\n";
+	    out += "\t3: i will go on, my poor soul\n";
+
+	    try {
+		ans = Integer.parseInt( in.readLine() ); 
+	    }
+	    catch (IOException e) { }
+
+	    if (ans == 1) {
+		System.out.println("what a scallywag.");
+		a.average -= 1;
+		a.sleep += 1;
+		a.physical += 1; 
+	    }
+	    else if (ans == 2) {
+		System.out.println("sigh......");
+		a.mental -= 1;
+		a.charisma -= 1;
+		a.physical -= 1; 
+	    }
+	    else {
+		System.out.println("you poor soul.");
+		a.mental -= 1;
+		a.physical -= 1;
+		a.sleep += 1;
+	    } 
+	} 	
+    }  
 } 
