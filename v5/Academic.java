@@ -244,7 +244,7 @@ public class Academic {
 	    }
 	    catch (IOException e) {}
 	    if (ans == 1) {
-		out = "okay, things are going good. then, you encounter a problem you don't know how to solve.";
+		out = "okay, things are going good. then, you encounter a problem you don't know how to solve.\n";
 		out += "What do you do?\n"; 
 		out += "\t1: ask friends, teachers, go to the library and work it out. you got this down.\n";
 		out += "\t2: deperation seeps in. you go on the intertubes.\n";
@@ -255,7 +255,7 @@ public class Academic {
 		}
 		catch (IOException e) {}
 		if (ans == 1) {
-		    out = "good good. you pass the obstacle. presentation day comes.";
+		    out = "good good. you pass the obstacle. presentation day comes.\n";
 		    out += "What do you day to yourself?\n"; 
 		    out += "\t1: you can do it. just imagine everyone else in grandma underwear\n";
 		    out += "\t2: meh. just another school day.\n";
@@ -266,20 +266,20 @@ public class Academic {
 		    }
 		    catch (IOException e) {}
 		    if (ans == 1) {
-			System.out.println("your teacher loves it so much he gives you extra credit for being you. 105!");
+			System.out.println("your teacher loves it so much he gives you extra credit for being you. 105!\n");
 			a.average += 2; 
 		    }
 		    else if (ans == 2) {
-			System.out.println("good job but not great job. your average goes up by a point");
+			System.out.println("good job but not great job. your average goes up by a point\n");
 			a.average += 1;
 		    }
 		    else {
-			System.out.println("you panic and forget all your lines. big yikes. 50 for you!");
+			System.out.println("you panic and forget all your lines. big yikes. 50 for you!\n");
 			a.average -= 3;
 		    } 
 		}
 		else if (ans == 2) {
-		   out = "you get lost for quite a while in the world of cat videos and memes and super complicated concepts.";
+		   out = "you get lost for quite a while in the world of cat videos and memes and super complicated concepts.\n";
 		    out += "suddenly, it's presentation day. What do you do?\n"; 
 		    out += "\t1: pretend to be sick and prep the whole day to go tomorrow\n";
 		    out += "\t2: go to school and own up.\n";
@@ -290,7 +290,7 @@ public class Academic {
 		    }
 		    catch (IOException e) {}
 		    if (ans == 1) {
-			out = "it's game day. good presentation and you apologize to your teacher.";
+			out = "it's game day. good presentation and you apologize to your teacher.\n";
 			out += "What do you say to him/her?\n"; 
 			out += "\t1: i'm so sorry. the mumps just came.\n";
 			out += "\t2: it'll never happen again. thank you for being so understanding\n";
@@ -301,41 +301,41 @@ public class Academic {
 			}
 			catch (IOException e) { }
 			if (ans == 1) {
-			    System.out.println("turns out you were supposed to have strep throat. you confess and get a 0");
+			    System.out.println("turns out you were supposed to have strep throat. you confess and get a 0\n");
 			    a.average -= 5;
 			    a.charisma -= 1; 
 			}
 			else if (ans == 2) {
-			    System.out.println("you charm your teacher and get away with it. rascal.");
+			    System.out.println("you charm your teacher and get away with it. rascal.\n");
 			    a.average += 3; 
 			}
 			else {
-			    System.out.println("you confess your sins and feel better. an empty average is better than an empty soul");
+			    System.out.println("you confess your sins and feel better. an empty average is better than an empty soul\n");
 			    a.average -= 3;
 			    a.mental += 2; 
 			} 
 		    } 
 		    else if (ans == 2) {
-			System.out.println(" you lose a couple points in score but your teacher trusts you now");
+			System.out.println(" you lose a couple points in score but your teacher trusts you now\n");
 			a.charisma += 1;
 			a.mental += 1; 
 			
 		    }
 		    else {
-			System.out.println("you had to be hospitalized for malnutrition and sleep deprivation. your mom makes you rest for a month");
-			a.average -= 3;
+			System.out.println("you had to be hospitalized for malnutrition and sleep deprivation. your mom makes you rest for a month\n");
+ 			a.average -= 3;
 			a.mental -= 5;
 			a.physical -= 10; 
 		    } 
 		}
 		else {
-		    System.out.print("you got a zero");
+		    System.out.print("you got a zero\n");
 		    a.average -= 5; 
 		}
 	    }   
 	}
 	else {
-	    System.out.print("you got a zero");
+	    System.out.print("you got a zero\n");
 	    a.average -= 5; 
 	} 
     }
