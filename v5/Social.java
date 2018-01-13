@@ -6,10 +6,10 @@ public class Social {
     //private in = new BufferedReader( isr );
 
     public static void friend(Student player) {
-      int choiceF = (int)(Math.random() * 3);
+      int choiceF = (int)(Math.random() * 2);
       double choice = Math.random();
       NPC currFriend = Woo.yourFriends[choiceF];
-
+      System.out.println(choiceF);
       System.out.println("Your friend is:");
       System.out.println(currFriend + "\n");
 

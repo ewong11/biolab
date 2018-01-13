@@ -16,5 +16,5 @@ public class Friend extends NPC {
 else
     return "blood bonded sibwings";
   }
-  
+
 }

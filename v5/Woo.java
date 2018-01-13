@@ -171,7 +171,9 @@ public class Woo {
     //Making friends
     int friendgen = (int)(Math.random() * 6);
     friend1 = new Friend(NAMES[friendgen]);
+    int friendgen = (int)(Math.random() * 6);
     friend2 = new Friend(NAMES[friendgen]);
+    int friendgen = (int)(Math.random() * 6);
     friend2 = new Friend(NAMES[friendgen]);
     yourFriends = new Friend[3];
     yourFriends[0] = friend1;
@@ -253,11 +255,11 @@ public class Woo {
           if(luck < 0.45)
           Social.friend(player);
           else if (luck < 0.5)
-          Social.eatOut(player);
+          Social.eatOut();
           else if (luck < 0.55)
-          Social.birthday(player);
+          Social.birthday();
           else
-          Social.rumors(player);
+          Social.rumors();
         }
         else if (luck < 0.8){
           //Personal

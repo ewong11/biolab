@@ -141,6 +141,7 @@ public class Personal {
         System.out.println(s);
       }
     }
+
     public static void blindDate() {
     }
     public static void sick() {
