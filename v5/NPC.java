@@ -7,7 +7,6 @@ public class NPC extends Character{
       name = n;
     }
 
-    public int type;
     public String name;
     public double friendship;
     public int health;

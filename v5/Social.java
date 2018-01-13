@@ -5,7 +5,7 @@ public class Social {
     //   private isr = new InputStreamReader( System.in );
     //private in = new BufferedReader( isr );
 
-    public static void friend() {
+    public static void friend(Student player) {
       int choiceF = (int)(Math.random() * 3);
       double choice = Math.random();
       NPC currFriend = Woo.yourFriends[choiceF];
