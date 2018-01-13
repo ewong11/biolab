@@ -332,12 +332,7 @@ public class Academic {
 		    System.out.print("you got a zero");
 		    a.average -= 5; 
 		}
-	    } 
-	    else if (ans == 2) {
-	    }
-	    else {
-	    }
-	    
+	    }   
 	}
 	else {
 	    System.out.print("you got a zero");
