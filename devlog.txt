@@ -41,7 +41,7 @@ maybe some of these will move into the Obs.Ovrcm section...
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<wow! oo! etc!...>
+
 toString() can only be used to print out an instance of the class its in
 - defines how the current class is printed
 - i learned this from my sister, a former student of yours!
@@ -50,8 +50,7 @@ toString() can only be used to print out an instance of the class its in
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We changed ___ to ___ bc...
-<etc>
-<etc>
+
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -69,7 +68,7 @@ LESSONS LEARNED
 
 2018-01-12
 --------------------------------------------------------------
-eric :: i fixed FindClass()
+eric :: fixed FindClass and fixed indentation in all classes
 susan :: took a nap
 kaitlin :: took a nap
 ==============================================================
