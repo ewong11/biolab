@@ -4,21 +4,18 @@ import java.util.*;
 public class Social {
     private static InputStreamReader isr;
     private static BufferedReader in;
-
+    //Readers
 
     public static void friend(Student player) {
       isr = new InputStreamReader( System.in );
       in = new BufferedReader( isr );
+      //Chooses whcih friend to interact with
       int choiceF = (int)(Math.random() * 3);
+      //References friend with currFriend
 
-      Friend currFriend = Woo.yourFriends[choiceF];
-      System.out.println(choiceF);
-      System.out.println("Your friend is:");
-      System.out.println(currFriend + "\n");
-
-
+      //Which FriendEvent to do?
       double choice = Math.random();
-      if(choice < 0.25){
+      if(choice < 0.33){
 	    String s = "Your friend, " + currFriend +  " waved at you in the hallway! \n";
 	    s+= "\t What would you like to do? \n";
 	    s+= "\t1: Pretend you didn't notice \n";
@@ -47,7 +44,7 @@ public class Social {
 
 
     }
-    else if (choice < 0.5) {
+    else if (choice < 0.66) {
       String s = currFriend + " meets you at your locker and asks if you \nwant to go to help them with their homework after school.";
 	    s+= "\n What do you do?";
 	    s+= "\t1: No. I can't sorry. I have a lot of work to do\n";
@@ -84,26 +81,49 @@ public class Social {
       catch ( IOException e ) { }
 
     }
-    else if (choice < 0.75) {
-      String s = "";
-	    s+= "\n";
-	    s+= "\t \n";
-	    s+= "\t \n";
-	    s+= "\t1: \n";
-	    s+= "\t2: \n";
-	    s+= "\t3: \n";
-	    System.out.println(s);
-    }
     else{
-      String s = "";
-	    s+= "\n";
-	    s+= "\t \n";
-	    s+= "\t \n";
-	    s+= "\t1: \n";
-	    s+= "\t2: \n";
-	    s+= "\t3: \n";
+      String s = currFriend + "has a new significant other...";
+	    s+= "\n Recently, you've been neglected by the couple";
+	    s+= "\n and when you do get together, you're the third wheel.";
+	    s+= "\n What do you do?";
+	    s+= "\t1: Confront " + currFriend + "\n";
+	    s+= "\t2: Stop hanging out with them all together\n";
+	    s+= "\t3: You're not bothered by this.\n";
 	    System.out.println(s);
+
+      int ans = 0;
+
+      try {
+        ans = Integer.parseInt( in.readLine() );
+        if (ans == 2){
+          System.out.println(currFriend + " is a little offended and will \nremember your actions....");
+          if currFriend.friendship < 1{
+            currFriend.friendship = 0;
+          }
+          else
+            currFriend.friendship -=;
+        }
+        else if (ans == 3){
+          System.out.println(currFriend + " finishes their homework and gets 100!\nThey owe it all to you :)");
+          currFriend.friendship += 1.5;
+        }
+
+        else{
+          double caughtChance = Math.random();
+          if(caughtChance < 0.3){
+          System.out.println(currFriend + " gets caught copying your homework... \nYour average goes down 5 points but you and " + currFriend + " are closer than ever!");
+          player.average -= 5;
+          currFriend.friendship += 2;
+        }
+        else{
+          System.out.println(currFriend + " appreciates you.");
+          currFriend.friendship += 2;
+        }
+      }
+      }
+      catch ( IOException e ) { }
     }
+
     }
     public static void eatOut() {
 	String s = "";
