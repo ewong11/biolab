@@ -1,6 +1,25 @@
 public class NPC extends Character{
+
+    public NPC(){
+    }
+    public NPC(int t, String n){
+      this();
+      name = n;
+      type = t;
+    }
+
+    public int type;
+    public String name;
     public int friendship;
     public int health;
+
+    public String getName(){
+      return name;
+    }
+
+    public void setName(String n){
+      name = n;
+    }
 
     public int getFriendship(){
 	return friendship;

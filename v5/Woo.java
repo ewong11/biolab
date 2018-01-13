@@ -11,12 +11,15 @@ public class Woo {
   public static double luck;
   private int score;
   public static int maxE;
+  public static NPC[] yourFriends;
+  public NPC friend1;
+  public NPC friend2;
+  public NPC friend3;
 
   private InputStreamReader isr;
   private BufferedReader in;
 
   final String[] NAMES = {"Joe", "Gaby", "Buford", "Edith", "Arnold", "Kat"}; //possible names for NPCS
-
   //---------------------------------------------------------
 
   public Woo() {
@@ -146,7 +149,16 @@ public class Woo {
     }
 
     System.out.println(player.getSched());
-    System.out.println("====================="); 
+    System.out.println("=====================");
+    //Making Friends
+    int friendgen = (int)(Math.random() * 6);
+    friend1 = new NPC(1, NAMES[friendgen]);
+    friend2 = new NPC(1, NAMES[friendgen]);
+    friend2 = new NPC(1, NAMES[friendgen]);
+    yourFriends = new NPC[3];
+    yourFriends[0] = friend1;
+    yourFriends[1] = friend2;
+    yourFriends[2] = friend3;
 
   }
   //sims a day, out of a possible 180 - we can put the methods in another class
@@ -160,7 +172,7 @@ public class Woo {
     //FindClass run = new FindClass();
     //run.runToClass(player);
     //System.out.println(player.average);
-    
+
     if(!player.isDead()){
       System.out.println(luck);
       System.out.println("Good Morning " + player.name + "!");
@@ -249,6 +261,7 @@ public class Woo {
           else
           Other.urbex();
         }
+        luck = Math.random();
         eNum+= 1;
       }
 
