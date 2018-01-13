@@ -2,10 +2,9 @@ public class NPC extends Character{
 
     public NPC(){
     }
-    public NPC(int t, String n){
+    public NPC(String n){
       this();
       name = n;
-      type = t;
     }
 
     public int type;
@@ -22,12 +21,12 @@ public class NPC extends Character{
       name = n;
     }
 
-    public int getFriendship(){
-	return friendship;
+    public double getFriendship(){
+	     return friendship;
     }
 
     public void setFriendship(double n){
-	friendship = n;
+	     friendship = n;
     }
 
     public boolean isDead(){

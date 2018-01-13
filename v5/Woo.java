@@ -170,9 +170,9 @@ public class Woo {
     System.out.println("=====================");
     //Making friends
     int friendgen = (int)(Math.random() * 6);
-    friend1 = new NPC(1, NAMES[friendgen]);
-    friend2 = new NPC(1, NAMES[friendgen]);
-    friend2 = new NPC(1, NAMES[friendgen]);
+    friend1 = new NPC(NAMES[friendgen]);
+    friend2 = new NPC(NAMES[friendgen]);
+    friend2 = new NPC(NAMES[friendgen]);
     yourFriends = new NPC[3];
     yourFriends[0] = friend1;
     yourFriends[1] = friend2;
