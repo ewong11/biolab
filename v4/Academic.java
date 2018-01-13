@@ -1,11 +1,14 @@
+import java.io.*;
+import java.util.*;
+
 public class Academic {
-    public void test() {
+    public static void test() {
     }
-    public void quiz() {
+    public static void quiz() {
     }
-    public void project() {
+    public static void project() {
     }
-    public void sleep() {
+    public static void sleep() {
     }
     
 } 

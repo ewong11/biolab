@@ -3,7 +3,7 @@ public class Scholar extends Student {
 	intel = 95;
 	friendCount = 1;
 	average = 100.0;
-	sleep = 40;
+	sleep = 8.0;
 	mental = 75;
 	physical = 25;
 	charisma = 25;

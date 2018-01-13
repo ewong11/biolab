@@ -41,21 +41,20 @@ maybe some of these will move into the Obs.Ovrcm section...
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<wow! oo! etc!...>
+
+toString() can only be used to print out an instance of the class its in
+- defines how the current class is printed
+- i learned this from my sister, a former student of yours!
+
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We changed ___ to ___ bc...
-<etc>
-<etc>
+
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <tales of wisdom gained...>
-||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
 
  ______   ______   __   __   __       ______   _______
 /_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\
@@ -67,6 +66,7 @@ LESSONS LEARNED
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
+<<<<<<< HEAD
 2018-01-11
 --------------------------------------------------------------
 eric :: worked on FindClass
@@ -75,6 +75,16 @@ susan :: worked on Events w/ Kaitlin @CSDojo
 kaitlin :: worked on Events w/ Susan @CsDojo
 ==============================================================
 
+=======
+2018-01-12
+--------------------------------------------------------------
+eric :: fixed FindClass and fixed indentation in all classes
+susan :: took a nap
+kaitlin :: took a nap
+==============================================================
+
+
+>>>>>>> d3fdee9325622a1f08619a8464733692caaefabf
 2018-01-10
 --------------------------------------------------------------
 eric :: planned events with Susan

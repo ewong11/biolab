@@ -23,15 +23,65 @@ this one is tricky :(
 9. C
 10. D
 
+<<<<<<< HEAD
 11. Write method nextTankToFill
+=======
+11a. Write method nextTankToFill
+>>>>>>> d3fdee9325622a1f08619a8464733692caaefabf
 returns index of the next nextTankToFill
 
 public int nextTankToFill(int threshold){
   int smallestTank;
   smallestTank = threshold;
   for(int i = 0; i < tanks.length(); i++){
+<<<<<<< HEAD
     if (List.get(i) < smallestTank){
       smallestTank = i;
     }
   }
 }
+=======
+    if (tanks.get(i) < smallestTank){
+      smallestTank = i;
+    }
+  }
+  if (threshold < tanks.get(smallestTank)){
+     return filler.getCurrentIndex();
+  }
+  else{
+    return smallestTank;
+  }
+}
+
+11b. Move Forward only (Change Direction)
+moves to given tank location do NOT move past the getCurrentIndex
+
+public void moveToLocation(int locIndex){
+  if((0 <= locIndex) && (locIndex <= tanks.size()){
+  int preLoc = filler.getCurrentIndex();
+  int moves = abs(preLoc - locIndex);
+
+  // filler.isFacingRight(); = true -- go up index
+  // filler.isFacingRight(); = face -- go down index
+
+  if(locIndex > preLoc){
+    if(filler.isFacingRight() == false){
+      filler.changeDirection();
+    }
+    filler.moveForward(moves);
+  }
+
+  if(locIndex < preLoc){
+    if(filler.isFacingRight() == true){
+      filler.changeDirection();
+    }
+    filler.moveForward(moves);
+  }
+  }
+  else{
+    System.out.println("Invaild input.")
+  }
+  }
+
+  12a.
+>>>>>>> d3fdee9325622a1f08619a8464733692caaefabf

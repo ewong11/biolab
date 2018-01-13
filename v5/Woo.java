@@ -4,7 +4,7 @@ import java.util.*;
 public class Woo {
 
   // instance variables -----------------------------------
-  public private player;
+  protected Student player;
   private NPC npc1;
 
   public int days;
@@ -146,15 +146,21 @@ public class Woo {
     }
 
     System.out.println(player.getSched());
-    System.out.println("==================");
+    System.out.println("====================="); 
+
   }
   //sims a day, out of a possible 180 - we can put the methods in another class
   public boolean simDay() {
+    luck = Math.random();
+    //System.out.println(player.average);
     //Lunch lunch = new Lunch();
     //Events event = new Events();
     //event.impressCrush(player);
     //lunch.play(player);
-    luck = Math.random();
+    //FindClass run = new FindClass();
+    //run.runToClass(player);
+    //System.out.println(player.average);
+    
     if(!player.isDead()){
       System.out.println(luck);
       System.out.println("Good Morning " + player.name + "!");
@@ -200,13 +206,13 @@ public class Woo {
         else if (luck < 0.4){
           //Academic
           if(luck < 0.25)
-          Academic.test();
+          Academic.test(player);
           else if (luck < 0.3)
-          Academic.quiz();
+          Academic.quiz(player);
           else if (luck < 0.35)
-          Academic.project();
+          Academic.project(player);
           else
-          Academic.sleep();
+          Academic.sleep(player);
         }
 
         else if (luck < 0.6){

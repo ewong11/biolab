@@ -6,7 +6,7 @@ public class Normal extends Student{
 	intel = 50;
 	friendCount = 5;
 	average = 100.0;
-	sleep = 75.0;
+	sleep = 10.0;
 	mental = 75;
 	physical = 50;
 	charisma = 50;
