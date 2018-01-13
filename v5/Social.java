@@ -104,20 +104,18 @@ public class Social {
             currFriend.friendship -=;
         }
         else if (ans == 3){
-          System.out.println(currFriend + " finishes their homework and gets 100!\nThey owe it all to you :)");
-          currFriend.friendship += 1.5;
+          System.out.println("Nothing Happens.");
         }
 
         else{
           double caughtChance = Math.random();
-          if(caughtChance < 0.3){
-          System.out.println(currFriend + " gets caught copying your homework... \nYour average goes down 5 points but you and " + currFriend + " are closer than ever!");
-          player.average -= 5;
-          currFriend.friendship += 2;
+          if(currFriend.friendship < 2){
+          System.out.println(currFriend + " understands your situation. \nYour friendship goes up!");
+          currFriend.friendship += 0.5;
         }
         else{
-          System.out.println(currFriend + " appreciates you.");
-          currFriend.friendship += 2;
+          System.out.println(currFriend + " is angered...");
+          currFriend.friendship -= 1;
         }
       }
       }
@@ -126,7 +124,7 @@ public class Social {
 
     }
     public static void eatOut() {
-	String s = "";
+	String s = "EATING OUT TONIGHT!!!?!";
 	s+= "\n";
 	s+= "\t \n";
 	s+= "\t \n";
@@ -136,19 +134,19 @@ public class Social {
 	System.out.println(s);
     }
     public static void birthday() {
-	/*	String s = "";
-	s+= "HAPPY BIRTHDAY BUD! *cue scanner song\n";
-	s+= "\tYou're officially 15\n";
-	s+= "\tWhat would you like to do today: \n";
-	s+= "\t1: play hooky and go to Wok Wok! \n";
-	s+= "\t2: do nothing. school is still a thing for you :( \n";
-	s+= "\t3: \n";
+      /*String s = "";
+      s+= "HAPPY BIRTHDAY BUD! *cue scanner song\n";
+      s+= "\tYou're officially 15\n";
+      s+= "\tWhat would you like to do today: \n";
+      s+= "\t1: play hooky and go to Wok Wok! \n";
+      s+= "\t2: do nothing. school is still a thing for you :( \n";
+      s+= "\t3: Convince your teacher not to assign you homework\n";
 	System.out.println(s);
 
 	String ans = in.readLine(); */
     }
     public static void rumors() {
-	String s = "";
+	String s = "THERE'S A RUMOR GOING AROUND?!";
 	s+= "\n";
 	s+= "\t \n";
 	s+= "\t \n";
