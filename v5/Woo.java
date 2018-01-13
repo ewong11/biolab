@@ -147,6 +147,8 @@ public class Woo {
 
     System.out.println(player.getSched());
     System.out.println("==================");
+
+     Academic.test(player);
   }
   //sims a day, out of a possible 180 - we can put the methods in another class
   public boolean simDay() {
@@ -205,13 +207,13 @@ public class Woo {
         else if (luck < 0.4){
           //Academic
           if(luck < 0.25)
-          Academic.test();
+          Academic.test(player);
           else if (luck < 0.3)
-          Academic.quiz();
+          Academic.quiz(player);
           else if (luck < 0.35)
-          Academic.project();
+          Academic.project(player);
           else
-          Academic.sleep();
+          Academic.sleep(player);
         }
 
         else if (luck < 0.6){
