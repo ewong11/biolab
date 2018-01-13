@@ -151,14 +151,15 @@ public class Woo {
   //sims a day, out of a possible 180 - we can put the methods in another class
   public boolean simDay() {
     luck = Math.random();
-    System.out.println(player.average);
+    //System.out.println(player.average);
     //Lunch lunch = new Lunch();
     //Events event = new Events();
     //event.impressCrush(player);
     //lunch.play(player);
-    FindClass run = new FindClass();
-    run.runToClass(player);
-    System.out.println(player.average);
+    //FindClass run = new FindClass();
+    //run.runToClass(player);
+    //System.out.println(player.average);
+    
     if(!player.isDead()){
       System.out.println(luck);
       System.out.println("Good Morning " + player.name + "!");
