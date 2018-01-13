@@ -146,9 +146,8 @@ public class Woo {
     }
 
     System.out.println(player.getSched());
-    System.out.println("==================");
+    System.out.println("====================="); 
 
-     Academic.test(player);
   }
   //sims a day, out of a possible 180 - we can put the methods in another class
   public boolean simDay() {
