@@ -2,6 +2,7 @@ public class Friend extends NPC {
 
   public Friend(String n) {
     name = n;
+    friendship = 0;
   }
 
   public String friendLev() {
