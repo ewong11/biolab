@@ -126,7 +126,7 @@ public class Academic {
 	}
 	catch (IOException e) {}
 	if (ans == 2) { 
-	    score += 20;
+	    score += 50;
 	    System.out.println("mr. brown is supa pwoud");
 	}
 	else
@@ -143,7 +143,7 @@ public class Academic {
 	catch (IOException e) {}
 
 	if (ans == 1) {
-	    score += 20;
+	    score += 50;
 	    System.out.println("you're right!!!!");
 	}
 	else
@@ -384,7 +384,7 @@ public class Academic {
 		    System.out.println("woo! you can do the rest at lunch. congrats, you've survived\n");
 		    a.sleep += 6; 
 		} 
-		else if (ans == ) {
+		else if (ans == 2) {
 		    System.out.println("oh no, your other classes came first\n");
 		    a.average -= 1;
 		    a.sleep += 4; 
