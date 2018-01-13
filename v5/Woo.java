@@ -171,9 +171,9 @@ public class Woo {
     //Making friends
     int friendgen = (int)(Math.random() * 6);
     friend1 = new Friend(NAMES[friendgen]);
-    int friendgen = (int)(Math.random() * 6);
+    friendgen = (int)(Math.random() * 6);
     friend2 = new Friend(NAMES[friendgen]);
-    int friendgen = (int)(Math.random() * 6);
+    friendgen = (int)(Math.random() * 6);
     friend2 = new Friend(NAMES[friendgen]);
     yourFriends = new Friend[3];
     yourFriends[0] = friend1;
