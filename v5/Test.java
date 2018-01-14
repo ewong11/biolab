@@ -53,7 +53,7 @@ public class Test {
     player = new Normal("Player");
     crush = new Crush("Crush");
     Personal personal = new Personal();
-    personal.sick(player);
+    personal.nap(player);
     return true;
   }
     //System.out.println(player.average);

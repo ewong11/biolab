@@ -367,7 +367,7 @@ public class Personal {
                     s += "\nThere's no way you can go to school today...";
                     s += "\n1. I need perfect attendance...to school it is!";
                     s += "\n2. Yea, I need a mental health day anyways.";
-                    s += "\n3. I'm gonna go see a doctor!";
+                    s += "\n3. I'm gonna go see me a doctor!";
                     System.out.println(s);
 
                     try {
@@ -380,9 +380,9 @@ public class Personal {
                           s = "You go to school, but you're so sick that you can't focus...";
                           s += "\nWhat's worse, you spread the sickness to your close friends...";
                           a.physical -= 20;
-                          //b.friendship -= .3;
-                          //c.friendship -= .3;
-                          //d.friendship -= .3;
+                          b.friendship -= .3;
+                          c.friendship -= .3;
+                          d.friendship -= .3;
                         }
                         else {
                           s = "You feel a bit worse and you can't really focus in class.";
@@ -413,7 +413,56 @@ public class Personal {
                       System.out.println(s);
                     }
 
-                        public static void nap() {
-                        }
+                    public static void nap(Student a) {
+                      isr = new InputStreamReader( System.in );
+                      in = new BufferedReader( isr );
+                      String input = "";
+                      String s = "";
+                      int time = 0;
+                      boolean ans = false;
+                      s = "You feel a bit tired, would you like to take a nap? (y/n)";
+                      System.out.println(s);
+                      try {
+                        input = in.readLine();
+                      }
+                      catch (IOException e) {}
 
+                        while (ans == false) {
+                          if(input.equals("y")) {
+                            s = "For how long?";
+                            s += "\nEnter an integer value in minutes:";
+                            System.out.println(s);
+                            try {
+                              time = Integer.parseInt(in.readLine());
+                            }
+                            catch (IOException e) {}
+                              if (time > 180) {
+                                s = "Thats a lot of minutes...";
+                                s += "This is a nap, you know.";
+                              }
+                              else if (a.sleep < 5 && Math.random() > .5) {
+                                s = "Oh no! You missed your alarm!";
+                                s += "\nYou couldn't get any work done, but at least you got enough sleep!";
+                                a.sleep += 8;
+                                a.physical += 20;
+                                a.mental += 20;
+                                a.average -= 2.5;
+                                ans = true;
+                              }
+                              else {
+                                s = "You took a nap for " + time + " minutes!";
+                                a.sleep += (time/60);
+                                a.average -= (time*.01);
+                                a.mental += (time*.1);
+                                a.physical += (time*.1);
+                                ans = true;
+                              }
+                            }
+                            else {
+                              s = "That's okay, naps aren't for everyone!";
+                              ans = true;
+                            }
+                            System.out.println(s);
+                          }
+                        }
                       }
