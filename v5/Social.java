@@ -12,7 +12,7 @@ public class Social {
       //Chooses whcih friend to interact with
       int choiceF = (int)(Math.random() * 3);
       //References friend with currFriend
-
+      Friend currFriend = Woo.yourFriends[choiceF];
       //Which FriendEvent to do?
       double choice = Math.random();
       if(choice < 0.33){
@@ -97,13 +97,13 @@ public class Social {
         ans = Integer.parseInt( in.readLine() );
         if (ans == 2){
           System.out.println(currFriend + " is a little offended and will \nremember your actions....");
-          if currFriend.friendship < 1{
+          if (currFriend.friendship < 1) {
             currFriend.friendship = 0;
           }
           else
-            currFriend.friendship -=;
+            currFriend.friendship -= .3;
         }
-        else if (ans == 3){
+        else if (ans == 3) {
           System.out.println("Nothing Happens.");
         }
 

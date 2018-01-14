@@ -5,11 +5,11 @@ import java.util.ArrayList;
 public class Woo {
 
     // instance variables -----------------------------------
-    private Student player;
+    protected Student player;
     private Crush crush;
     private NPC npc1;
 
-    public int days;
+    public static int days;
     public static double luck;
     private int score;
     public static int maxE;
@@ -248,14 +248,14 @@ public class Woo {
           let = in.readLine();
           if(let == "Y"){
             System.out.println("Fortune: ");
-	    System.out.print(FORTUNES[(int)(Math.random() * 17)]); 
+	    System.out.print(FORTUNES[(int)(Math.random() * 17)]);
           }
 
         }
         else if (ans == 2){
 	    System.out.println("Fortune: ");
-	    System.out.print(FORTUNES[(int)(Math.random() * 17)]); 
-          
+	    System.out.print(FORTUNES[(int)(Math.random() * 17)]);
+
         }
         //IMPLEMENT LATER :))
         else
@@ -296,6 +296,7 @@ public class Woo {
           Social.rumors();
         }
 
+
         else if (luck < 0.8){
           //Personal
           if(luck < 0.65)
@@ -303,7 +304,7 @@ public class Woo {
           else if (luck < 0.7)
           Personal.date(player, crush);
           else if (luck < 0.75)
-          Personal.sick();
+          Personal.sick(player);
           else
           Personal.nap();
         }
@@ -327,10 +328,6 @@ public class Woo {
     return false;
   }
 
-
-  public static double getLuck() {
-    return luck;
-  }
 
   public static void main(String[] args) {
     Woo game = new Woo();
