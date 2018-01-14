@@ -37,6 +37,7 @@ public class Woo {
     String s;
     String name = "";
     String cname = "";
+    boolean datenight = false;
     //these variables will determine the type of person you are
     int intelligence = 0;
     int social = 0;
