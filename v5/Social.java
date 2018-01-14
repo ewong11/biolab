@@ -97,13 +97,21 @@ public class Social {
         ans = Integer.parseInt( in.readLine() );
         if (ans == 2){
           System.out.println(currFriend + " is a little offended and will \nremember your actions....");
+<<<<<<< HEAD
           if (currFriend.friendship < 1){
             currFriend.friendship = 0;
           }
           else
             currFriend.friendship -= 1;
+=======
+          if (currFriend.friendship < 1) {
+            currFriend.friendship = 0;
+          }
+          else
+            currFriend.friendship -= .3;
+>>>>>>> a3bc23a7e87fe2f0e3996333f214a7bf5e1d652c
         }
-        else if (ans == 3){
+        else if (ans == 3) {
           System.out.println("Nothing Happens.");
         }
 

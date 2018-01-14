@@ -483,13 +483,13 @@ public class Academic {
 		a.physical += 1; 
 	    }
 	    else if (ans == 2) {
-		System.out.println("sigh......");
+		System.out.println("sigh......the effort drains you but at least the show went on");
 		a.mental -= 1;
 		a.charisma -= 1;
 		a.physical -= 1; 
 	    }
 	    else {
-		System.out.println("you poor soul.");
+		System.out.println("you poor soul. you'll be alright");
 		a.mental -= 1;
 		a.physical -= 1;
 		a.sleep += 1;

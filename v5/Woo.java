@@ -4,25 +4,45 @@ import java.util.ArrayList;
 
 public class Woo {
 
-  // instance variables -----------------------------------
-  private Student player;
-  private Crush crush;
-  private NPC npc1;
+    // instance variables -----------------------------------
+    protected Student player;
+    private Crush crush;
+    private NPC npc1;
 
-  public int days;
-  public static double luck;
-  private int score;
-  public static int maxE;
-  public static Friend[] yourFriends;
-  public Friend friend1;
-  public Friend friend2;
-  public Friend friend3;
+    public static int days;
+    public static double luck;
+    private int score;
+    public static int maxE;
+    public static Friend[] yourFriends;
+    public Friend friend1;
+    public Friend friend2;
+    public Friend friend3;
+    public static boolean datenight = false;
 
-  private InputStreamReader isr;
-  private BufferedReader in;
 
-  final String[] NAMES = {"Joe", "Gaby", "Buford", "Edith", "Arnold", "Kat"}; //possible names for NPCS
-  //---------------------------------------------------------
+    private InputStreamReader isr;
+    private BufferedReader in;
+
+    final String[] NAMES = {"Joe", "Gaby", "Buford", "Edith", "Arnold", "Kat"}; //possible names for NPCS
+
+    final String[] FORTUNES = {"a friend asks only for your time, not your money\n",
+			       "you learn from your mistakes. you will learn a lot today\n",
+			       "if you have something good in your life, don't let it go!\n",
+			       "your shoes will make you a very happy person today\n",
+			       "meeting adversary well is the source of your strength\n",
+			       "it is now, and in this world, that we must live so live well.\n",
+			       "you already know the answers to the questions lingering in your head\n",
+			       "the greatest risk is not taking one\n",
+			       "it's better to be alone sometimes\n",
+			       "when hungry, order more Chinese food\n",
+			       "all of your fingers can't be of the same length\n",
+			       "patience is a virtue unless it is against a brick wall \n",
+			       "the most important part of communication is hearing what isn't said\n",
+			       "a different world cannot be built by indifferent people",
+			       "you are not illiterate",
+			       "this project will wow you",
+			       "let your heart decide. it doesn't get as easily confused as your head\n"};
+    //---------------------------------------------------------
 
   public Woo() {
     days = 0;
@@ -189,10 +209,13 @@ public class Woo {
     yourFriends[0] = friend1;
     yourFriends[1] = friend2;
     yourFriends[2] = friend3;
+
   }
   //sims a day, out of a possible 180 - we can put the methods in another class
   public boolean simDay() {
     luck = Math.random();
+    Personal personal = new Personal();
+    personal.date(player, crush);
     //System.out.println(player.average);
     //Lunch lunch = new Lunch();
     //Events event = new Events();
@@ -225,11 +248,14 @@ public class Woo {
           let = in.readLine();
           if(let == "Y"){
             System.out.println("Fortune: ");
+	    System.out.print(FORTUNES[(int)(Math.random() * 17)]);
           }
 
         }
         else if (ans == 2){
-          System.out.println("Fortune: ");
+	    System.out.println("Fortune: ");
+	    System.out.print(FORTUNES[(int)(Math.random() * 17)]);
+
         }
         //IMPLEMENT LATER :))
         else
@@ -269,27 +295,29 @@ public class Woo {
           else
           Social.rumors();
         }
+
+
         else if (luck < 0.8){
           //Personal
           if(luck < 0.65)
           Personal.netflix(player, crush);
           else if (luck < 0.7)
-          Personal.blindDate();
+          Personal.date(player, crush);
           else if (luck < 0.75)
-          Personal.sick();
+          Personal.sick(player);
           else
           Personal.nap();
         }
         else{
           //Other
           if(luck < 0.85)
-          Other.MTA();
+          Other.MTA(player);
           else if (luck < 0.9)
-          Other.allNighter();
+          Other.allNighter(player);
           else if (luck < 0.95)
-          Other.soulCycle();
+          Other.soulCycle(player);
           else
-          Other.urbex();
+          Other.urbex(player);
         }
         eNum+= 1;
         luck = Math.random();
@@ -300,10 +328,6 @@ public class Woo {
     return false;
   }
 
-
-  public static double getLuck() {
-    return luck;
-  }
 
   public static void main(String[] args) {
     Woo game = new Woo();

@@ -66,16 +66,13 @@ LESSONS LEARNED
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-<<<<<<< HEAD
-2018-01-11
+2018-01-13 (met in person!!) 
 --------------------------------------------------------------
-eric :: worked on FindClass
-{Eric missed CSDojo bc practice he doesn't want to get cut :( }
-susan :: worked on Events w/ Kaitlin @CSDojo
-kaitlin :: worked on Events w/ Susan @CsDojo
+eric :: completed two methods of class Personal
+susan :: completed three methods of class Academics
+kaitlin :: made Friends class and began work on class Social
 ==============================================================
 
-=======
 2018-01-12
 --------------------------------------------------------------
 eric :: fixed FindClass and fixed indentation in all classes
@@ -83,8 +80,14 @@ susan :: took a nap
 kaitlin :: took a nap
 ==============================================================
 
+2018-01-11
+--------------------------------------------------------------
+eric :: worked on FindClass
+{Eric missed CSDojo bc practice he doesn't want to get cut :( }
+susan :: worked on implementation of Events w/ Kaitlin @CSDojo
+kaitlin :: worked on implementation Events w/ Susan @CsDojo
+==============================================================
 
->>>>>>> d3fdee9325622a1f08619a8464733692caaefabf
 2018-01-10
 --------------------------------------------------------------
 eric :: planned events with Susan
@@ -124,10 +127,12 @@ kaitlin :: created NPC.java
 --------------------------------------------------------------
 eric :: revised proposal accordingly; started uml diagram
 susan :: revised proposal accordingly; uploaded uml to repo
+kaitlin :: took a nap 
 ==============================================================
 
 2018-01-02
 --------------------------------------------------------------
 eric :: brainstormed ideas; added classes/instance variables
 susan :: brainstormed ideas; added instantiation values for attributes
+kaitlin :: took a nap 
 ==============================================================
