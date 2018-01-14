@@ -46,7 +46,7 @@ public class Social {
     }
     else if (choice < 0.66) {
       String s = currFriend + " meets you at your locker and asks if you \nwant to go to help them with their homework after school.";
-	    s+= "\n What do you do?";
+	    s+= "\n What do you do? \n";
 	    s+= "\t1: No. I can't sorry. I have a lot of work to do\n";
 	    s+= "\t2: Sure! I gotcha!\n";
 	    s+= "\t3: You can just copy mine!\n";
@@ -82,10 +82,10 @@ public class Social {
 
     }
     else{
-      String s = currFriend + "has a new significant other...";
-	    s+= "\n Recently, you've been neglected by the couple";
-	    s+= "\n and when you do get together, you're the third wheel.";
-	    s+= "\n What do you do?";
+      String s = currFriend + " has a new significant other...";
+	    s+= "\nRecently, you've been neglected by the couple";
+	    s+= "\nand when you do get together, you're the third wheel.";
+	    s+= "\nWhat do you do?";
 	    s+= "\t1: Confront " + currFriend + "\n";
 	    s+= "\t2: Stop hanging out with them all together\n";
 	    s+= "\t3: You're not bothered by this.\n";
@@ -97,11 +97,19 @@ public class Social {
         ans = Integer.parseInt( in.readLine() );
         if (ans == 2){
           System.out.println(currFriend + " is a little offended and will \nremember your actions....");
+<<<<<<< HEAD
+          if (currFriend.friendship < 1){
+            currFriend.friendship = 0;
+          }
+          else
+            currFriend.friendship -= 1;
+=======
           if (currFriend.friendship < 1) {
             currFriend.friendship = 0;
           }
           else
             currFriend.friendship -= .3;
+>>>>>>> a3bc23a7e87fe2f0e3996333f214a7bf5e1d652c
         }
         else if (ans == 3) {
           System.out.println("Nothing Happens.");
