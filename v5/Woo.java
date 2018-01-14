@@ -17,6 +17,8 @@ public class Woo {
   public Friend friend1;
   public Friend friend2;
   public Friend friend3;
+  public static boolean datenight = false;
+
 
   private InputStreamReader isr;
   private BufferedReader in;
@@ -37,7 +39,6 @@ public class Woo {
     String s;
     String name = "";
     String cname = "";
-    boolean datenight = false;
     //these variables will determine the type of person you are
     int intelligence = 0;
     int social = 0;
@@ -179,7 +180,7 @@ public class Woo {
     System.out.println(crush.name);
     System.out.println("=====================");
     //Making friends
-
+/*
     int friendgen = (int)(Math.random() * 6);
     friend1 = new Friend(NAMES[friendgen]);
     friendgen = (int)(Math.random() * 6);
@@ -190,10 +191,13 @@ public class Woo {
     yourFriends[0] = friend1;
     yourFriends[1] = friend2;
     yourFriends[2] = friend3;
+    */
   }
   //sims a day, out of a possible 180 - we can put the methods in another class
   public boolean simDay() {
     luck = Math.random();
+    Personal personal = new Personal();
+    personal.date(player, crush);
     //System.out.println(player.average);
     //Lunch lunch = new Lunch();
     //Events event = new Events();
@@ -257,7 +261,7 @@ public class Woo {
           else
           Academic.sleep(player);
         }
-
+/*
         else if (luck < 0.6){
           //Social
           //friend // eatOut // brithday // rumors
@@ -270,12 +274,13 @@ public class Woo {
           else
           Social.rumors();
         }
+        */
         else if (luck < 0.8){
           //Personal
           if(luck < 0.65)
           Personal.netflix(player, crush);
           else if (luck < 0.7)
-          Personal.blindDate();
+          Personal.date(player, crush);
           else if (luck < 0.75)
           Personal.sick();
           else

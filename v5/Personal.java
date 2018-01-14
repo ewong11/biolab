@@ -144,7 +144,7 @@ public class Personal {
     public static void date(Student a, Crush b) {
       String input = "";
       if (b.friendship > 2.5);
-      String s = b.date + " asks you out on a 'date'";
+      String s = b.name + " asks you out on a 'date'";
       s += "\nDo you want to go? (y/n)";
       System.out.println(s);
       isr = new InputStreamReader( System.in );
@@ -153,7 +153,7 @@ public class Personal {
       try {
         input = in.readLine();
       }
-      catch (IOException) {}
+      catch (IOException e) {}
         if (input.equals("y")) {
           s = b.name + " asks you where you want to go, and recommends the arcade.";
           s += "\nWhere do you want to go?";
@@ -162,14 +162,12 @@ public class Personal {
           s += "\n3. the movies";
           s += "\n4. actually...I don't really want to go on a date..";
           System.out.println(s);
-        }
-
         try {
-          input = Integer.parseInt(in.readLine());
+          input = in.readLine();
         }
-        catch (IOException) {}
+        catch (IOException e) {}
 
-          if (input == 1) {
+          if (input.equals("1")) {
             s = "You guys go to the arcade!";
             System.out.println(s);
             double chance = Math.random();
@@ -180,14 +178,15 @@ public class Personal {
                 b.friendship += .3;
               }
               else if (Math.random() > .7) {
-                s += b.name + "loses :(." + "\nIn a rage, he knocks over the machine and storms off!";
-                s += "\n Your date ends badly...";
+                s += b.name + " loses :(." + "\nIn a rage, " + b.name + " knocks over the machine and storms off!";
+                s += "\nYour date ends badly...";
                 b.friendship -= .5;
               }
               else {
                 s = "loses, but you guys had a good time nonetheless.";
-                b.frienship += .2;
+                b.friendship += .2;
               }
+              System.out.println(s);
             }
             else if (chance > .5 && chance < .9) {
               s = "\n" + b.name + " faces you in a game of ping pong!";
@@ -197,7 +196,7 @@ public class Personal {
               try {
                 input = in.readLine();
               }
-              catch (IOException) {}
+              catch (IOException e) {}
 
                 if (input.equals("y")) {
                   s = b.name + " seems to notice that you're going easy on him, and seems disinterested...";
@@ -205,7 +204,7 @@ public class Personal {
                   try {
                     input = in.readLine();
                   }
-                  catch (IOException) {}
+                  catch (IOException e) {}
                     if (input.equals("y")) {
                       s = "\n Even though you beat " + b.name +" easily," + b.name;
                       s += "\n gives a sly grin and seems really into it.";
@@ -231,6 +230,7 @@ public class Personal {
                     s += "\n" + b.name + " and you had a great time!";
                     b.friendship += .6;
                   }
+                  System.out.println(s);
                 }
                 else  {
                   if (Woo.luck > .3) {
@@ -244,26 +244,26 @@ public class Personal {
                     }
                     System.out.println(s);
                     try {
-                      input = Integer.parseInt(in.readLine());
+                      input = in.readLine();
                     }
-                    catch (IOException) {}
-                      if (input == 1) {
+                    catch (IOException e) {}
+                      if (input.equals("1")) {
                         s = "The night goes by in a whirlwind and you wake up in a daze...";
                         s += "\nYou don't know what happened...";
                         s += "\nMaybe you should ask!";
                         Woo.datenight = true;
-                        b.relationship += 1;
+                        b.friendship += 1;
                         a.charisma += 10;
                         a.mental -= 5;
                       }
-                      else if (input == 2) {
+                      else if (input.equals("2")) {
                         s = b.name + ": ...";
                         s += "\n" + b.name + " chuckles nervously and you guys keep playing Pac-Man";
                         s += "\n The rest of the night goes by without incident, but ";
                         s += "\n there is an undeniable awkwardness between you two";
                         b.friendship -= 1.2;
                       }
-                      else if (input == 3 && a.charisma > 80) {
+                      else if (input.equals(3) && a.charisma > 80) {
                         s = "You guys have the best night ever";
                         s += "You feel infinitely closer to" + b.name;
                         b.friendship += 2.0;
@@ -281,78 +281,84 @@ public class Personal {
                     System.out.println(s);
                   }
                 }
-                else if (input == 2) {
+                else if (input.equals("2")) {
                   s = b.name + ": ...okay, but I don't really like carnivals.";
                   s += "\nType anything to continue";
-                  in.readLine();
-
-                  if (Math.random() > .6) {
-                    s += "\nIt begins to drizzle, then rain, then pour as the day goes on.";
-                    s += "\nBoth of you are miserable, and " + b.name + "clearly isn't interested.";
-                    s += "\nYou go home dejected and angry for picking the carnival";
-                    b.relationship -= 1;
-                  }
-                  else if (a.charisma > 80) {
-                    s += "\n Even though " + b.name + " doesn't like carnivals, ";
-                    s += "\n your radiant personality makes the whole experience great!";
-                    s += "\n It was a surprisingly good date!";
-                    b.relationship += .5;
-                  }
-                  else {
-                    s += "\n" + b.name + " didn't pay any attention to you and was obviously bored out of his mind.";
-                    s += "\n This was a mistake...";
-                    b.relationship -= .5;
-                  }
-                  System.out.println(s);
-                }
-                else if(input == 3) {
-                  s = "Nothing wrong with a basic date!";
-                  s += "\nWhat do you watch?";
-                  s += "\n1. an action movie";
-                  s += "\n2. a drama";
-                  s += "\n3. a romantic movie";
-                  s += "\n4: a comedy";
-                  System.out.println(s);
-
                   try {
-                    input = Integer.parseInt(in.readLine());
+                    in.readLine();
                   }
-                  catch (IOException) {}
-                    if (input == 1) {
-                      s = "Everyone loves some action!";
-                      a.mental += 5;
-                      b.relationship += .2;
+                  catch (IOException e) {}
+
+                    if (Math.random() > .6) {
+                      s += "\nIt begins to drizzle, then rain, then pour as the day goes on.";
+                      s += "\nBoth of you are miserable, and " + b.name + "clearly isn't interested.";
+                      s += "\nYou go home dejected and angry for picking the carnival";
+                      b.friendship -= 1;
                     }
-                    else if (input == 2) {
-                      s = "Turns out " + b.name + " is really into drama!";
-                      b.relationship += .3;
-                    }
-                    else if (input == 3) {
-                      s = ";)";
-                      s += b.name + " (looks at you weird)";
-                      a.charisma += 20;
+                    else if (a.charisma > 80) {
+                      s += "\n Even though " + b.name + " doesn't like carnivals, ";
+                      s += "\n your radiant personality makes the whole experience great!";
+                      s += "\n It was a surprisingly good date!";
+                      b.friendship += .5;
                     }
                     else {
-                      s = "Comedy it is!";
-                      s += "\nUnfortunately its a cheesy comedy...";
-                      a.charimsa += 10;
-                      a.mental -= 10;
-                      a.intel -= 10;
-                      b.relationship += .2;
+                      s += "\n" + b.name + " didn't pay any attention to you and was obviously bored out of his mind.";
+                      s += "\n This was a mistake...";
+                      b.friendship -= .5;
                     }
                     System.out.println(s);
                   }
-              else {
-                s = b.name + " acts like its no big deal, but you can see the disappointment";
-                s += "\n wash across " + b.name + "'s face...";
-                s += "\n" + b.name + "walks away, leaving you alone.";
-                b.friendship -= 1.5;
-                System.out.println(s);
-              }
+                  else if(input.equals("3")) {
+                    s = "Nothing wrong with a basic date!";
+                    s += "\nWhat do you watch?";
+                    s += "\n1. an action movie";
+                    s += "\n2. a drama";
+                    s += "\n3. a romantic movie";
+                    s += "\n4: a comedy";
+                    System.out.println(s);
 
-              public static void sick() {
-              }
-              public static void nap() {
-              }
+                    try {
+                      input = in.readLine();
+                    }
+                    catch (IOException e) {}
+                      if (input.equals("1")) {
+                        s = "Everyone loves some action!";
+                        s += "You have a good time";
+                        a.mental += 5;
+                        b.friendship += .2;
+                      }
+                      else if (input.equals("2")) {
+                        s = "Turns out " + b.name + " is really into drama!";
+                        b.friendship += .3;
+                      }
+                      else if (input.equals("3")) {
+                        s = ";)";
+                        s += b.name + " (looks at you weird)";
+                        a.charisma += 20;
+                      }
+                      else {
+                        s = "Comedy it is!";
+                        s += "\nUnfortunately it's a cheesy comedy...";
+                        a.charisma += 10;
+                        a.mental -= 10;
+                        a.intel -= 10;
+                        b.friendship += .2;
+                      }
+                      System.out.println(s);
+                    }
+                  }
+                    else {
+                      s = b.name + " acts like its no big deal, but you can see the disappointment ";
+                      s += "\nwash across " + b.name + "'s face...";
+                      s += "\n" + b.name + " walks away, leaving you alone.";
+                      b.friendship -= 1.5;
+                      System.out.println(s);
+                    }
+                  }
 
-            }
+                  public static void sick() {
+                  }
+                  public static void nap() {
+                  }
+
+                }
