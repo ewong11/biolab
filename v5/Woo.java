@@ -253,11 +253,11 @@ public class Woo {
           if(luck < 0.45)
           Social.friend(player);
           else if (luck < 0.5)
-          Social.eatOut(player);
+          Social.eatOut();
           else if (luck < 0.55)
-          Social.birthday(player);
+          Social.birthday();
           else
-          Social.rumors(player);
+          Social.rumors();
         }
         else if (luck < 0.8){
           //Personal
@@ -273,13 +273,13 @@ public class Woo {
         else{
           //Other
           if(luck < 0.85)
-          Other.MTA();
+          Other.MTA(player);
           else if (luck < 0.9)
-          Other.allNighter();
+          Other.allNighter(player);
           else if (luck < 0.95)
-          Other.soulCycle();
+          Other.soulCycle(player);
           else
-          Other.urbex();
+          Other.urbex(player);
         }
         eNum+= 1;
         luck = Math.random();
