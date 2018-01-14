@@ -4,27 +4,45 @@ import java.util.ArrayList;
 
 public class Woo {
 
-  // instance variables -----------------------------------
-  private Student player;
-  private Crush crush;
-  private NPC npc1;
+    // instance variables -----------------------------------
+    private Student player;
+    private Crush crush;
+    private NPC npc1;
 
-  public int days;
-  public static double luck;
-  private int score;
-  public static int maxE;
-  public static Friend[] yourFriends;
-  public Friend friend1;
-  public Friend friend2;
-  public Friend friend3;
-  public static boolean datenight = false;
+    public int days;
+    public static double luck;
+    private int score;
+    public static int maxE;
+    public static Friend[] yourFriends;
+    public Friend friend1;
+    public Friend friend2;
+    public Friend friend3;
+    public static boolean datenight = false;
 
 
-  private InputStreamReader isr;
-  private BufferedReader in;
+    private InputStreamReader isr;
+    private BufferedReader in;
 
-  final String[] NAMES = {"Joe", "Gaby", "Buford", "Edith", "Arnold", "Kat"}; //possible names for NPCS
-  //---------------------------------------------------------
+    final String[] NAMES = {"Joe", "Gaby", "Buford", "Edith", "Arnold", "Kat"}; //possible names for NPCS
+
+    final String[] FORTUNES = {"a friend asks only for your time, not your money\n",
+			       "you learn from your mistakes. you will learn a lot today\n",
+			       "if you have something good in your life, don't let it go!\n",
+			       "your shoes will make you a very happy person today\n",
+			       "meeting adversary well is the source of your strength\n",
+			       "it is now, and in this world, that we must live so live well.\n",
+			       "you already know the answers to the questions lingering in your head\n",
+			       "the greatest risk is not taking one\n",
+			       "it's better to be alone sometimes\n",
+			       "when hungry, order more Chinese food\n",
+			       "all of your fingers can't be of the same length\n",
+			       "patience is a virtue unless it is against a brick wall \n",
+			       "the most important part of communication is hearing what isn't said\n",
+			       "a different world cannot be built by indifferent people",
+			       "you are not illiterate",
+			       "this project will wow you",
+			       "let your heart decide. it doesn't get as easily confused as your head\n"};
+    //---------------------------------------------------------
 
   public Woo() {
     days = 0;
@@ -230,11 +248,14 @@ public class Woo {
           let = in.readLine();
           if(let == "Y"){
             System.out.println("Fortune: ");
+	    System.out.print(FORTUNES[(int)(Math.random() * 17)]); 
           }
 
         }
         else if (ans == 2){
-          System.out.println("Fortune: ");
+	    System.out.println("Fortune: ");
+	    System.out.print(FORTUNES[(int)(Math.random() * 17)]); 
+          
         }
         //IMPLEMENT LATER :))
         else
