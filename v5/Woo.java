@@ -180,7 +180,7 @@ public class Woo {
     System.out.println(crush.name);
     System.out.println("=====================");
     //Making friends
-/*
+
     int friendgen = (int)(Math.random() * 6);
     friend1 = new Friend(NAMES[friendgen]);
     friendgen = (int)(Math.random() * 6);
@@ -191,7 +191,7 @@ public class Woo {
     yourFriends[0] = friend1;
     yourFriends[1] = friend2;
     yourFriends[2] = friend3;
-    */
+
   }
   //sims a day, out of a possible 180 - we can put the methods in another class
   public boolean simDay() {
@@ -261,7 +261,7 @@ public class Woo {
           else
           Academic.sleep(player);
         }
-/*
+
         else if (luck < 0.6){
           //Social
           //friend // eatOut // brithday // rumors
@@ -274,7 +274,7 @@ public class Woo {
           else
           Social.rumors();
         }
-        */
+
         else if (luck < 0.8){
           //Personal
           if(luck < 0.65)
