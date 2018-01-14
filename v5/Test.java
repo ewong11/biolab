@@ -18,6 +18,7 @@ public class Test {
   //public Friend friend2;
   //public Friend friend3;
   public static boolean datenight = false;
+  public static boolean flix = false;
 
 
   private InputStreamReader isr;
