@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.*;
+import java.util.ArrayList;
 
 public class Woo {
 
@@ -16,6 +17,8 @@ public class Woo {
   public Friend friend1;
   public Friend friend2;
   public Friend friend3;
+  public static boolean datenight = false;
+
 
   private InputStreamReader isr;
   private BufferedReader in;
@@ -40,8 +43,16 @@ public class Woo {
     int intelligence = 0;
     int social = 0;
     int normal = 0;
-    s = "Welcome to StuyLife: Freshman Frenzy! \n";
-    s += "But first, let us know your name: ";
+    s = "Welcome to\n";
+    s += "   _____ _               _      _  __             \n"
+      +  "  / ____| |             | |    (_)/ _|    _       \n"
+      +  " | (___ | |_ _   _ _   _| |     _| |_ ___(_)      \n"
+      +  "  \\___ \\| __| | | | | | | |    | |  _/ _ \\        \n"
+      +  "  ____) | |_| |_| | |_| | |____| | ||  __/_       \n"
+      +  " |_____/ \\__|\\__,_|\\__, |______|_|_| \\___(_)      \n"
+      +  "                    __/ |                         \n"
+      +  "                   |___/                          \n";
+    s += "  \t \tF r e s h m a n  F r e n z y! \nBut first, let us know your name: ";
     System.out.println(s);
 
     try {
@@ -169,18 +180,24 @@ public class Woo {
     System.out.println(crush.name);
     System.out.println("=====================");
     //Making friends
+
     int friendgen = (int)(Math.random() * 6);
     friend1 = new Friend(NAMES[friendgen]);
+    friendgen = (int)(Math.random() * 6);
     friend2 = new Friend(NAMES[friendgen]);
-    friend2 = new Friend(NAMES[friendgen]);
+    friendgen = (int)(Math.random() * 6);
+    friend3 = new Friend(NAMES[friendgen]);
     yourFriends = new Friend[3];
     yourFriends[0] = friend1;
     yourFriends[1] = friend2;
     yourFriends[2] = friend3;
+
   }
   //sims a day, out of a possible 180 - we can put the methods in another class
   public boolean simDay() {
     luck = Math.random();
+    Personal personal = new Personal();
+    personal.date(player, crush);
     //System.out.println(player.average);
     //Lunch lunch = new Lunch();
     //Events event = new Events();
@@ -228,8 +245,6 @@ public class Woo {
       System.out.println("OK HERE WE GO");
       //Starting school
       int eNum = 0;
-
-      Social.friend(player);
       while(eNum <= maxE){
         if (luck < 0.2){
           //No events
@@ -259,12 +274,13 @@ public class Woo {
           else
           Social.rumors();
         }
+
         else if (luck < 0.8){
           //Personal
           if(luck < 0.65)
           Personal.netflix(player, crush);
           else if (luck < 0.7)
-          Personal.blindDate();
+          Personal.date(player, crush);
           else if (luck < 0.75)
           Personal.sick();
           else
