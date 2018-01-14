@@ -28,7 +28,7 @@ public class Personal {
     if (input.equals("1")) {
       s = "Before you know it, its ";
       s += time;
-      s += " You slowly drift off, with the sound of your TV in the background...";
+      s += " \nYou slowly drift off, with the sound of your TV in the background...";
       a.sleep -= time;
       a.intel -= 5;
       a.mental += 20;
@@ -94,7 +94,7 @@ public class Personal {
         }
 
         else if (input.equals("2") && b.friendship > 1.75) {
-          s = "What'd you do that for? Now" + b.name + " probably thinks you're a weirdo...";
+          s = "What'd you do that for? \nNow" + b.name + " probably thinks you're a weirdo...";
           a.charisma -= 10;
           a.mental -= 5;
         }
@@ -141,7 +141,89 @@ public class Personal {
         System.out.println(s);
       }
     }
-    public static void blindDate() {
+    public static void date(Student a, Crush b) {
+      String input = "";
+      if (b.friendship > 2.5);
+      String s = b.date + " asks you out on a date";
+      s += "\nDo you want to go? (y/n)";
+      System.out.println(s);
+      isr = new InputStreamReader( System.in );
+      in = new BufferedReader( isr );
+
+      try {
+        input = in.readLine();
+      }
+      catch (IOException) {}
+      if (input.equals("y")) {
+        s = b.name + " asks you where you want to go, but recommends the arcade.";
+        s += "\nWhere do you want to go?";
+        s += "\n1. the arcade";
+        s += "\n2. the carnival";
+        s += "\n3. The Uncommons";
+        s += "\n4. actually...I don't really want to go on a date..";
+        System.out.println(s);
+      }
+
+      try {
+        input = Integer.parseInt(in.readLine());
+      }
+      catch (IOException) {}
+
+        if (input == 1) {
+          s = "You guys go to the arcade!";
+          System.out.println(s);
+          double chance = Math.random();
+          if (chance > .5) {
+            s = b.name + " decides to plays the claw machine and ";
+            if (Math.random() < .5) {
+              s += b.name + "wins!\n" + b.name + " gives you the stuffed animal.";
+              b.friendship += .2;
+            }
+            else if (Math.random() > .8) {
+              s += b.name + "loses :(." + "\nIn a rage, he knocks over the machine and storms off!";
+              s += "\n Your date ends badly.";
+              b.friendship -= .5;
+            }
+            else {
+              s = "Nothing special happens, but " + b.name + " seems interested!";
+              b.frienship += .3;
+            }
+          }
+          else if (chance > .5 && chance < .9) {
+            s = "\n" + b.name + " faces you in a game of air hockey!";
+            s += "\n" + b.name + " doesn't know it, but you are a air hockey champion!";
+            s += "\n Do you let him win?";
+            if (input == 1) {
+            }
+            else if (input == 2) {
+            }
+            else {
+            }
+              }
+          }
+          if (input == 1) {
+          }
+          else if (input == 2) {
+          }
+          else {
+          }
+            }
+      	}
+      	else if (input == 2) {
+      	}
+      	else {
+      	}
+          }
+
+      else {
+        s = b.name + " acts like " + b.name + " okay, but you can see the disappointment";
+        s += "\n wash across " + b.name + "'s face...";
+        s += "\n" + b.name + "walks away, leaving you alone.";
+        b.friendship -= 2;
+        System.out.println(s);
+      }
+
+
     }
     public static void sick() {
     }
