@@ -224,20 +224,92 @@ public class Other {
 	String out = "";
 	int ans = 0;
 
-	out += "";
-	out += "";
-	out += "";
-	out += "";
+	out += "you walk around school and see a poster for soulCycle. ";
+	out += "they're offering free classes for Stuy kids! ";
+	out += "you remember Dr. Markova mentioning it non-threatningly... ";
+	out += "it's probably best for your health to go\n";
+	out += "do you go?\n";
+	out += "\t\n1: YES";
+	out += "\t\n2: um sure";
+	out += "\t\n3: NO";
+	out += "\t\n4: i'll think about it later.";
+	System.out.println(out); 
 	try {
 	    ans = Integer.parseInt(in.readLine());
 	}
 	catch (IOException e) {}
 
 	if (ans == 1) {
+	    a.physical += 2;
+	    out = "whooa. soulcycle was so intense. now you decide to get a snack after the work out. what do you get?\n";
+	    out += "\t1: mcDonalds\n";
+	    out += "\t2: bubble tea from Kung Fu Tea\n";
+	    out += "\t3: one of those insane green drinks because why not\n";
+
+	    try {
+		ans = Integer.parseInt(in.readLine());
+	    }
+	    catch (IOException e) {}
+
+	    if (ans == 1) {
+		System.out.println("you regained all the calories but in a bad form. sigh....\n");
+		a.physical -= 2;
+		a.mental -= 1; 
+	    }
+	    else if (ans == 2) {
+		System.out.println("good choice. you even meet a friend there and talk. soulcycle was a good choice");
+		a.charisma += 1;
+		a.mental += 1; 
+	    }
+	    else {
+		System.out.println("you feel healthier after just one sip! \n");
+		a.physical += 5;
+		a.mental += 1; 
+	    } 
 	}
 	else if (ans == 2) {
+	    System.out.println("you go but because you've never had to climb up more than 2 flights at a time, it hurts\n");
+	    a.charisma += 1;
+	    a.physical += 2; 
 	}
+	else if (ans == 3) {
+	    System.out.println("Dr. MArkova is disappointed, but you told her you exercise every day so she lets it go");
+	    a.charisma += 1; 
+	} 
 	else {
+	    out = "Dr. Markova spots you down the hallway and zones in. she asks, " + a.name;
+	    out += "did you go to the soulCycle?\n";
+	    out += "\t1: umm yea, about that...\n";
+	    out += "\t2: no, I'm really not into soulCycle. track is more my jam\n";
+	    out += "\t3; totally! it was rad as heck! groovy dude!\n";
+	    System.out.println(out); 
+	    
+	    try {
+		ans = Integer.parseInt(in.readLine());
+	    }
+	    catch (IOException e) {}
+
+
+	    if (ans == 1) {
+		String excuse = ""; 
+		System.out.println("make up an exuse: \n");
+			    
+		try {
+		    excuse = in.readLine();
+		}
+		catch (IOException e) {}
+
+		System.out.println("Dr. Markova, " + excuse);
+		System.out.println("she says ahhhh... I understand. see you in gym! \n");
+		a.charisma -= 1; 
+	    }
+	    else if (ans == 2) 
+		System.out.println("what luck! she totally sympathizes with you and even tells you to join track!");
+	    else {
+		System.out.println("she makes a few quips about people faking attendence in gym class :(( \n");
+		a.charisma -= 1;
+		a.physical -= 1; 
+	    } 
 	}
     }
     public static void urbex(Student a) {
