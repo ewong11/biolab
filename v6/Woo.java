@@ -96,7 +96,7 @@ public class Woo {
 
     //we can add a check here at the end aka "are you sure?"
     System.out.println("Cool, nice to meet you, " + name + "!");
-    s = "\nTo start, let us figure out what type of person you are!";
+    s = "To start, let us figure out what type of person you are!";
     System.out.print("\033[H\033[2J");
     System.out.println(s);
 
@@ -138,6 +138,7 @@ public class Woo {
       normal += 1;
     }
     catch ( IOException e ) { }
+    System.out.print("\033[H\033[2J");
     ans = 0;
     s = "What are your plans on a Friday Night? \n";
     s += "\t1: Study for my Math Test\n";
@@ -145,7 +146,6 @@ public class Woo {
     s += "\t3: Watch Breaking Bad \n";
     s += "Selection: ";
     System.out.println(s);
-    System.out.print("\033[H\033[2J");
     try {
       ans = Integer.parseInt( in.readLine() );
       if (ans == 1)
@@ -164,7 +164,6 @@ public class Woo {
     s += "\t3: \"Are you ok\" \n";
     s += "Selection: ";
     System.out.println(s);
-    System.out.print("\033[H\033[2J");
     try {
       ans = Integer.parseInt( in.readLine() );
       if (ans == 1)
@@ -195,7 +194,7 @@ public class Woo {
 
     }
 
-    System.out.println("Your crush is " + crush.name);
+    System.out.println("Your crush is " + crush.name + "!");
     System.out.println("This is your schedule!");
     System.out.println(player.getSched());
 
