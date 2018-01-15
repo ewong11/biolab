@@ -11,7 +11,6 @@ public class Other {
 	String out = "";
 	int ans = 0;
 	
-	System.out.print("\033[H\033[2J");
 	out += a.name + ", the train is running late! What's your plan?\n";
 	out += "\t1: take a cab. my life revolves around school.\n";
 	out += "\t2: wait it out. the train will come eventually.\n";
@@ -247,7 +246,6 @@ public class Other {
 	in = new BufferedReader( isr);
 	String out = "";
 	int ans = 0;
-	System.out.print("\033[H\033[2J");
 	out += "you walk around school and see a poster for soulCycle. ";
 	out += "they're offering free classes for Stuy kids! ";
 	out += "you remember Dr. Markova mentioning it non-threatningly... ";

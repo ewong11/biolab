@@ -69,6 +69,7 @@ public class Woo {
     int social = 0;
     int normal = 0;
     Scanner sc = new Scanner(System.in);
+    System.out.print("\033[H\033[2J");
     s = "Welcome to\n";
     s += "   _____ _               _      _  __             \n"
     +  "  / ____| |             | |    (_)/ _|    _       \n"
@@ -82,10 +83,11 @@ public class Woo {
     System.out.println(s);
 
     //try {
-      name = sc.next();
+    name = sc.next();
     //}
     //catch ( IOException e ) { }
-
+    
+    System.out.print("\033[H\033[2J");
     s = "Everyone has a crush, who's yours?";
     System.out.println(s);
 
@@ -100,6 +102,7 @@ public class Woo {
     System.out.println(crush.name);
 
     //we can add a check here at the end aka "are you sure?"
+    System.out.print("\033[H\033[2J");
     System.out.println("Cool, nice to meet you, " + name + "!");
     s = "To start, let us figure out what type of person you are!";
     System.out.print("\033[H\033[2J");
