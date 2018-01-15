@@ -44,7 +44,7 @@ public class Woo {
   //---------------------------------------------------------
 
   public Woo() {
-    days = 0;
+    days = 1;
     isr = new InputStreamReader( System.in );
     in = new BufferedReader( isr );
     newGame();
@@ -76,9 +76,34 @@ public class Woo {
     +  " |_____/ \\__|\\__,_|\\__, |______|_|_| \\___(_)      \n"
     +  "                    __/ |                         \n"
     +  "                   |___/                          \n";
-    s += "  \t \tF r e s h m a n  F r e n z y! \nBut first, let us know your name: ";
+    s += "  \t \tF r e s h m a n  F r e n z y! \n";
     System.out.println(s);
+    s = "~~~\n"
+    s += "It's been a week since you've submitted your college\n"
+    s += "apps. The past few months as a senior have been grueling.\n"
+    System.out.println(s);
+    confirm();
+    s = "You've discovered so much about yourself from analyzing\n"
+    s += "your whole Stuyvesant career for your essays. Before you\n"
+    s += "fell asleep last night, you began to wonder:\n"
+    s += "What if I could start over...\n"
+    s += "What if I could go back to first term Freshman Year?\n"
+    s += "Then you drifted off to sleep..."
+    System.out.println(s);
+    confirm();
+    s = "====================\n"
+    s += "How to play:\n"
+    s += "\t With each prompt, you will be asked to give some feedback!\n"
+    s += "\t The easiest way to do that is typing your answer\n"
+    s += "\t (usually 1,2,3... or y/n) then hitting ENTER!\n"
+    s += "\t Your goal is to make it through your first term of\n"
+    s += "\t FRESHMAN YEAR... DUN DUNN DUUUNNN!\n"
+    s += "\t We hope you get through and enjoy!\n"
+    s += "\t -Kaitlin, Eric and Susan\n"
+    System.out.println(s);
+    confirm();
 
+    System.out.println("But first, let us know your name: ");
     //try {
       name = sc.next();
     //}
@@ -177,7 +202,6 @@ public class Woo {
       normal += 1;
     }
     catch ( IOException e ) { }
-    System.out.print("\033[H\033[2J");
 
     // makes the player one of three characters
     int highest = Math.max(intelligence, Math.max(normal, social));
@@ -224,14 +248,13 @@ public class Woo {
     boolean done = false;
     if(!player.isDead()){
 
-      System.out.println(luck);
-
       while (done == false) {
         int ans = 0;
         String s = "";
         System.out.print("\033[H\033[2J");
-        System.out.println("==============================================\n");
+        System.out.println("==============================================");
         System.out.println("Day " + days);
+        System.out.println("==============================================");
         System.out.println("Good Morning " + player.name + "!");
         System.out.println("Please select one of the following:");
         s += "\t1: Show Your Status\n";
@@ -291,10 +314,9 @@ public class Woo {
       //Starting school
 
       int eNum = 0;
-      while(eNum <= 1){
+      while(eNum <= 0){
 	  if (luck < 0.2){
 	      System.out.println("Nothing Special Happens...");
-	      System.out.println("**************");
 	      //No events
 	      break;
 	  }
@@ -309,7 +331,6 @@ public class Woo {
 		  Academic.project(player);
 	      else
 		  Academic.sleep(player);
-	      System.out.println("**************");
 	  }
 
 	  else if (luck < 0.6){
@@ -324,7 +345,6 @@ public class Woo {
 		  Social.birthday();
 	      else
 		  Social.rumors(player);
-	      System.out.println("**************");
 	  }
 
 
@@ -340,7 +360,6 @@ public class Woo {
 	      else
 		  Personal.nap(player);
 
-	      System.out.println("**************");
 	  }
 	  else{
 	      System.out.println("Special OTHER Event!");
@@ -353,13 +372,10 @@ public class Woo {
 		  Other.soulCycle(player);
 	      else
 		  Other.hqtrivia(player);
-	      System.out.println("**************");
 	  }
-
-	  eNum+= 1;
-	  luck = Math.random();
+	    eNum+= 1;
       }
-
+      confirm();
       return true;
     }
     done = false;
