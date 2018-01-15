@@ -6,12 +6,11 @@ import java.util.Scanner;
 public class Woo {
     // instance variables -----------------------------------
     protected Student player;
-    private Crush crush;
-    private NPC npc1;
 
     public static int days;
     public static double luck;
     private int score;
+    public static Crush crush;
     public static Friend[] yourFriends;
     public static Friend friend1;
     public static Friend friend2;
@@ -22,7 +21,9 @@ public class Woo {
     private InputStreamReader isr;
     private BufferedReader in;
 
-    final String[] NAMES = {"Joe", "Gaby", "Buford", "Edith", "Arnold", "Kat"}; //possible names for NPCS
+    final String[] NAMES1 = {"Joe", "Gaby", "Beauford", "Marge", "Dwight", "Kat"};
+    final String[] NAMES2 = {"Michael", "Pam", "Erin", "Felix", "Homer", "Ryan"};
+    final String[] NAMES3 = {"Bart", "Lisa", "Manny", "Jim", "Phyllis", "Oscar"};//possible names for NPCS
 
   final String[] FORTUNES = {"a friend asks only for your time, not your money\n",
   "you learn from your mistakes. you will learn a lot today\n",
@@ -84,6 +85,7 @@ public class Woo {
     + "apps. The past few months as a senior have been grueling.\n";
     System.out.println(s);
     confirm();
+    System.out.print("\033[H\033[2J");
     s = "You've discovered so much about yourself from analyzing\n";
     s += "your whole Stuyvesant career for your essays. Before you\n"
     + "fell asleep last night, you began to wonder:\n"
@@ -92,6 +94,7 @@ public class Woo {
     + "Then you drifted off to sleep...";
     System.out.println(s);
     confirm();
+    System.out.print("\033[H\033[2J");
     s = "====================\n"
     + "How to play:\n"
     + "\t With each prompt, you will be asked to give some feedback!\n"
@@ -103,12 +106,13 @@ public class Woo {
     + "\t -Kaitlin, Eric and Susan\n";
     System.out.println(s);
     confirm();
+    System.out.print("\033[H\033[2J");
 
     System.out.println("But first, let us know your name: ");
-    //try {
-    name = sc.next();
-    //}
-    //catch ( IOException e ) { }
+    try {
+    name = in.readLine();
+    }
+    catch ( IOException e ) { }
 
     System.out.print("\033[H\033[2J");
     s = "Everyone has a crush, who's yours?";
@@ -207,6 +211,8 @@ public class Woo {
     catch ( IOException e ) { }
 
     // makes the player one of three characters
+    System.out.print("\033[H\033[2J");
+
     int highest = Math.max(intelligence, Math.max(normal, social));
     if(highest == intelligence && !(highest == social || highest == normal)) {
       player = new Scholar(name);
@@ -233,11 +239,11 @@ public class Woo {
     //Making friends
 
     int friendgen = (int)(Math.random() * 6);
-    friend1 = new Friend(NAMES[friendgen]);
+    friend1 = new Friend(NAMES1[friendgen]);
     friendgen = (int)(Math.random() * 6);
-    friend2 = new Friend(NAMES[friendgen]);
+    friend2 = new Friend(NAMES2[friendgen]);
     friendgen = (int)(Math.random() * 6);
-    friend3 = new Friend(NAMES[friendgen]);
+    friend3 = new Friend(NAMES3[friendgen]);
     yourFriends = new Friend[3];
     yourFriends[0] = friend1;
     yourFriends[1] = friend2;
@@ -261,8 +267,8 @@ public class Woo {
         System.out.println("Good Morning " + player.name + "!");
         System.out.println("Please select one of the following:");
         s += "\t1: Show Your Status\n";
-        s += "\t2. Rank my friends based on how close we are!\n";
-	s += "\t3: show me ma achievments\n";
+        s += "\t2. Judge ma fwends!\n";
+	       s += "\t3: show me ma achievments\n";
         s += "\t4: Fortune Me! \n";
         s += "\t5: INTO THE FRAY! \n";
         s += "Selection: ";
@@ -286,20 +292,25 @@ public class Woo {
 		confirm();
 	    }
 	    else if (ans == 2) {
+    System.out.print("\033[H\033[2J");
 		CompareFriendship compare = new CompareFriendship();
 		compare.populate(friend1);
 		compare.populate(friend2);
 		compare.populate(friend3);
 		compare.sort();
+    System.out.println("\nThis is how close you are with" + crush.name);
+    System.out.println("<" + crush.friendLev() + ">");
 		confirm();
 	    }
 	    else if (ans == 3) {
+    System.out.print("\033[H\033[2J");
 		System.out.println("---------------------------------");
 		System.out.println("badges: " + player.badges);
 		System.out.println("---------------------------------");
 		confirm();
 	    }
 	    else if (ans == 4){
+    System.out.print("\033[H\033[2J");
 		System.out.println("Fortune: ");
 		System.out.print(FORTUNES[(int)(Math.random() * 17)]);
 		System.out.println("\n");
@@ -308,11 +319,12 @@ public class Woo {
 	    else {
 		System.out.println("Packing your turtle shell...");
 		done = true;
+    confirm();
 	    }
 	}
 	catch ( IOException e ) { }
       }
-
+      System.out.print("\033[H\033[2J");
       System.out.println("OK HERE WE GO \n");
       //Starting school
 
@@ -323,7 +335,7 @@ public class Woo {
 	      //No events
 	      break;
 	  }
-	  else if (luck < 0.4){
+	  else if (luck <= 0.4){
 	      System.out.println("Academic Event");
 	      //Academic
 	      if(luck < 0.25)
@@ -336,7 +348,7 @@ public class Woo {
 		  Academic.sleep(player);
 	  }
 
-	  else if (luck < 0.6){
+	  else if (luck <= 0.6 && luck > 0.4){
 	      System.out.println("Social Event");
 	      //Social
 	      //friend // eatOut // brithday // rumors
@@ -351,13 +363,19 @@ public class Woo {
 	  }
 
 
-	  else if (luck < 0.8){
+	  else if (luck < 0.8 && luck > .06){
 	      System.out.println("Personal Event!");
 	      //Personal
 	      if(luck < 0.65)
 		  Personal.netflix(player, crush);
-	      else if (luck < 0.7)
+	      else if (luck < 0.7) {
+          if (crush.friendship > 2.5) {
 		  Personal.date(player, crush);
+          }
+          else {
+            System.out.println("...You think sbout going on a date with " + crush.name);
+          }
+        }
 	      else if (luck < 0.75)
 		  Personal.sick(player,friend1,friend2,friend3);
 	      else

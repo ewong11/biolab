@@ -25,7 +25,7 @@ public class CompareFriendship {
 
   //--------------------------------------------
 
-  
+
   public void populate(Friend a) {
     _data.add(a.friendship);
     names.add(a.name);
@@ -38,6 +38,7 @@ public class CompareFriendship {
         names.set(index, names.set(index+1, names.get(index)));
       }
     }
+    System.out.println("Done! Your list of friends from best to worst!");
     System.out.println(names);
   }
 

@@ -28,7 +28,7 @@ public class Personal {
 	int time = (int)(Math.random() * 6);
 	if (input.equals("1")) {
 	    s = "Before you know it, its ";
-	    s += time;
+	    s += time + "o'clock";
 	    s += " \nYou slowly drift off, with the sound of your TV in the background...";
 	    a.sleep -= time;
 	    a.intel -= 5;
@@ -39,7 +39,7 @@ public class Personal {
 	else if (input.equals("2")) {
 	    int num = 1;
 	    s = "You begin to call " + b.name;
-	    if (a.mental > 50) {
+	    if (b.friendship > .2) {
 		s += "..." + b.name + " picks up!";
 		s += "\nWhat do you do?";
 		if (b.friendship < 1.75) {
@@ -47,17 +47,17 @@ public class Personal {
 		    num += 1;
 		    s += "\n" + num + ": (hang up)";
 		    num += 1;
-		    if ((a.charisma + a.mental) > 140) {
+      }
+		 if ((a.charisma + a.mental) > 140) {
 			s += "\n" + num + ": Hey, I happened to pick up your book on the way to your house...";
 			s += "\nCome over...we can write a new chapter together!";
 			num += 1;
 			s += "\n" + num + ": I'll be the 'net' in Netflix, because you're my catch!";
 			num += 1;
 		    }
-		    if (b.friendship > 3) 
+		    if (b.friendship > 3) {
 			s += "\n" + num + ": free tonite? wanna come over?";
 		}
-	    }
 	    System.out.println(s);
 
 	    try {
@@ -130,6 +130,10 @@ public class Personal {
 		    b.friendship += .1;
 		}
 	    }
+    }
+    else {
+      s = "...no answer :(";
+    }
 	    System.out.println(s);
 	}
 
@@ -143,7 +147,6 @@ public class Personal {
     }
     public static void date(Student a, Crush b) {
 	String input = "";
-	if (b.friendship > 2.5);
 	String s = b.name + " asks you out on a 'date'";
 	s += "\nDo you want to go? (y/n)";
 	System.out.println(s);
@@ -233,7 +236,7 @@ public class Personal {
                     System.out.println(s);
 		}
 		else  {
-                    if (Woo.luck > .3) {
+                    if (Woo.luck > .3 && b.friendship > 2.5) {
 			s = "You guys are just playing Pac-Man, when you feel ";
 			s += "\n" + b.name + " leaning closer.";
 			s += "\n What do you do?\n";

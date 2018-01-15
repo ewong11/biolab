@@ -1,5 +1,8 @@
 public class Friend extends NPC implements Comparable<Friend>{
 
+  public Friend() {
+  }
+
   public Friend(String n) {
     name = n;
     friendship = 0;

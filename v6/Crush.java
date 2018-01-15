@@ -1,6 +1,9 @@
-public class Crush extends NPC {
+public class Crush extends Friend {
 
   protected static String name ;
+
+  public Crush() {
+  }
 
   public Crush(String n) {
     name = n;

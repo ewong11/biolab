@@ -11,8 +11,14 @@ public class Social {
     in = new BufferedReader( isr );
     //Chooses whcih friend to interact with
     int choiceF = (int)(Math.random() * 3);
+    Friend currFriend;
     //References friend with currFriend
-    Friend currFriend = Woo.yourFriends[choiceF];
+    if (Math.random() > .4) {
+       currFriend = Woo.yourFriends[choiceF];
+    }
+    else {
+       currFriend = Woo.crush;
+    }
     //Which FriendEvent to do?
     double choice = Math.random();
 
