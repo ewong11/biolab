@@ -52,9 +52,6 @@ public static void allNighter(Student a) {
 	in = new BufferedReader( isr);
 	String out = "";
 	int ans = 0;
-
-
-
 	out = "Projects are looming.";
 	out += "\nTests are coming up";
 	out += "\nYou have homework you didn't do.";
@@ -64,7 +61,7 @@ public static void allNighter(Student a) {
   System.out.println(out);
 while (question == false) {
 out += "\n\n1. You can pull an all-nighter and finish all your work OR";
-out += '\n2. You can just sleep, its a lost cause anyways';
+out += "\n2. You can just sleep, its a lost cause anyways";
 System.out.println(out);
 	try {
 	    ans = Integer.parseInt(in.readLine());

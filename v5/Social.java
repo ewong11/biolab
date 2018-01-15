@@ -182,7 +182,7 @@ public class Social {
             System.out.println("The best sleep yet!");
             System.out.println("You wake up to texts from group chat texts \n");
             System.out.println("\t: Can't believe " + p.name + " didn't come today." );
-            System.out.println("\t: At least now I know who my real friends are!")
+            System.out.println("\t: At least now I know who my real friends are!");
             AllFriendsChange("sub", 0.3);
             p.sleep += 2;
           }
