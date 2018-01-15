@@ -10,7 +10,6 @@ public class Academic {
 	in = new BufferedReader( isr);
 	int score = 0; 
 	String out = "";
-	System.out.print("\033[H\033[2J");
 	out += "hello " + a.name + "! this is a pop test!\n";
 	out += "\tif you fail, 5 points will be deducted from your average\n";
 	out += "\tif you score over 90, one point will be added\n";
@@ -113,7 +112,6 @@ public class Academic {
 	in = new BufferedReader( isr);
 		int score = 0; 
 	String out = "";
-	System.out.print("\033[H\033[2J");
 	out += "hello " + a.name + "! POP QUIZ!\n";
 	out += "\tif you fail, 2 points will be deducted from your average\n";
 	out += "\tif you score over 90, one point will be added\n";
@@ -164,7 +162,6 @@ public class Academic {
 	in = new BufferedReader( isr);
 	String out = "";
 	int ans = 0;
-	System.out.print("\033[H\033[2J");
 	out += "hello " + a.name + "! Your teacher decides to assign you a project the week before break\n";
 	out += "\tWhat do you do?\n";
 	out += "\t1: squad up\n";
@@ -374,7 +371,6 @@ public class Academic {
 	String out = "";
 	int ans = 0;
 
-	System.out.print("\033[H\033[2J");
 	out = "After a long day at school, you come back to home sweet home\n";
 	out += "For a snack to eat while doing hw, what do you pick?\n";
 	out += "\t1: cookies and hot cocoa\n";
