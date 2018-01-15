@@ -12,13 +12,12 @@ public class Woo {
     public static int days;
     public static double luck;
     private int score;
-    public static int maxE;
     public static Friend[] yourFriends;
     public static Friend friend1;
     public static Friend friend2;
     public static Friend friend3;
     public static boolean datenight = false;
-    public static boolean flix = false; 
+    public static boolean flix = false;
 
     private InputStreamReader isr;
     private BufferedReader in;
@@ -46,7 +45,6 @@ public class Woo {
 
   public Woo() {
     days = 0;
-    maxE = (int)(Math.random() * 5);
     isr = new InputStreamReader( System.in );
     in = new BufferedReader( isr );
     newGame();
@@ -238,21 +236,21 @@ public class Woo {
         System.out.println("Please select one of the following:");
         s += "\t1: Show Your Status\n";
         s += "\t2. Rank my friends based on how close we are!\n";
-	s += "\t3: show me ma achievments\n"; 
+	s += "\t3: show me ma achievments\n";
         s += "\t4: Fortune Me! \n";
-        s += "\t5: INTO THE FRAY! \n"; 
+        s += "\t5: INTO THE FRAY! \n";
         s += "Selection: ";
         System.out.println(s);
 
 	if (days == 50)
 	    player.badges.add("50-days-50-states");
-	else if (days == 90) 
+	else if (days == 90)
 	    player.badges.add("halfway-and-halfbaked");
-	else if (days == 100) 
+	else if (days == 100)
 	    player.badges.add("100-days-100-lates");
 	else if (player.average > 95 && days > 45)
 	    player.badges.add("YO-AVERAGE-IS-NOT-DEAD");
-	player.updateBadges(player); 
+	player.updateBadges(player);
 
 	try {
 	    ans = Integer.parseInt( in.readLine() );
@@ -260,21 +258,21 @@ public class Woo {
 	    if (ans == 1){
 		System.out.println(player);
 		confirm();
-	    } 
+	    }
 	    else if (ans == 2) {
 		CompareFriendship compare = new CompareFriendship();
 		compare.populate(friend1);
 		compare.populate(friend2);
 		compare.populate(friend3);
 		compare.sort();
-		confirm(); 
+		confirm();
 	    }
 	    else if (ans == 3) {
 		System.out.println("---------------------------------");
 		System.out.println("badges: " + player.badges);
 		System.out.println("---------------------------------");
-		confirm(); 
-	    } 
+		confirm();
+	    }
 	    else if (ans == 4){
 		System.out.println("Fortune: ");
 		System.out.print(FORTUNES[(int)(Math.random() * 17)]);
@@ -288,11 +286,12 @@ public class Woo {
 	}
 	catch ( IOException e ) { }
       }
-      
+
       System.out.println("OK HERE WE GO \n");
       //Starting school
+
       int eNum = 0;
-      while(eNum <= maxE){
+      while(eNum <= 1){
 	  if (luck < 0.2){
 	      System.out.println("Nothing Special Happens...");
 	      System.out.println("**************");
