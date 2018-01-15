@@ -27,6 +27,4 @@ To do:
 
 
 NOTEBOARD TO TEAM: 
-- Eric: shouldn't findClass break if randX == coordX && (not ||) randY == coordY 
-	and there should be a point deducted from average if they don't make it on time 
 	
