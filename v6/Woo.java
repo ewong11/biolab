@@ -5,27 +5,27 @@ import java.util.Scanner;
 
 public class Woo {
 
-  // instance variables -----------------------------------
-  protected Student player;
-  private Crush crush;
-  private NPC npc1;
+    // instance variables -----------------------------------
+    protected Student player;
+    private Crush crush;
+    private NPC npc1;
 
-  public static int days;
-  public static double luck;
-  private int score;
-  public static int maxE;
-  public static Friend[] yourFriends;
-  public static Friend friend1;
-  public static Friend friend2;
-  public static Friend friend3;
-  public static boolean datenight = false;
-  public static boolean flix = false;
+    public static int days;
+    public static double luck;
+    private int score;
+    public static int maxE;
+    public static Friend[] yourFriends;
+    public static Friend friend1;
+    public static Friend friend2;
+    public static Friend friend3;
+    public static boolean datenight = false;
+    public static boolean flix = false;
 
 
-  private InputStreamReader isr;
-  private BufferedReader in;
+    private InputStreamReader isr;
+    private BufferedReader in;
 
-  final String[] NAMES = {"Joe", "Gaby", "Buford", "Edith", "Arnold", "Kat"}; //possible names for NPCS
+    final String[] NAMES = {"Joe", "Gaby", "Buford", "Edith", "Arnold", "Kat"}; //possible names for NPCS
 
   final String[] FORTUNES = {"a friend asks only for your time, not your money\n",
   "you learn from your mistakes. you will learn a lot today\n",
@@ -269,7 +269,7 @@ public class Woo {
       while(eNum <= maxE){
         if (luck < 0.2){
           System.out.println("Nothing Special Happens...");
-          System.out.println("***");
+          System.out.println("**************");
           //No events
           break;
         }
@@ -277,14 +277,14 @@ public class Woo {
           System.out.println("Academic Event");
           //Academic
           if(luck < 0.25)
-          Academic.test(player);
+	      Academic.test(player);
           else if (luck < 0.3)
-          Academic.quiz(player);
+	      Academic.quiz(player);
           else if (luck < 0.35)
-          Academic.project(player);
+	      Academic.project(player);
           else
-          Academic.sleep(player);
-          System.out.println("***");
+	      Academic.sleep(player);
+          System.out.println("**************");
         }
 
         else if (luck < 0.6){
@@ -299,7 +299,7 @@ public class Woo {
           Social.birthday();
           else
           Social.rumors(player);
-          System.out.println("***");
+          System.out.println("**************");
         }
 
 
@@ -315,7 +315,7 @@ public class Woo {
           else
           Personal.nap(player);
 
-          System.out.println("***");
+          System.out.println("**************");
         }
         else{
           System.out.println("Special OTHER Event!");
@@ -328,7 +328,7 @@ public class Woo {
           Other.soulCycle(player);
           else
           Other.hqtrivia(player);
-          System.out.println("***");
+          System.out.println("**************");
         }
 
         eNum+= 1;

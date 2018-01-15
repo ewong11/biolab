@@ -56,8 +56,10 @@ public class Test {
   public boolean testDay() {
     player = new Normal("Player");
     crush = new Crush("Crush");
-    Other other = new Other();
-    other.hqtrivia(player);
+    Academic.quiz(player); 
+    //Other other = new Other();
+    //Other.hqtrivia(player);
+    
     return true;
   }
     //System.out.println(player.average);
