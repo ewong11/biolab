@@ -295,10 +295,16 @@ public class Woo {
 	    else if (ans == 2) {
     System.out.print("\033[H\033[2J");
 		CompareFriendship compare = new CompareFriendship();
+    friend1.friendship += 3;
+    friend2.friendship += 4;
+    friend3.friendship += 3.5;
 		compare.populate(friend1);
 		compare.populate(friend2);
 		compare.populate(friend3);
 		compare.sort();
+    System.out.println("1: "+friend1.name + "friendship: " + friend1.friendship);
+    System.out.println("2: "+friend2.name + "friendship: " + friend2.friendship);
+    System.out.println("3" + friend3.name + "friendship" + friend3.friendship);
     System.out.println("\nThis is how close you are with " + crush.name);
     System.out.println("<" + crush.friendLev() + ">");
 		confirm();

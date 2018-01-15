@@ -32,10 +32,10 @@ public class CompareFriendship {
   }
   public void sort() {
     for (int pos = 0; pos < _data.size(); pos ++) {
-      for (int index = 0; index < _data.size()-1; index++)
-      if (_data.get(index).compareTo(_data.get(index + 1)) > 1) {
-        _data.set(index, _data.set(index+1, _data.get(index)));
-        names.set(index, names.set(index+1, names.get(index)));
+      for (int index = _data.size()-1; index > 0; index--)
+      if (_data.get(index).compareTo(_data.get(index - 1)) > 0) {
+        _data.set(index, _data.set(index-1, _data.get(index)));
+        names.set(index, names.set(index-1, names.get(index)));
       }
     }
     System.out.println("Done! Your list of friends from best to worst!");
