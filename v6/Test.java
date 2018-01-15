@@ -56,7 +56,7 @@ public class Test {
   public boolean testDay() {
     player = new Normal("Player");
     crush = new Crush("Crush");
-    Academic.quiz(player); 
+    Other.MTA(player); 
     //Other other = new Other();
     //Other.hqtrivia(player);
     
