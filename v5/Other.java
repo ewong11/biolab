@@ -60,7 +60,7 @@ public static void allNighter(Student a) {
 }
   System.out.println(out);
 while (question == false) {
-out += "\n\n1. You can pull an all-nighter and finish all your work OR";
+out = "\n1. You can pull an all-nighter and finish all your work OR";
 out += "\n2. You can just sleep, its a lost cause anyways";
 System.out.println(out);
 	try {
@@ -70,7 +70,7 @@ System.out.println(out);
 
 	if (ans == 1) {
     out = "That was a long night, but you finally got everything done!";
-    out += "\nUnfortunately, you got no sleep and you won't be able to focus in class";
+    out += "\nUnfortunately, you got no sleep and you won't be able to focus in class.";
     a.sleep = 1;
     a.physical -= 20;
     a.mental -= 20;
@@ -78,8 +78,8 @@ System.out.println(out);
     question = true;
 	}
 	else if (ans == 2) {
-    out = "Yeah, sleeping was definitely the right choice!";
-    out += "You feel refreshed and invigorated, but your grades take a hit";
+    out = "Yeah, sleeping was definitely the right choice! ";
+    out += "\nYou feel refreshed and invigorated, but your grades take a hit";
     a.sleep += 3;
     a.physical += 20;
     a.mental += 20;
