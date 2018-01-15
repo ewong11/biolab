@@ -215,8 +215,8 @@ public class Woo {
   //sims a day, out of a possible 180 - we can put the methods in another class
   public boolean simDay() {
     luck = Math.random();
-    Personal personal = new Personal();
-    personal.date(player, crush);
+    //Personal personal = new Personal();
+    //personal.date(player, crush);
     //System.out.println(player.average);
     //Lunch lunch = new Lunch();
     //Events event = new Events();
@@ -294,7 +294,7 @@ public class Woo {
           else if (luck < 0.55)
           Social.birthday();
           else
-          Social.rumors();
+          Social.rumors(player);
         }
 
 

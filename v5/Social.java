@@ -227,12 +227,12 @@ public class Social {
         try {
           ans = Integer.parseInt( in.readLine() );
           if (ans == 1){
-            int maybeDone = Math.random();
+            double maybeDone = Math.random();
 
             //GET KICKED OUT?!?
             if (maybeDone < 0.1){
               System.out.println("You just lost. Never cheat yourself :(");
-              p.health = 0;
+              p.setMental(0);
             }
             else{
               System.out.println("You better get yourself together!");
@@ -292,7 +292,7 @@ public class Social {
         try {
           ans = Integer.parseInt( in.readLine() );
           if (ans == 1){
-            int posorneg = Math.random();
+            double posorneg = Math.random();
 
             if (posorneg < 0.5){
               System.out.println("People think you're annoying :( Friendships lower");
@@ -311,7 +311,7 @@ public class Social {
             System.out.println("The rumor gets to you :( Your friendships suffer...");
             AllFriendsChange("sub", 0.5);
           }
-          
+
         }
         catch ( IOException e ) { }
 
