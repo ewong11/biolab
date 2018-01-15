@@ -350,6 +350,7 @@ public class Academic {
 	out += "\t1: cookies and hot cocoa\n";
 	out += "\t2: some kbbq chickpeas and aloe vera\n";
 	out += "\t3: earl grey tea and scones\n";
+	System.out.println("");
 
 	try {
 	    ans = Integer.parseInt( in.readLine() ); 
@@ -362,6 +363,8 @@ public class Academic {
 	    out += "\t1: Geometry\n";
 	    out += "\t2: Biology\n";
 	    out += "\t3: History\n";
+	    System.out.println("");
+		
 	    
 	    try {
 		ans = Integer.parseInt( in.readLine() ); 
@@ -374,6 +377,8 @@ public class Academic {
 		out += "\t1: Biology\n";
 		out += "\t2: History\n";
 		out += "\t3: English\n";
+		System.out.println("");
+		
 	    
 		try {
 		    ans = Integer.parseInt( in.readLine() ); 
@@ -402,7 +407,8 @@ public class Academic {
 		out += "\t1: during Biology\n";
 		out += "\t2: during lunch\n";
 		out += "\t3: in the hallways\n";
-
+		System.out.println("");
+		
 		try {
 		    ans = Integer.parseInt( in.readLine() ); 
 		}
@@ -438,7 +444,8 @@ public class Academic {
 	    out += "\t1: the breakfast cart for coffee\n";
 	    out += "\t2: zuckers for a bagel\n";
 	    out += "\t3: ferry's for a bacon chiptole avocado on a roll\n";
-
+	    System.out.println("");
+		
 	    try {
 		ans = Integer.parseInt( in.readLine() ); 
 	    }
@@ -470,7 +477,8 @@ public class Academic {
 	    out += "\t1: play hooky\n";
 	    out += "\t2: go to school. power to the player!\n";
 	    out += "\t3: i will go on, my poor soul\n";
-
+	    System.out.println("");
+		
 	    try {
 		ans = Integer.parseInt( in.readLine() ); 
 	    }
