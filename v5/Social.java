@@ -87,7 +87,7 @@ public class Social {
           String s = currFriend + " has a new significant other...";
 	        s+= "\nRecently, you've been neglected by the couple";
 	        s+= "\nand when you do get together, you're the third wheel.";
-	        s+= "\nWhat do you do?";
+	        s+= "\nWhat do you do? \n";
 	        s+= "\t1: Confront " + currFriend + "\n";
           s+= "\t2: Stop hanging out with them all together\n";
 	        s+= "\t3: You're not bothered by this.\n";
@@ -168,10 +168,10 @@ public class Social {
         }
         else{
           int newOne = 0;
-          newOne = Integer.parseInt(in.readLine());
           System.out.println("What are your new plans?");
           System.out.println("\t1: Study Session @ AIS tutoring");
           System.out.println("\t2: Going to sleep the second you get home!");
+          newOne = Integer.parseInt(in.readLine());
           if(newOne == 1){
             System.out.println("You ACE your test tomorrow!! WOoo!");
             System.out.println("Grades go up... Friends go down :(");
@@ -216,8 +216,8 @@ public class Social {
 
       if(choice < 0.33){
         String s = "THERE'S A RUMOR GOING AROUND?!";
-  	    s+= "\n They say that you're trying to bribe others to write your papers?!";
-  	    s+= "What do you do?\n";
+  	    s+= "\nThey say that you're trying to bribe others to write your papers?!";
+  	    s+= "\nWhat do you do?\n";
   	    s+= "\t1: Keep quiet... It just might be true... \n";
         s+= "\t2: Go to your guidance counselor. Talk it out!\n";
         s+= "\t3: Ignore them!! You know it's not true!\n";
