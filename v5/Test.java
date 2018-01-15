@@ -13,10 +13,10 @@ public class Test {
   public static double luck;
   private int score;
   public static int maxE;
-  //public static Friend[] yourFriends;
-  //public Friend friend1;
-  //public Friend friend2;
-  //public Friend friend3;
+  public static Friend[] yourFriends;
+  public static Friend friend1;
+  public static Friend friend2;
+  public static Friend friend3;
   public static boolean datenight = false;
   public static boolean flix = false;
 
@@ -32,29 +32,35 @@ public class Test {
     maxE = (int)(Math.random() * 5);
     isr = new InputStreamReader( System.in );
     in = new BufferedReader( isr );
-  }
+
 
 
 
     //Making friends
-/*
+
     int friendgen = (int)(Math.random() * 6);
     friend1 = new Friend(NAMES[friendgen]);
+    friend1.friendship = 3;
     friendgen = (int)(Math.random() * 6);
     friend2 = new Friend(NAMES[friendgen]);
+    friend2.friendship = 1;
     friendgen = (int)(Math.random() * 6);
     friend3 = new Friend(NAMES[friendgen]);
+    friend2.friendship = 7;
     yourFriends = new Friend[3];
     yourFriends[0] = friend1;
     yourFriends[1] = friend2;
     yourFriends[2] = friend3;
-    */
+}
   //sims a day, out of a possible 180 - we can put the methods in another class
   public boolean testDay() {
     player = new Normal("Player");
     crush = new Crush("Crush");
-    Other other = new Other();
-    other.allNighter(player);
+    CompareFriendship cf = new CompareFriendship();
+    cf.populate(friend1);
+    cf.populate(friend2);
+    cf.populate(friend3);
+    cf.sort();
     return true;
   }
     //System.out.println(player.average);
