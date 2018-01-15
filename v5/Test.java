@@ -56,11 +56,8 @@ public class Test {
   public boolean testDay() {
     player = new Normal("Player");
     crush = new Crush("Crush");
-    CompareFriendship cf = new CompareFriendship();
-    cf.populate(friend1);
-    cf.populate(friend2);
-    cf.populate(friend3);
-    cf.sort();
+    Other other = new Other();
+    other.hqtrivia(player);
     return true;
   }
     //System.out.println(player.average);
