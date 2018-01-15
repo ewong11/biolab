@@ -233,157 +233,160 @@ public class Other {
                   out += "\t\n3: NO";
                   out += "\t\n4: i'll think about it later.";
                   System.out.println(out);
-                    	try {
-                    	    ans = Integer.parseInt(in.readLine());
-                    	}
-                    	catch (IOException e) {}
-
-                    	if (ans == 1) {
-                   	    a.physical += 2;
-                   	    out = "whooa. soulcycle was so intense. now you decide to get a snack after the work out. what do you get?\n";
-                   	    out += "\t1: mcDonalds\n";
-                   	    out += "\t2: bubble tea from Kung Fu Tea\n";
-                   	    out += "\t3: one of those insane green drinks because why not\n";
-
-                   	    try {
-                   		ans = Integer.parseInt(in.readLine());
-                   	    }
-                   	    catch (IOException e) {}
-
-                   	    if (ans == 1) {
-                   		System.out.println("you regained all the calories but in a bad form. sigh....\n");
-                   		a.physical -= 2;
-                   		a.mental -= 1;
-                   	    }
-                   	    else if (ans == 2) {
-                   		System.out.println("good choice. you even meet a friend there and talk. soulcycle was a good choice");
-                   		a.charisma += 1;
-                   		a.mental += 1;
-                   	    }
-                   	    else {
-                   		System.out.println("you feel healthier after just one sip! \n");
-                   		a.physical += 5;
-                   		a.mental += 1;
-                   	    }
-                    	}
-                    	else if (ans == 2) {
-                   	    System.out.println("you go but because you've never had to climb up more than 2 flights at a time, it hurts\n");
-                   	    a.charisma += 1;
-                   	    a.physical += 2;
-                    	}
-                   	else if (ans == 3) {
-                   	    System.out.println("Dr. MArkova is disappointed, but you told her you exercise every day so she lets it go");
-                   	    a.charisma += 1;
-                   	}
-                    	else {
-                   	    out = "Dr. Markova spots you down the hallway and zones in. she asks, " + a.name;
-                   	    out += "did you go to the soulCycle?\n";
-                   	    out += "\t1: umm yea, about that...\n";
-                   	    out += "\t2: no, I'm really not into soulCycle. track is more my jam\n";
-                   	    out += "\t3; totally! it was rad as heck! groovy dude!\n";
-                   	    System.out.println(out);
-
-                   	    try {
-                   		ans = Integer.parseInt(in.readLine());
-                       }
-                   	    catch (IOException e) {}
-
-
-                   	    if (ans == 1) {
-                   		String excuse = "";
-                   		System.out.println("make up an exuse: \n");
-
-                   		try {
-                   		    excuse = in.readLine();
-                   		}
-                   	catch (IOException e) {}
-
-                   		System.out.println("Dr. Markova, " + excuse);
-                   		System.out.println("she says ahhhh... I understand. see you in gym! \n");
-                   		a.charisma -= 1;
-                   	    }
-                   	    else if (ans == 2)
-                   		System.out.println("what luck! she totally sympathizes with you and even tells you to join track!");
-                   	    else {
-                   		System.out.println("she makes a few quips about people faking attendence in gym class :(( \n");
-                   		a.charisma -= 1;
-                   		a.physical -= 1;
-                    }
+                  try {
+                    ans = Integer.parseInt(in.readLine());
                   }
-                } 
-                  public static void hqtrivia(Student a) {
-                    //Woo.trivia = true;
-                    String s = "Sorry, that's incorrect :(\nGame Over";
-                    isr = new InputStreamReader(System.in);
-                    in = new BufferedReader( isr);
-                    String out = "";
-                    int ans = 0;
+                  catch (IOException e) {}
 
-                    out = "Welcome to HQtrivia, HQuties!";
-                    out += "\nI'm your host, QuizDaddy and here are the rules";
-                    out += "\nYou must answer 3 questions to win some $$$";
-                    out += "\nLet's Play!";
-                    out += "\nQuestion 1: Which of the following is not a real animal?";
-                    out += "\n1. Jackalope";
-                    out += "\n2. Wholphin";
-                    out += "\n3. Liger";
-                    System.out.println(out);
-                    try {
-                      ans = Integer.parseInt(in.readLine());
-                    }
-                    catch (IOException e) {}
+                    if (ans == 1) {
+                      a.physical += 2;
+                      out = "whooa. soulcycle was so intense. now you decide to get a snack after the work out. what do you get?\n";
+                      out += "\t1: mcDonalds\n";
+                      out += "\t2: bubble tea from Kung Fu Tea\n";
+                      out += "\t3: one of those insane green drinks because why not\n";
 
-                      if (ans == 2) {
-                        System.out.println(s);
+                      try {
+                        ans = Integer.parseInt(in.readLine());
                       }
-                      else if (ans == 1) {
-                        out = "Good job! Next Question: ";
-                        out += "\n How much are all the vowels in Wheel of Fortune worth combined?";
-                        out += "\n1. $1000";
-                        out += "\n2. $1250";
-                        out += "\n3. $2500";
-                        a.mental += 1;
+                      catch (IOException e) {}
+
+                        if (ans == 1) {
+                          System.out.println("you regained all the calories but in a bad form. sigh....\n");
+                          a.physical -= 2;
+                          a.mental -= 1;
+                        }
+                        else if (ans == 2) {
+                          System.out.println("good choice. you even meet a friend there and talk. soulcycle was a good choice");
+                          a.charisma += 1;
+                          a.mental += 1;
+                        }
+                        else {
+                          System.out.println("you feel healthier after just one sip! \n");
+                          a.physical += 5;
+                          a.mental += 1;
+                        }
+                      }
+                      else if (ans == 2) {
+                        System.out.println("you go but because you've never had to climb up more than 2 flights at a time, it hurts\n");
+                        a.charisma += 1;
+                        a.physical += 2;
+                      }
+                      else if (ans == 3) {
+                        System.out.println("Dr. MArkova is disappointed, but you told her you exercise every day so she lets it go");
+                        a.charisma += 1;
+                      }
+                      else {
+                        out = "Dr. Markova spots you down the hallway and zones in. she asks, " + a.name;
+                        out += "did you go to the soulCycle?\n";
+                        out += "\t1: umm yea, about that...\n";
+                        out += "\t2: no, I'm really not into soulCycle. track is more my jam\n";
+                        out += "\t3; totally! it was rad as heck! groovy dude!\n";
                         System.out.println(out);
+
                         try {
                           ans = Integer.parseInt(in.readLine());
                         }
                         catch (IOException e) {}
+
+
                           if (ans == 1) {
-                            System.out.println(s);
-                          }
-                          else if (ans == 2) {
-                            out = "Wow! That's correct! Next and Last Question";
-                            out += "\nWhich of these two cities are in the same time zone?";
-                            out += "\n1. Cheyenne and Bismarck";
-                            out += "\n2. San Francisco and Phoenix";
-                            out += "\n3. Sioux Falls and Penascola";
-                            a.mental += 3;
-                            System.out.println(out);
+                            String excuse = "";
+                            System.out.println("make up an exuse: \n");
+
                             try {
-                              ans = Integer.parseInt(in.readLine());
+                              excuse = in.readLine();
                             }
                             catch (IOException e) {}
-                              if (ans == 1) {
-                                System.out.println(s);
-                              }
-                              else if (ans == 2) {
-                                System.out.println(s);
-                              }
-                              else if (ans == 3) {
-                                out = "Whaaat that's crazy!";
-                                out += "\nYou're right!";
-                                out += "\nHere's some fake cash!";
-                                out += "\nAnd real happiness!!";
-                                a.mental += 30;
-                                System.out.println(out);
-                              }
+
+                              System.out.println("Dr. Markova, " + excuse);
+                              System.out.println("she says ahhhh... I understand. see you in gym! \n");
+                              a.charisma -= 1;
                             }
-                            else if (ans == 3) {
-                              System.out.println(s);
+                            else if (ans == 2)
+                            System.out.println("what luck! she totally sympathizes with you and even tells you to join track!");
+                            else {
+                              System.out.println("she makes a few quips about people faking attendence in gym class :(( \n");
+                              a.charisma -= 1;
+                              a.physical -= 1;
                             }
-                          }
-                          else if (ans == 3) {
-                            System.out.println(s);
                           }
                         }
-                      }
+                        public static void hqtrivia(Student a) {
+                          //Woo.trivia = true;
+                          String s = "Sorry, that's incorrect :(\nGame Over";
+                          isr = new InputStreamReader(System.in);
+                          in = new BufferedReader( isr);
+                          String out = "";
+                          int ans = 0;
+
+                          out = "Welcome to HQtrivia, HQuties!";
+                          out += "\nI'm your host, QuizDaddy and here are the rules";
+                          out += "\nYou must answer 3 questions to win some $$$";
+                          out += "\nLet's Play!";
+                          out += "\nQuestion 1: Which of the following is not a real animal?";
+                          out += "\n1. Jackalope";
+                          out += "\n2. Wholphin";
+                          out += "\n3. Liger";
+                          System.out.println(out);
+                          try {
+                            ans = Integer.parseInt(in.readLine());
+                          }
+                          catch (IOException e) {}
+
+                            if (ans == 2) {
+                              System.out.println(s);
+                            }
+                            else if (ans == 1) {
+                              out = "Good job! Next Question: ";
+                              out += "\n How much are all the vowels in Wheel of Fortune worth combined?";
+                              out += "\n1. $1000";
+                              out += "\n2. $1250";
+                              out += "\n3. $2500";
+                              a.mental += 1;
+                              a.intel += 5;
+                              System.out.println(out);
+                              try {
+                                ans = Integer.parseInt(in.readLine());
+                              }
+                              catch (IOException e) {}
+                                if (ans == 1) {
+                                  System.out.println(s);
+                                }
+                                else if (ans == 2) {
+                                  out = "Wow! That's correct! Next and Last Question";
+                                  out += "\nWhich of these two cities are in the same time zone?";
+                                  out += "\n1. Cheyenne and Bismarck";
+                                  out += "\n2. San Francisco and Phoenix";
+                                  out += "\n3. Sioux Falls and Penascola";
+                                  a.mental += 3;
+                                  a.intel += 7;
+                                  System.out.println(out);
+                                  try {
+                                    ans = Integer.parseInt(in.readLine());
+                                  }
+                                  catch (IOException e) {}
+                                    if (ans == 1) {
+                                      System.out.println(s);
+                                    }
+                                    else if (ans == 2) {
+                                      System.out.println(s);
+                                    }
+                                    else if (ans == 3) {
+                                      out = "Whaaat that's crazy!";
+                                      out += "\nYou're right!";
+                                      out += "\nHere's some fake cash!";
+                                      out += "\nAnd real happiness!!";
+                                      a.mental += 30;
+                                      a.intel += 10;
+                                      System.out.println(out);
+                                    }
+                                  }
+                                  else if (ans == 3) {
+                                    System.out.println(s);
+                                  }
+                                }
+                                else if (ans == 3) {
+                                  System.out.println(s);
+                                }
+                              }
+                            }
