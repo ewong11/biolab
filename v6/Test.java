@@ -56,11 +56,13 @@ public class Test {
   public boolean testDay() {
     player = new Normal("Player");
     crush = new Crush("Crush");
-    Social social = new Social();
-    social.friend(player);
+    //Social social = new Social();
+    //social.friend(player);
     //Other other = new Other();
     //Other.hqtrivia(player);
 
+    FindClass a = new FindClass();
+    a.runToClass(player);
     return true;
   }
     //System.out.println(player.average);
