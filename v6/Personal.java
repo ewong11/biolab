@@ -5,7 +5,7 @@ public class Personal {
     private static InputStreamReader isr;
     private static BufferedReader in;
 
-    public static void netflix(Student a, Crush b) {
+    public static void netflix(Student a, Friend b) {
 	Woo.flix = true;
 	//Test.flix = true;
 	String input = "";
@@ -145,7 +145,7 @@ public class Personal {
 	    System.out.println(s);
 	}
     }
-    public static void date(Student a, Crush b) {
+    public static void date(Student a, Friend b) {
 	String input = "";
 	String s = b.name + " asks you out on a 'date'";
 	s += "\nDo you want to go? (y/n)";

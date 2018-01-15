@@ -13,18 +13,13 @@ public class Social {
     int choiceF = (int)(Math.random() * 3);
     Friend currFriend;
     //References friend with currFriend
-    if (Math.random() > .4) {
-       currFriend = Woo.yourFriends[choiceF];
-    }
-    else {
-       currFriend = Woo.crush;
-    }
+       currFriend = Woo.yourFriends[3];
     //Which FriendEvent to do?
     double choice = Math.random();
 
     //Friend Event 1
     if(choice < 0.33){
-      String s = "Your friend, " + currFriend +  " waved at you in the hallway! \n";
+      String s = "Your friend, " + currFriend.name +  " waved at you in the hallway! \n";
       s+= "\t What would you like to do? \n";
       s+= "\t1: Pretend you didn't notice \n";
       s+= "\t2: Wave Back!\n";
@@ -53,7 +48,7 @@ public class Social {
 
     //Friend Event 2
     else if (choice < 0.66) {
-      String s = currFriend + " meets you at your locker and asks if you \nwant to go to help them with their homework after school.";
+      String s = currFriend.name + " meets you at your locker and asks if you \nwant to go to help them with their homework after school.";
       s+= "\n What do you do? \n";
       s+= "\t1: No. I can't sorry. I have a lot of work to do\n";
       s+= "\t2: Sure! I gotcha!\n";
@@ -90,11 +85,11 @@ public class Social {
       catch ( IOException e ) { }
     }
     else{
-      String s = currFriend + " has a new significant other...";
+      String s = currFriend.name + " has a new significant other...";
       s+= "\nRecently, you've been neglected by the couple";
       s+= "\nand when you do get together, you're the third wheel.";
       s+= "\nWhat do you do? \n";
-      s+= "\t1: Confront " + currFriend + "\n";
+      s+= "\t1: Confront " + currFriend.name + "\n";
       s+= "\t2: Stop hanging out with them all together\n";
       s+= "\t3: You're not bothered by this.\n";
       System.out.println(s);
@@ -137,11 +132,13 @@ public class Social {
       Woo.friend1.friendship += amt;
       Woo.friend2.friendship += amt;
       Woo.friend3.friendship += amt;
+      Woo.crush.friendship += amt;
     }
     else{
       Woo.friend1.friendship -= amt;
       Woo.friend2.friendship -= amt;
       Woo.friend3.friendship -= amt;
+      Woo.crush.friendship -= amt;
     }
   }
 
@@ -270,7 +267,7 @@ public class Social {
       try {
         ans = Integer.parseInt( in.readLine() );
         if (ans == 1){
-          System.out.println("You and " + currFriend + " have an intense argument...");
+          System.out.println("You and " + currFriend.name + " have an intense argument...");
           System.out.println("Friendship level decreases...");
           currFriend.friendship -= 1;
         }

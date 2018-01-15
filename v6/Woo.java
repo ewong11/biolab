@@ -10,7 +10,7 @@ public class Woo {
     public static int days;
     public static double luck;
     private int score;
-    public static Crush crush;
+    public static Friend crush;
     public static Friend[] yourFriends;
     public static Friend friend1;
     public static Friend friend2;
@@ -244,10 +244,11 @@ public class Woo {
     friend2 = new Friend(NAMES2[friendgen]);
     friendgen = (int)(Math.random() * 6);
     friend3 = new Friend(NAMES3[friendgen]);
-    yourFriends = new Friend[3];
+    yourFriends = new Friend[4];
     yourFriends[0] = friend1;
     yourFriends[1] = friend2;
     yourFriends[2] = friend3;
+    yourFriends[3] = crush;
 
   }
 
@@ -298,7 +299,7 @@ public class Woo {
 		compare.populate(friend2);
 		compare.populate(friend3);
 		compare.sort();
-    System.out.println("\nThis is how close you are with" + crush.name);
+    System.out.println("\nThis is how close you are with " + crush.name);
     System.out.println("<" + crush.friendLev() + ">");
 		confirm();
 	    }
@@ -357,8 +358,6 @@ public class Woo {
 	      else if (luck < 0.5)
 		  Social.eatOut(player);
 	      else if (luck < 0.55)
-		  Social.birthday();
-	      else
 		  Social.rumors(player);
 	  }
 
@@ -373,7 +372,7 @@ public class Woo {
 		  Personal.date(player, crush);
           }
           else {
-            System.out.println("...You think sbout going on a date with " + crush.name);
+            System.out.println("...You think about going on a date with " + crush.name);
           }
         }
 	      else if (luck < 0.75)

@@ -6,7 +6,7 @@ public class Crush extends Friend {
   }
 
   public Crush(String n) {
-    name = n;
+    super(name = n);
   }
   public String friendLev() {
     if (friendship < 0.5)
