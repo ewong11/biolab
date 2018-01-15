@@ -15,10 +15,10 @@ public class Personal {
     //PROMPT------------------------------------------------------------------
     String s = "Something good just came out on Netflix!";
     s += "\nYou really want to watch the show, but you also know that you need to do homework...";
-    s += "\nWhat do you do?";
-    s += "\n1: BINGE WATCH NETFLIX DUH";
-    s += "\n2: Call " + b.name +  " and see if she wants to Netflix and chilll";
-    s += "\n3: I really need to do hw...";
+    s += "\nWhat do you do?\n";
+    s += "\t1: BINGE WATCH NETFLIX DUH\n";
+    s += "\t2: Call " + b.name +  " and see if she wants to Netflix and chilll\n";
+    s += "\t3: I really need to do hw...";
     System.out.println(s);
     //RESPONSES---------------------------------------------------------------
     try {
@@ -158,11 +158,11 @@ public class Personal {
       catch (IOException e) {}
         if (input.equals("y")) {
           s = b.name + " asks you where you want to go, and recommends the arcade.";
-          s += "\nWhere do you want to go?";
-          s += "\n1. the arcade";
-          s += "\n2. the carnival";
-          s += "\n3. the movies";
-          s += "\n4. actually...I don't really want to go on a date..";
+          s += "\nWhere do you want to go?\n";
+          s += "\t1. the arcade\n";
+          s += "\t2. the carnival\n";
+          s += "\t3. the movies\n";
+          s += "\t4. actually...I don't really want to go on a date..";
           System.out.println(s);
           try {
             input = in.readLine();
@@ -238,11 +238,11 @@ public class Personal {
                     if (Woo.luck > .3) {
                       s = "You guys are just playing Pac-Man, when you feel ";
                       s += "\n" + b.name + " leaning closer.";
-                      s += "\n What do you do?";
-                      s += "\n1. Go with the flow!";
-                      s += "\n2. Push " + b.name + " away";
+                      s += "\n What do you do?\n";
+                      s += "\t1. Go with the flow!\n";
+                      s += "\t2. Push " + b.name + " away\n";
                       if (a.charisma > 80) {
-                        s += "\n3.Be aggressive!";
+                        s += "\t3.Be aggressive!\n";
                       }
                       System.out.println(s);
                       try {
@@ -267,12 +267,12 @@ public class Personal {
                         }
                         else if (input.equals(3) && a.charisma > 80) {
                           s = "You guys have the best night ever";
-                          s += "You feel infinitely closer to" + b.name;
+                          s += "\nYou feel infinitely closer to" + b.name;
                           b.friendship += 2.0;
                         }
                         else {
                           s = "You just stand there...";
-                          s += "Nothing happens and the date ends";
+                          s += "\nNothing happens and the date ends";
                         }
                       }
                       else {
@@ -312,11 +312,11 @@ public class Personal {
                     }
                     else if(input.equals("3")) {
                       s = "Nothing wrong with a basic date!";
-                      s += "\nWhat do you watch?";
-                      s += "\n1. an action movie";
-                      s += "\n2. a drama";
-                      s += "\n3. a romantic movie";
-                      s += "\n4: a comedy";
+                      s += "\nWhat do you watch?\n";
+                      s += "\t1. an action movie\n";
+                      s += "\t2. a drama\n";
+                      s += "\t3. a romantic movie\n";
+                      s += "\t4: a comedy";
                       System.out.println(s);
 
                       try {
@@ -325,7 +325,7 @@ public class Personal {
                       catch (IOException e) {}
                         if (input.equals("1")) {
                           s = "Everyone loves some action!";
-                          s += "You have a good time";
+                          s += "\nYou have a good time";
                           a.mental += 5;
                           b.friendship += .2;
                         }
@@ -366,10 +366,10 @@ public class Personal {
 
                     a.physical -= 20;
                     s = "You're sick...";
-                    s += "\nThere's no way you can go to school today...";
-                    s += "\n1. I need perfect attendance...to school it is!";
-                    s += "\n2. Yea, I need a mental health day anyways.";
-                    s += "\n3. I'm gonna go see me a doctor!";
+                    s += "\nThere's no way you can go to school today...\n";
+                    s += "\t1. I need perfect attendance...to school it is!\n";
+                    s += "\t2. Yea, I need a mental health day anyways.\n";
+                    s += "\t3. I'm gonna go see me a doctor!";
                     System.out.println(s);
 
                     try {

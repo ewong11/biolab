@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Woo {
 
@@ -62,6 +63,7 @@ public class Woo {
     int intelligence = 0;
     int social = 0;
     int normal = 0;
+    Scanner sc = new Scanner(System.in);
     s = "Welcome to\n";
     s += "   _____ _               _      _  __             \n"
     +  "  / ____| |             | |    (_)/ _|    _       \n"
@@ -74,10 +76,10 @@ public class Woo {
     s += "  \t \tF r e s h m a n  F r e n z y! \nBut first, let us know your name: ";
     System.out.println(s);
 
-    try {
-      name = in.readLine();
-    }
-    catch ( IOException e ) { }
+    //try {
+      name = sc.next();
+    //}
+    //catch ( IOException e ) { }
 
     s = "Everyone has a crush, who's yours?";
     System.out.println(s);
@@ -172,9 +174,7 @@ public class Woo {
       normal += 1;
     }
     catch ( IOException e ) { }
-
-    System.out.println(crush.name);
-
+    System.out.print("\033[H\033[2J");
 
     // makes the player one of three characters
     int highest = Math.max(intelligence, Math.max(normal, social));
@@ -216,16 +216,6 @@ public class Woo {
   //sims a day, out of a possible 180 - we can put the methods in another class
   public boolean simDay() {
     luck = Math.random();
-    //Personal personal = new Personal();
-    //personal.date(player, crush);
-    //System.out.println(player.average);
-    //Lunch lunch = new Lunch();
-    //Events event = new Events();
-    //event.impressCrush(player);
-    //lunch.play(player);
-    //FindClass run = new FindClass();
-    //run.runToClass(player);
-    //System.out.println(player.average);
 
     if(!player.isDead()){
       System.out.println(luck);
@@ -235,8 +225,9 @@ public class Woo {
       int ans = 0;
       String s = "";
       s += "\t1: Show Your Status\n";
-      s += "\t2: Fortune Me! \n";
-      s += "\t3: INTO THE FRAY! \n";
+      s += "\t2. Rank my friends based on how close we are!\n";
+      s += "\t3: Fortune Me! \n";
+      s += "\t4: INTO THE FRAY! \n";
       s += "Selection: ";
       System.out.println(s);
 
@@ -253,9 +244,16 @@ public class Woo {
             System.out.print(FORTUNES[(int)(Math.random() * 17)]);
             System.out.println("\n");
           }
+        else if (ans == 2) {
+          CompareFriendship compare = new CompareFriendship();
+          compare.populate(friend1);
+          compare.populate(friend2);
+          compare.populate(friend3);
+          compare.sort();
+        }
 
         }
-        else if (ans == 2){
+        else if (ans == 3){
           System.out.println("Fortune: ");
           System.out.print(FORTUNES[(int)(Math.random() * 17)]);
           System.out.println("\n");

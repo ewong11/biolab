@@ -186,8 +186,8 @@ public class Other {
                 }
                 System.out.println(out);
                 while (question == false) {
-                  out = "\n1. You can pull an all-nighter and finish all your work OR";
-                  out += "\n2. You can just sleep, its a lost cause anyways";
+                  out = "\t1. You can pull an all-nighter and finish all your work OR\n";
+                  out += "\t2. You can just sleep, its a lost cause anyways\n";
                   System.out.println(out);
                   try {
                     ans = Integer.parseInt(in.readLine());
@@ -204,8 +204,8 @@ public class Other {
                       question = true;
                     }
                     else if (ans == 2) {
-                      out = "Yeah, sleeping was definitely the right choice! ";
-                      out += "\nYou feel refreshed and invigorated, but your grades take a hit.";
+                      out = "Yeah, sleeping was definitely the right choice!\n";
+                      out += "You feel refreshed and invigorated, but your grades take a hit.";
                       a.sleep += 3;
                       a.physical += 20;
                       a.mental += 20;
@@ -323,10 +323,10 @@ public class Other {
                           out += "\nI'm your host, QuizDaddy and here are the rules";
                           out += "\nYou must answer 3 questions to win some $$$";
                           out += "\nLet's Play!";
-                          out += "\nQuestion 1: Which of the following is not a real animal?";
-                          out += "\n1. Jackalope";
-                          out += "\n2. Wholphin";
-                          out += "\n3. Liger";
+                          out += "\nQuestion 1: Which of the following is not a real animal?\n";
+                          out += "\t1. Jackalope\n";
+                          out += "\t2. Wholphin\n";
+                          out += "\t3. Liger\n";
                           System.out.println(out);
                           try {
                             ans = Integer.parseInt(in.readLine());
@@ -338,10 +338,10 @@ public class Other {
                             }
                             else if (ans == 1) {
                               out = "Good job! Next Question: ";
-                              out += "\n How much are all the vowels in Wheel of Fortune worth combined?";
-                              out += "\n1. $1000";
-                              out += "\n2. $1250";
-                              out += "\n3. $2500";
+                              out += "\n How much are all the vowels in Wheel of Fortune worth combined?\n";
+                              out += "\t1. $1000\n";
+                              out += "\t2. $1250\n";
+                              out += "\t3. $2500\n";
                               a.mental += 1;
                               a.intel += 5;
                               System.out.println(out);
@@ -355,9 +355,9 @@ public class Other {
                                 else if (ans == 2) {
                                   out = "Wow! That's correct! Next and Last Question";
                                   out += "\nWhich of these two cities are in the same time zone?";
-                                  out += "\n1. Cheyenne and Bismarck";
-                                  out += "\n2. San Francisco and Phoenix";
-                                  out += "\n3. Sioux Falls and Penascola";
+                                  out += "\t1. Cheyenne and Bismarck\n";
+                                  out += "\t2. San Francisco and Phoenix\n";
+                                  out += "\t3. Sioux Falls and Penascola\n";
                                   a.mental += 3;
                                   a.intel += 7;
                                   System.out.println(out);
