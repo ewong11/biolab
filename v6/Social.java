@@ -9,11 +9,11 @@ public class Social {
   public static void friend(Student player) {
     isr = new InputStreamReader( System.in );
     in = new BufferedReader( isr );
-    //Chooses whcih friend to interact with
+    //Chooses which friend to interact with
     int choiceF = (int)(Math.random() * 3);
     Friend currFriend;
     //References friend with currFriend
-       currFriend = Woo.yourFriends[3];
+    currFriend = Woo.yourFriends[3];
     //Which FriendEvent to do?
     double choice = Math.random();
 
@@ -194,17 +194,35 @@ public class Social {
     catch ( IOException e ) { }
   }
 
-  public static void birthday() {
-    /*String s = "";
-    s+= "HAPPY BIRTHDAY BUD! *cue scanner song\n";
-    s+= "\tYou're officially 15\n";
-    s+= "\tWhat would you like to do today: \n";
-    s+= "\t1: play hooky and go to Wok Wok! \n";
-    s+= "\t2: do nothing. school is still a thing for you :( \n";
-    s+= "\t3: Convince your teacher not to assign you homework\n";
+  public static int birthday(Student p) {
+    isr = new InputStreamReader( System.in );
+    in = new BufferedReader( isr );
+    String s = "\n";
+    s += "           iiiiiiiiii\n";
+    s += "          |:H:a:p:p:y:|\n";
+    s += "        __|___________|__\n";
+    s += "       |^^^^^^^^^^^^^^^^^|\n";
+    s += "       |:B:i:r:t:h:d:a:y:|\n";
+    s += "       |                 |\n";
+    s += "       ~~~~~~~~~~~~~~~~~~~\n";
+    s += "HAPPY BIRTHDAY BUD!\n";
+    s += "\tYou're officially 15\n";
+    s += "\tWhat would you like to do today: \n";
+    s += "\t1: play hooky and go to Wok Wok! \n";
+    s += "\t2: do nothing. school is still a thing for you :( \n";
     System.out.println(s);
 
-    String ans = in.readLine(); */
+    String ans = in.readLine();
+    if(ans == 1){
+      System.out.println("You had a great time today!\n");
+      System.out.println("Have a great year! <3");
+      p.mental += 0.5;
+      return 1;
+    }
+    else{
+      System.out.println("You go to school...\n");
+      return 0;
+    }
   }
 
   public static void rumors(Student p) {

@@ -232,7 +232,8 @@ public class Woo {
     }
 
     //Bithday!
-    birthday = (int)(Math.random() * 150);
+    //birthday = (int)(Math.random() * 150);
+    birthday = 2;
     System.out.println("Your brithday is: " + birthday + "\n");
     System.out.println("Your crush is " + crush.name + "!\n");
     System.out.println("This is your schedule!");
@@ -336,8 +337,7 @@ public class Woo {
 
       int eNum = 0;
       if(day == birthday){
-        Social.birthday();
-        eNum++;
+        eNum += Social.birthday(player);
       }
 
       while(eNum <= 0){
