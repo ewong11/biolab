@@ -79,12 +79,12 @@ public class Woo {
     +  "                   |___/                          \n";
     s += "  \t \tF r e s h m a n  F r e n z y! \n";
     System.out.println(s);
-    s = "~~~\n"
+    s = "~~~\n";
     s += "It's been a week since you've submitted your college\n"
-    s += "apps. The past few months as a senior have been grueling.\n"
+    + "apps. The past few months as a senior have been grueling.\n";
     System.out.println(s);
     confirm();
-    s = "You've discovered so much about yourself from analyzing\n"
+    s = "You've discovered so much about yourself from analyzing\n";
     s += "your whole Stuyvesant career for your essays. Before you\n"
     + "fell asleep last night, you began to wonder:\n"
     + "What if I could start over...\n"
@@ -109,7 +109,7 @@ public class Woo {
     name = sc.next();
     //}
     //catch ( IOException e ) { }
-    
+
     System.out.print("\033[H\033[2J");
     s = "Everyone has a crush, who's yours?";
     System.out.println(s);
