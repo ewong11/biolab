@@ -309,10 +309,10 @@ public class Other {
                             }
                             else if (ans == 3) {
                               System.out.println(s);
-                          }
+                            }
                           }
                           else if (ans == 3) {
                             System.out.println(s);
+                          }
                         }
                       }
-                    }

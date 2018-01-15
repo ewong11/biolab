@@ -4,46 +4,46 @@ import java.util.ArrayList;
 
 public class Woo {
 
-    // instance variables -----------------------------------
-    protected Student player;
-    private Crush crush;
-    private NPC npc1;
+  // instance variables -----------------------------------
+  protected Student player;
+  private Crush crush;
+  private NPC npc1;
 
-    public static int days;
-    public static double luck;
-    private int score;
-    public static int maxE;
-    public static Friend[] yourFriends;
-    public static Friend friend1;
-    public static Friend friend2;
-    public static Friend friend3;
-    public static boolean datenight = false;
-    public static boolean flix = false;
+  public static int days;
+  public static double luck;
+  private int score;
+  public static int maxE;
+  public static Friend[] yourFriends;
+  public static Friend friend1;
+  public static Friend friend2;
+  public static Friend friend3;
+  public static boolean datenight = false;
+  public static boolean flix = false;
 
 
-    private InputStreamReader isr;
-    private BufferedReader in;
+  private InputStreamReader isr;
+  private BufferedReader in;
 
-    final String[] NAMES = {"Joe", "Gaby", "Buford", "Edith", "Arnold", "Kat"}; //possible names for NPCS
+  final String[] NAMES = {"Joe", "Gaby", "Buford", "Edith", "Arnold", "Kat"}; //possible names for NPCS
 
-    final String[] FORTUNES = {"a friend asks only for your time, not your money\n",
-			       "you learn from your mistakes. you will learn a lot today\n",
-			       "if you have something good in your life, don't let it go!\n",
-			       "your shoes will make you a very happy person today\n",
-			       "meeting adversary well is the source of your strength\n",
-			       "it is now, and in this world, that we must live so live well.\n",
-			       "you already know the answers to the questions lingering in your head\n",
-			       "the greatest risk is not taking one\n",
-			       "it's better to be alone sometimes\n",
-			       "when hungry, order more Chinese food\n",
-			       "all of your fingers can't be of the same length\n",
-			       "patience is a virtue unless it is against a brick wall \n",
-			       "the most important part of communication is hearing what isn't said\n",
-			       "a different world cannot be built by indifferent people",
-			       "you are not illiterate",
-			       "this project will wow you",
-			       "let your heart decide. it doesn't get as easily confused as your head\n"};
-    //---------------------------------------------------------
+  final String[] FORTUNES = {"a friend asks only for your time, not your money\n",
+  "you learn from your mistakes. you will learn a lot today\n",
+  "if you have something good in your life, don't let it go!\n",
+  "your shoes will make you a very happy person today\n",
+  "meeting adversary well is the source of your strength\n",
+  "it is now, and in this world, that we must live so live well.\n",
+  "you already know the answers to the questions lingering in your head\n",
+  "the greatest risk is not taking one\n",
+  "it's better to be alone sometimes\n",
+  "when hungry, order more Chinese food\n",
+  "all of your fingers can't be of the same length\n",
+  "patience is a virtue unless it is against a brick wall \n",
+  "the most important part of communication is hearing what isn't said\n",
+  "a different world cannot be built by indifferent people",
+  "you are not illiterate",
+  "this project will wow you",
+  "let your heart decide. it doesn't get as easily confused as your head\n"};
+  //---------------------------------------------------------
 
   public Woo() {
     days = 0;
@@ -64,13 +64,13 @@ public class Woo {
     int normal = 0;
     s = "Welcome to\n";
     s += "   _____ _               _      _  __             \n"
-      +  "  / ____| |             | |    (_)/ _|    _       \n"
-      +  " | (___ | |_ _   _ _   _| |     _| |_ ___(_)      \n"
-      +  "  \\___ \\| __| | | | | | | |    | |  _/ _ \\        \n"
-      +  "  ____) | |_| |_| | |_| | |____| | ||  __/_       \n"
-      +  " |_____/ \\__|\\__,_|\\__, |______|_|_| \\___(_)      \n"
-      +  "                    __/ |                         \n"
-      +  "                   |___/                          \n";
+    +  "  / ____| |             | |    (_)/ _|    _       \n"
+    +  " | (___ | |_ _   _ _   _| |     _| |_ ___(_)      \n"
+    +  "  \\___ \\| __| | | | | | | |    | |  _/ _ \\        \n"
+    +  "  ____) | |_| |_| | |_| | |____| | ||  __/_       \n"
+    +  " |_____/ \\__|\\__,_|\\__, |______|_|_| \\___(_)      \n"
+    +  "                    __/ |                         \n"
+    +  "                   |___/                          \n";
     s += "  \t \tF r e s h m a n  F r e n z y! \nBut first, let us know your name: ";
     System.out.println(s);
 
@@ -250,14 +250,14 @@ public class Woo {
           let = in.readLine();
           if(let.equals("Y")){
             System.out.println("Fortune: ");
-	           System.out.print(FORTUNES[(int)(Math.random() * 17)]);
-             System.out.println("\n");
+            System.out.print(FORTUNES[(int)(Math.random() * 17)]);
+            System.out.println("\n");
           }
 
         }
         else if (ans == 2){
           System.out.println("Fortune: ");
-	        System.out.print(FORTUNES[(int)(Math.random() * 17)]);
+          System.out.print(FORTUNES[(int)(Math.random() * 17)]);
           System.out.println("\n");
         }
         else
@@ -329,7 +329,7 @@ public class Woo {
           else if (luck < 0.95)
           Other.soulCycle(player);
           else
-          Other.urbex(player);
+          Other.hqtrivia(player);
           System.out.println("***");
         }
 

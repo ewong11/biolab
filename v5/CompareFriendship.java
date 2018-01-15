@@ -16,13 +16,6 @@ public class CompareFriendship {
     return _data.toString();
   }
 
-
-  public Comparable remove( int index )
-  {
-    return _data.remove(index);
-  }
-
-
   public int size()
   {
     return _data.size();
@@ -36,7 +29,7 @@ public class CompareFriendship {
 
   //--------------------------------------------
 
-
+  
   public void populate(Friend a) {
     _data.add(a.friendship);
     names.add(a.name);
@@ -45,9 +38,9 @@ public class CompareFriendship {
     for (int pos = 0; pos < _data.size(); pos ++) {
       for (int index = 0; index < _data.size()-1; index++)
       if (_data.get(index).compareTo(_data.get(index + 1)) > 1) {
-      _data.set(index, _data.set(index+1, _data.get(index)));
-      names.set(index, names.set(index+1, names.get(index)));
-    }
+        _data.set(index, _data.set(index+1, _data.get(index)));
+        names.set(index, names.set(index+1, names.get(index)));
+      }
     }
     System.out.println(names);
   }
