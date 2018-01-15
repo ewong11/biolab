@@ -283,10 +283,39 @@ public class Social {
         String s = "THERE'S A RUMOR GOING AROUND?!";
         s+= "\nPeople are saying that you're failing all your classes!";
         s+= "\n What do you do?\n";
-        s+= "\t1: \n";
-        s+= "\t2: \n";
-        s+= "\t3: \n";
+        s+= "\t1: Prove to everyone that you're a scholar!\n";
+        s+= "\t2: Ignore it. You know you're not failing :)\n";
+        s+= "\t3: Cry :(\n";
         System.out.println(s);
+
+        int ans = 0;
+        try {
+          ans = Integer.parseInt( in.readLine() );
+          if (ans == 1){
+            int posorneg = Math.random();
+
+            if (posorneg < 0.5){
+              System.out.println("People think you're annoying :( Friendships lower");
+              AllFriendsChange("sub", 0.5);
+            }
+            else{
+              System.out.println("People think you're a role model!");
+              System.out.println("Friendships go up!");
+              AllFriendsChange("add", 0.5);
+            }
+          }
+          else if (ans == 2){
+            System.out.println("The rumor dies down and you continue with your life! :)");
+          }
+          else{
+            System.out.println("The rumor gets to you :( Your friendships suffer...");
+            AllFriendsChange("sub", 0.5);
+          }
+          
+        }
+        catch ( IOException e ) { }
+
+
       }
     }
 
