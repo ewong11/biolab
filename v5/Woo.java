@@ -332,7 +332,7 @@ public class Woo {
           Other.urbex(player);
           System.out.println("***");
         }
-        
+
         eNum+= 1;
         luck = Math.random();
       }
