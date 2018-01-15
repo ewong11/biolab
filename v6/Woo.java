@@ -97,6 +97,7 @@ public class Woo {
     //we can add a check here at the end aka "are you sure?"
     System.out.println("Cool, nice to meet you, " + name + "!");
     s = "\nTo start, let us figure out what type of person you are!";
+    System.out.print("\033[H\033[2J");
     System.out.println(s);
 
     //ADD QUIZ HERE----------------------------------------------
@@ -118,7 +119,7 @@ public class Woo {
       normal += 1;
     }
     catch ( IOException e ) { }
-
+    System.out.print("\033[H\033[2J");
     ans = 0;
     s = "Pick your afterschool club \n";
     s += "\t1: the Spectator or Speech/Debate \n";
@@ -144,7 +145,7 @@ public class Woo {
     s += "\t3: Watch Breaking Bad \n";
     s += "Selection: ";
     System.out.println(s);
-
+    System.out.print("\033[H\033[2J");
     try {
       ans = Integer.parseInt( in.readLine() );
       if (ans == 1)
@@ -155,7 +156,7 @@ public class Woo {
       normal += 1;
     }
     catch ( IOException e ) { }
-
+    System.out.print("\033[H\033[2J");
     ans = 0;
     s = " You see a person crying in the hallway. What do you do? \n";
     s += "\t1: Pretend you didn't see. \n";
@@ -163,7 +164,7 @@ public class Woo {
     s += "\t3: \"Are you ok\" \n";
     s += "Selection: ";
     System.out.println(s);
-
+    System.out.print("\033[H\033[2J");
     try {
       ans = Integer.parseInt( in.readLine() );
       if (ans == 1)

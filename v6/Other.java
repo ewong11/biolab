@@ -123,99 +123,6 @@ public class Other {
 	    out += "\t3: you walk to the 456\n";
 	    System.out.println(out);
 
-<<<<<<< HEAD
-                    if (ans == 1) {
-                      System.out.println("oof. you end up having a notebook quiz but you don't have your notes. bad quiz grade.");
-                      a.average -= 2;
-                      a.mental -= 1;
-                      a.physical += 1;
-                    }
-                    else if (ans == 2) {
-                      System.out.println("WHOOOOOO. everything is swell even if your hair is a little matted with sweat.\n");
-                      a.physical += 1;
-                      a.mental += 1;
-                      a.charisma += 1;
-                    }
-                    else {
-                      System.out.println("fair point. but you end up a little late.");
-                      a.average -= 1;
-                      a.physical -= 1;
-                      a.mental += 1;
-                    }
-                  }
-                  else {
-                    System.out.println("you're late, but not as late as you could've been so you decide to just go on with the day.\n");
-                    a.charisma += 1;
-                    a.physical += 1;
-                  }
-                }
-              }
-              public static void allNighter(Student a) {
-                boolean question = false;
-                isr = new InputStreamReader(System.in);
-                in = new BufferedReader( isr);
-                String out = "";
-                int ans = 0;
-                out = "Projects are looming.";
-                out += "\nTests are coming up";
-                out += "\nYou have homework you didn't do.";
-                if (Woo.flix == true) {
-                  out += "\nOh why did I watch binge Netflix?";
-                }
-                System.out.println(out);
-                while (question == false) {
-                  out = "\t1. You can pull an all-nighter and finish all your work OR\n";
-                  out += "\t2. You can just sleep, its a lost cause anyways\n";
-                  System.out.println(out);
-                  try {
-                    ans = Integer.parseInt(in.readLine());
-                  }
-                  catch (IOException e) {}
-
-                    if (ans == 1) {
-                      out = "That was a long night, but you finally got everything done!";
-                      out += "\nUnfortunately, you got no sleep and you won't be able to focus in class.";
-                      a.sleep = 1;
-                      a.physical -= 20;
-                      a.mental -= 20;
-                      a.average += 3;
-                      question = true;
-                    }
-                    else if (ans == 2) {
-                      out = "Yeah, sleeping was definitely the right choice!\n";
-                      out += "You feel refreshed and invigorated, but your grades take a hit.";
-                      a.sleep += 3;
-                      a.physical += 20;
-                      a.mental += 20;
-                      a.average -= 3;
-                      question = true;
-                    }
-                    else {
-                      out = "make a choice, silly";
-                    }
-                    System.out.println(out);
-                  }
-                }
-                public static void soulCycle(Student a) {
-                  isr = new InputStreamReader(System.in);
-                  in = new BufferedReader( isr);
-                  String out = "";
-                  int ans = 0;
-                  out += "you walk around school and see a poster for soulCycle. ";
-                  out += "they're offering free classes for Stuy kids! ";
-                  out += "you remember Dr. Markova mentioning it non-threatningly... ";
-                  out += "it's probably best for your health to go\n";
-                  out += "do you go?\n";
-                  out += "\t\n1: YES";
-                  out += "\t\n2: um sure";
-                  out += "\t\n3: NO";
-                  out += "\t\n4: i'll think about it later.";
-                  System.out.println(out);
-                  try {
-                    ans = Integer.parseInt(in.readLine());
-                  }
-                  catch (IOException e) {}
-=======
 	    try {
 		ans = Integer.parseInt(in.readLine());
 	    }
@@ -238,7 +145,6 @@ public class Other {
 		    ans = Integer.parseInt(in.readLine());
 		}
 		catch (IOException e) {}
->>>>>>> 59efab6f89a74256793ab7c84bc2a5a8ae190175
 
 		if (ans == 1) {
 		    System.out.println("oof. you end up having a notebook quiz but you don't have your notes. bad quiz grade.");
