@@ -114,11 +114,11 @@ public class Academic {
 	out += "hello " + a.name + "! POP QUIZ!\n";
 	out += "\tif you fail, 2 points will be deducted from your average\n";
 	out += "\tif you score over 90, one point will be added\n";
-	out += "\there we go...\n";
+	out += "\there we go...\n\n";
         out += "\tquestion 1: what does the right atrium do?\n";
-	out += "\t1: takes oxygen rich bood from the lungs\n";
-	out += "\t2: receives oxygen poor blood from body\n";
-	out += "\t3: isn't that the thing on the 3rd floor that people dance in?\n"; 
+	out += "\t\t1: takes oxygen rich bood from the lungs\n";
+	out += "\t\t2: receives oxygen poor blood from body\n";
+	out += "\t\t3: isn't that the thing on the 3rd floor that people dance in?\n"; 
 	System.out.println(out);
 	int ans = 0;
 	try {
@@ -133,9 +133,9 @@ public class Academic {
 	    System.out.println("stop sleeping in class");
 	
 	out = "\tquestion 2: how much does the bartender charge a neutron for a drink?\n";
-	out += "\t1: nothing\n";
-	out += "\t2: 7 dollars, vodka is expensive\n";
-	out += "\t3: 2.54$\n"; 
+	out += "\t\t1: nothing\n";
+	out += "\t\t2: 7 dollars, vodka is expensive\n";
+	out += "\t\t3: 2.54$\n"; 
 	System.out.println(out); 
 	try {
 	    ans = Integer.parseInt( in.readLine() ); 
@@ -234,7 +234,7 @@ public class Academic {
 	    } 
 	}
 	else if (ans == 2) {
-	    out = "the teacher is hesitant but ultimately gives in. where do you go from here?";
+	    out = "the teacher is hesitant but ultimately gives in. where do you go from here?\n";
 	    out += "\t1: write an outline, set up a schedule, and get some keys\n";
 	    out += "\t2: wait until the weekend before and have to pull two all nighters.\n";
 	    out += "\t3: do the project but overcomplicate it and it ends up mess\n";
@@ -247,7 +247,7 @@ public class Academic {
 		out = "okay, things are going good. then, you encounter a problem you don't know how to solve.\n";
 		out += "What do you do?\n"; 
 		out += "\t1: ask friends, teachers, go to the library and work it out. you got this down.\n";
-		out += "\t2: deperation seeps in. you go on the intertubes.\n";
+		out += "\t2: desperation seeps in. you go on the intertubes.\n";
 		out += "\t3: cry, give up, and buy a ticket to paris. you're here for a good time, not a long time.\n";
 		System.out.println(out); 
 		try {
@@ -346,11 +346,11 @@ public class Academic {
 	int ans = 0;
 
 	out = "After a long day at school, you come back to home sweet home\n";
-	out += "For a snack to eat while doing hw, what do you pick?";
+	out += "For a snack to eat while doing hw, what do you pick?\n";
 	out += "\t1: cookies and hot cocoa\n";
 	out += "\t2: some kbbq chickpeas and aloe vera\n";
 	out += "\t3: earl grey tea and scones\n";
-	System.out.println("");
+	System.out.println(out);
 
 	try {
 	    ans = Integer.parseInt( in.readLine() ); 
@@ -359,11 +359,11 @@ public class Academic {
 	
 	if (ans == 1) {
 	    out = "you fell straight asleep. uh oh.";
-	    out += "you wake up at 4AM. bless your soul. which hw do you do first? " ;
+	    out += "you wake up at 4AM. bless your soul. which hw do you do first? \n" ;
 	    out += "\t1: Geometry\n";
 	    out += "\t2: Biology\n";
 	    out += "\t3: History\n";
-	    System.out.println("");
+	    System.out.println(out);
 		
 	    
 	    try {
@@ -377,9 +377,8 @@ public class Academic {
 		out += "\t1: Biology\n";
 		out += "\t2: History\n";
 		out += "\t3: English\n";
-		System.out.println("");
-		
-	    
+		System.out.println(out);
+			    
 		try {
 		    ans = Integer.parseInt( in.readLine() ); 
 		}
@@ -407,7 +406,7 @@ public class Academic {
 		out += "\t1: during Biology\n";
 		out += "\t2: during lunch\n";
 		out += "\t3: in the hallways\n";
-		System.out.println("");
+		System.out.println(out);
 		
 		try {
 		    ans = Integer.parseInt( in.readLine() ); 
@@ -444,7 +443,7 @@ public class Academic {
 	    out += "\t1: the breakfast cart for coffee\n";
 	    out += "\t2: zuckers for a bagel\n";
 	    out += "\t3: ferry's for a bacon chiptole avocado on a roll\n";
-	    System.out.println("");
+	    System.out.println(out);
 		
 	    try {
 		ans = Integer.parseInt( in.readLine() ); 
@@ -473,11 +472,11 @@ public class Academic {
 	}
 	else {
 	    out = "the tea gives you insomnia and you stay awake thinking about ducks. you get work done... \n";
-	    out += "but no sleep feels terrible the next day. what do you do?";
+	    out += "but no sleep feels terrible the next day. what do you do?\n";
 	    out += "\t1: play hooky\n";
 	    out += "\t2: go to school. power to the player!\n";
 	    out += "\t3: i will go on, my poor soul\n";
-	    System.out.println("");
+	    System.out.println(out);
 		
 	    try {
 		ans = Integer.parseInt( in.readLine() ); 
