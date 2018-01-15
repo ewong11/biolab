@@ -204,15 +204,90 @@ public class Social {
 	      String ans = in.readLine(); */
       }
 
-    public static void rumors() {
-	     String s = "THERE'S A RUMOR GOING AROUND?!";
-	     s+= "\n";
-	     s+= "\t \n";
-       s+= "\t \n";
-	     s+= "\t1: \n";
-       s+= "\t2: \n";
-       s+= "\t3: \n";
-       System.out.println(s);
-     }
+    public static void rumors(Student p) {
+      isr = new InputStreamReader( System.in );
+      in = new BufferedReader( isr );
+      //Chooses whcih friend to interact with
+      int choiceF = (int)(Math.random() * 3);
+      //References friend with currFriend
+      Friend currFriend = Woo.yourFriends[choiceF];
+      //Which FriendEvent to do?
+      double choice = Math.random();
+
+      if(choice < 0.33){
+        String s = "THERE'S A RUMOR GOING AROUND?!";
+  	    s+= "\n They say that you're trying to bribe others to write your papers?!";
+  	    s+= "What do you do?\n";
+  	    s+= "\t1: Keep quiet... It just might be true... \n";
+        s+= "\t2: Go to your guidance counselor. Talk it out!\n";
+        s+= "\t3: Ignore them!! You know it's not true!\n";
+        System.out.println(s);
+
+        int ans = 0;
+        try {
+          ans = Integer.parseInt( in.readLine() );
+          if (ans == 1){
+            int maybeDone = Math.random();
+
+            //GET KICKED OUT?!?
+            if (maybeDone < 0.1){
+              System.out.println("You just lost. Never cheat yourself :(");
+              p.health = 0;
+            }
+            else{
+              System.out.println("You better get yourself together!");
+            }
+          }
+          else if (ans == 2){
+            System.out.println("The rumor dies down and you continue with your life! :)");
+          }
+          else{
+            System.out.println("The rumor dies down and you continue with your life! :)");
+          }
+        }
+        catch ( IOException e ) { }
+
+
+
+      }
+      else if (choice < 0.66) {
+        String s = "THERE'S A RUMOR GOING AROUND?!";
+        s+= "\nPeople are saying that " + currFriend + " started it...";
+        s+= "\nIt says that you're really mean and fake?!\n";
+        s+= "What do you do? \n";
+        s+= "\t1: Confront " + currFriend + "\n";
+        s+= "\t2: Laugh it off\n";
+        s+= "\t3: Ignore everyone.\n";
+        System.out.println(s);
+
+        int ans = 0;
+        try {
+          ans = Integer.parseInt( in.readLine() );
+          if (ans == 1){
+            System.out.println("You and " + currFriend + " have an intense argument...");
+            System.out.println("Friendship level decreases...");
+            currFriend.friendship -= 1;
+          }
+          else if (ans == 2){
+            System.out.println("The rumor dies down and you continue with your life! :)");
+          }
+          else{
+            System.out.println("Oh no :( You've stopped talking to a lot of people");
+            System.out.println("It's bad for all your friendships :(");
+            AllFriendsChange("sub", 0.5);
+          }
+        }
+        catch ( IOException e ) { }
+      }
+      else{
+        String s = "THERE'S A RUMOR GOING AROUND?!";
+        s+= "\nPeople are saying that you're failing all your classes!";
+        s+= "\n What do you do?\n";
+        s+= "\t1: \n";
+        s+= "\t2: \n";
+        s+= "\t3: \n";
+        System.out.println(s);
+      }
+    }
 
 }
