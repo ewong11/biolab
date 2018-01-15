@@ -194,10 +194,11 @@ public class Woo {
 
     }
 
+    System.out.println("Your crush is " + crush.name);
+    System.out.println("This is your schedule!");
     System.out.println(player.getSched());
-    System.out.println("==================");
-    System.out.println(crush.name);
-    System.out.println("=====================");
+
+
     //Making friends
 
     int friendgen = (int)(Math.random() * 6);
@@ -247,7 +248,7 @@ public class Woo {
           System.out.println(player);
           System.out.println("Would you like a fortune? (Y/N)");
           let = in.readLine();
-          if(let == "Y"){
+          if(let.equals("Y")){
             System.out.println("Fortune: ");
 	           System.out.print(FORTUNES[(int)(Math.random() * 17)]);
              System.out.println("\n");
@@ -269,8 +270,8 @@ public class Woo {
       int eNum = 0;
       while(eNum <= maxE){
         if (luck < 0.2){
-          System.out.println("Nothing Special Happens today...");
-          System.out.println("");
+          System.out.println("Nothing Special Happens...");
+          System.out.println("***");
           //No events
           break;
         }
@@ -285,7 +286,7 @@ public class Woo {
           Academic.project(player);
           else
           Academic.sleep(player);
-          System.out.println("");
+          System.out.println("***");
         }
 
         else if (luck < 0.6){
@@ -300,7 +301,7 @@ public class Woo {
           Social.birthday();
           else
           Social.rumors(player);
-          System.out.println("");
+          System.out.println("***");
         }
 
 
@@ -316,7 +317,7 @@ public class Woo {
           else
           Personal.nap(player);
 
-          System.out.println("");
+          System.out.println("***");
         }
         else{
           System.out.println("Special OTHER Event!");
@@ -329,8 +330,9 @@ public class Woo {
           Other.soulCycle(player);
           else
           Other.urbex(player);
-          System.out.println("");
+          System.out.println("***");
         }
+        
         eNum+= 1;
         luck = Math.random();
       }
