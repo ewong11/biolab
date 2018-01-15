@@ -85,21 +85,21 @@ public class Woo {
     confirm();
     s = "You've discovered so much about yourself from analyzing\n"
     s += "your whole Stuyvesant career for your essays. Before you\n"
-    s += "fell asleep last night, you began to wonder:\n"
-    s += "What if I could start over...\n"
-    s += "What if I could go back to first term Freshman Year?\n"
-    s += "Then you drifted off to sleep..."
+    + "fell asleep last night, you began to wonder:\n"
+    + "What if I could start over...\n"
+    + "What if I could go back to first term Freshman Year?\n"
+    + "Then you drifted off to sleep...";
     System.out.println(s);
     confirm();
     s = "====================\n"
-    s += "How to play:\n"
-    s += "\t With each prompt, you will be asked to give some feedback!\n"
-    s += "\t The easiest way to do that is typing your answer\n"
-    s += "\t (usually 1,2,3... or y/n) then hitting ENTER!\n"
-    s += "\t Your goal is to make it through your first term of\n"
-    s += "\t FRESHMAN YEAR... DUN DUNN DUUUNNN!\n"
-    s += "\t We hope you get through and enjoy!\n"
-    s += "\t -Kaitlin, Eric and Susan\n"
+    + "How to play:\n"
+    + "\t With each prompt, you will be asked to give some feedback!\n"
+    + "\t The easiest way to do that is typing your answer\n"
+    + "\t (usually 1,2,3... or y/n) then hitting ENTER!\n"
+    + "\t Your goal is to make it through your first term of\n"
+    + "\t FRESHMAN YEAR... DUN DUNN DUUUNNN!\n"
+    + "\t We hope you get through and enjoy!\n"
+    + "\t -Kaitlin, Eric and Susan\n";
     System.out.println(s);
     confirm();
 
