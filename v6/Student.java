@@ -10,6 +10,7 @@ public abstract class Student extends Character {
   protected static String[] badges;
 
   public String toString() {
+    System.out.print("\033[H\033[2J");
     String ans = "";
     ans += "intelligence: " + intel + "\n";
     ans += "friend count: " + friendCount + "\n";

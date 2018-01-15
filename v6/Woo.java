@@ -54,6 +54,13 @@ public class Woo {
     newGame();
   }
 
+  public static void confirm() {
+    String out = "(press 'Enter' to continue)";
+    Scanner sc = new Scanner(System.in);
+    System.out.println(out);
+    sc.nextLine();
+  }
+
   //---------CREATES NEW GAME--------------------
   public void newGame() {
     String s;
@@ -158,7 +165,7 @@ public class Woo {
     catch ( IOException e ) { }
     System.out.print("\033[H\033[2J");
     ans = 0;
-    s = " You see a person crying in the hallway. What do you do? \n";
+    s = "You see a person crying in the hallway. What do you do? \n";
     s += "\t1: Pretend you didn't see. \n";
     s += "\t2: Give them a BIG HUG! \n";
     s += "\t3: \"Are you ok\" \n";
@@ -197,6 +204,7 @@ public class Woo {
     System.out.println("Your crush is " + crush.name + "!");
     System.out.println("This is your schedule!");
     System.out.println(player.getSched());
+    confirm();
 
 
     //Making friends
@@ -213,24 +221,29 @@ public class Woo {
     yourFriends[2] = friend3;
 
   }
+
   //sims a day, out of a possible 180 - we can put the methods in another class
   public boolean simDay() {
     luck = Math.random();
-
+    boolean done = false;
     if(!player.isDead()){
+
       System.out.println(luck);
-      System.out.println("Good Morning " + player.name + "!");
-      System.out.println("Please select one of the following:");
 
-      int ans = 0;
-      String s = "";
-      s += "\t1: Show Your Status\n";
-      s += "\t2. Rank my friends based on how close we are!\n";
-      s += "\t3: Fortune Me! \n";
-      s += "\t4: INTO THE FRAY! \n";
-      s += "Selection: ";
-      System.out.println(s);
-
+      while (done == false) {
+        int ans = 0;
+        String s = "";
+        System.out.print("\033[H\033[2J");
+        System.out.println("==============================================\n");
+        System.out.println("Day " + days);
+        System.out.println("Good Morning " + player.name + "!");
+        System.out.println("Please select one of the following:");
+        s += "\t1: Show Your Status\n";
+        s += "\t2. Rank my friends based on how close we are!\n";
+        s += "\t3: Fortune Me! \n";
+        s += "\t4: INTO THE FRAY! \n";
+        s += "Selection: ";
+        System.out.println(s);
 
       try {
         ans = Integer.parseInt( in.readLine() );
@@ -239,29 +252,36 @@ public class Woo {
           System.out.println(player);
           System.out.println("Would you like a fortune? (Y/N)");
           let = in.readLine();
-          if(let.equals("Y")){
+          if(let.equalsIgnoreCase("Y")){
+            System.out.print("\033[H\033[2J");
             System.out.println("Fortune: ");
             System.out.print(FORTUNES[(int)(Math.random() * 17)]);
-            System.out.println("\n");
+            confirm();
+            //System.out.println("\n");
+            //add a confirmation
           }
+        }
         else if (ans == 2) {
           CompareFriendship compare = new CompareFriendship();
           compare.populate(friend1);
           compare.populate(friend2);
           compare.populate(friend3);
           compare.sort();
-        }
-
+          confirm();
         }
         else if (ans == 3){
           System.out.println("Fortune: ");
           System.out.print(FORTUNES[(int)(Math.random() * 17)]);
           System.out.println("\n");
+          confirm();
         }
-        else
+        else {
         System.out.println("Packing your turtle shell...");
+        done = true;
       }
+    }
       catch ( IOException e ) { }
+    }
 
       System.out.println("OK HERE WE GO \n");
       //Starting school
@@ -337,17 +357,15 @@ public class Woo {
 
       return true;
     }
+    done = false;
     return false;
   }
 
 
   public static void main(String[] args) {
     Woo game = new Woo();
-    int days = 1;
 
     while(days <= 180){
-      System.out.println("==============================================\n");
-      System.out.println("Day " + days);
       if(!game.simDay())
       break;
       days++;
