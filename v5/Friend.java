@@ -1,4 +1,4 @@
-public class Friend extends NPC {
+public class Friend extends NPC implements Comparable<Friend>{
 
   public Friend(String n) {
     name = n;
@@ -17,5 +17,7 @@ public class Friend extends NPC {
 else
     return "blood bonded sibwings";
   }
-
+  public int compareTo(Friend other){
+    return Double.compare(this.friendship,other.friendship);
+  }
 }

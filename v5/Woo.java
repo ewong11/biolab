@@ -14,10 +14,11 @@ public class Woo {
     private int score;
     public static int maxE;
     public static Friend[] yourFriends;
-    public Friend friend1;
-    public Friend friend2;
-    public Friend friend3;
+    public static Friend friend1;
+    public static Friend friend2;
+    public static Friend friend3;
     public static boolean datenight = false;
+    public static boolean flix = false;
 
 
     private InputStreamReader isr;
@@ -289,7 +290,7 @@ public class Woo {
           if(luck < 0.45)
           Social.friend(player);
           else if (luck < 0.5)
-          Social.eatOut();
+          Social.eatOut(player);
           else if (luck < 0.55)
           Social.birthday();
           else
@@ -304,9 +305,9 @@ public class Woo {
           else if (luck < 0.7)
           Personal.date(player, crush);
           else if (luck < 0.75)
-          Personal.sick(player);
+          Personal.sick(player,friend1,friend2,friend3);
           else
-          Personal.nap();
+          Personal.nap(player);
         }
         else{
           //Other

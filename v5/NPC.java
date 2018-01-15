@@ -14,7 +14,7 @@ public class NPC extends Character{
     public String toString(){
       return getName();
     }
-    
+
     public String getName(){
       return name;
     }
@@ -34,6 +34,7 @@ public class NPC extends Character{
     public boolean isDead(){
       return health <= 0;
     }
+
 
 
 }

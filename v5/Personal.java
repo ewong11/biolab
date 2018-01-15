@@ -358,7 +358,7 @@ public class Personal {
                     }
                   }
 
-                  public static void sick(Student a) { //, Friend b, Friend c, Friend d) {
+                  public static void sick(Student a, Friend b, Friend c, Friend d) { //, Friend b, Friend c, Friend d) {
                     isr = new InputStreamReader( System.in );
                     in = new BufferedReader( isr );
                     int input = 0;
