@@ -8,6 +8,7 @@ public class Woo {
     protected Student player;
 
     public static int days;
+    public static int birthday;
     public static double luck;
     private int score;
     public static Friend crush;
@@ -230,14 +231,16 @@ public class Woo {
 
     }
 
-    System.out.println("Your crush is " + crush.name + "!");
+    //Bithday!
+    birthday = (int)(Math.random() * 150);
+    System.out.println("Your brithday is: " + birthday + "\n");
+    System.out.println("Your crush is " + crush.name + "!\n");
     System.out.println("This is your schedule!");
     System.out.println(player.getSched());
     confirm();
 
 
     //Making friends
-
     int friendgen = (int)(Math.random() * 6);
     friend1 = new Friend(NAMES1[friendgen]);
     friendgen = (int)(Math.random() * 6);
@@ -249,6 +252,8 @@ public class Woo {
     yourFriends[1] = friend2;
     yourFriends[2] = friend3;
     yourFriends[3] = crush;
+
+
 
   }
 
@@ -330,6 +335,11 @@ public class Woo {
       //Starting school
 
       int eNum = 0;
+      if(day == birthday){
+        Social.birthday();
+        eNum++;
+      }
+
       while(eNum <= 0){
         if (Math.random() * player.sleep < 3) {
           FindClass a = new FindClass();
