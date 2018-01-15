@@ -5,19 +5,20 @@ import java.util.ArrayList;
 public class Woo {
 
     // instance variables -----------------------------------
-    private Student player;
+    protected Student player;
     private Crush crush;
     private NPC npc1;
 
-    public int days;
+    public static int days;
     public static double luck;
     private int score;
     public static int maxE;
     public static Friend[] yourFriends;
-    public Friend friend1;
-    public Friend friend2;
-    public Friend friend3;
+    public static Friend friend1;
+    public static Friend friend2;
+    public static Friend friend3;
     public static boolean datenight = false;
+    public static boolean flix = false;
 
 
     private InputStreamReader isr;
@@ -193,10 +194,11 @@ public class Woo {
 
     }
 
+    System.out.println("Your crush is " + crush.name);
+    System.out.println("This is your schedule!");
     System.out.println(player.getSched());
-    System.out.println("==================");
-    System.out.println(crush.name);
-    System.out.println("=====================");
+
+
     //Making friends
 
     int friendgen = (int)(Math.random() * 6);
@@ -214,8 +216,8 @@ public class Woo {
   //sims a day, out of a possible 180 - we can put the methods in another class
   public boolean simDay() {
     luck = Math.random();
-    Personal personal = new Personal();
-    personal.date(player, crush);
+    //Personal personal = new Personal();
+    //personal.date(player, crush);
     //System.out.println(player.average);
     //Lunch lunch = new Lunch();
     //Events event = new Events();
@@ -246,32 +248,35 @@ public class Woo {
           System.out.println(player);
           System.out.println("Would you like a fortune? (Y/N)");
           let = in.readLine();
-          if(let == "Y"){
+          if(let.equals("Y")){
             System.out.println("Fortune: ");
-	    System.out.print(FORTUNES[(int)(Math.random() * 17)]); 
+	           System.out.print(FORTUNES[(int)(Math.random() * 17)]);
+             System.out.println("\n");
           }
 
         }
         else if (ans == 2){
-	    System.out.println("Fortune: ");
-	    System.out.print(FORTUNES[(int)(Math.random() * 17)]); 
-          
+          System.out.println("Fortune: ");
+	        System.out.print(FORTUNES[(int)(Math.random() * 17)]);
+          System.out.println("\n");
         }
-        //IMPLEMENT LATER :))
         else
         System.out.println("Packing your turtle shell...");
       }
       catch ( IOException e ) { }
 
-      System.out.println("OK HERE WE GO");
+      System.out.println("OK HERE WE GO \n");
       //Starting school
       int eNum = 0;
       while(eNum <= maxE){
         if (luck < 0.2){
+          System.out.println("Nothing Special Happens...");
+          System.out.println("***");
           //No events
           break;
         }
         else if (luck < 0.4){
+          System.out.println("Academic Event");
           //Academic
           if(luck < 0.25)
           Academic.test(player);
@@ -281,33 +286,41 @@ public class Woo {
           Academic.project(player);
           else
           Academic.sleep(player);
+          System.out.println("***");
         }
 
         else if (luck < 0.6){
+          System.out.println("Social Event");
           //Social
           //friend // eatOut // brithday // rumors
           if(luck < 0.45)
           Social.friend(player);
           else if (luck < 0.5)
-          Social.eatOut();
+          Social.eatOut(player);
           else if (luck < 0.55)
           Social.birthday();
           else
-          Social.rumors();
+          Social.rumors(player);
+          System.out.println("***");
         }
 
+
         else if (luck < 0.8){
+          System.out.println("Personal Event!");
           //Personal
           if(luck < 0.65)
           Personal.netflix(player, crush);
           else if (luck < 0.7)
           Personal.date(player, crush);
           else if (luck < 0.75)
-          Personal.sick();
+          Personal.sick(player,friend1,friend2,friend3);
           else
-          Personal.nap();
+          Personal.nap(player);
+
+          System.out.println("***");
         }
         else{
+          System.out.println("Special OTHER Event!");
           //Other
           if(luck < 0.85)
           Other.MTA(player);
@@ -317,7 +330,9 @@ public class Woo {
           Other.soulCycle(player);
           else
           Other.urbex(player);
+          System.out.println("***");
         }
+
         eNum+= 1;
         luck = Math.random();
       }
@@ -328,15 +343,12 @@ public class Woo {
   }
 
 
-  public static double getLuck() {
-    return luck;
-  }
-
   public static void main(String[] args) {
     Woo game = new Woo();
     int days = 1;
 
     while(days <= 180){
+      System.out.println("==============================================\n");
       System.out.println("Day " + days);
       if(!game.simDay())
       break;

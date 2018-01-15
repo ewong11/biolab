@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Test {
 
   // instance variables -----------------------------------
-  private Student player;
+  protected Student player;
   private Crush crush;
   private NPC npc1;
 
@@ -13,11 +13,12 @@ public class Test {
   public static double luck;
   private int score;
   public static int maxE;
-  public static Friend[] yourFriends;
-  public Friend friend1;
-  public Friend friend2;
-  public Friend friend3;
+  //public static Friend[] yourFriends;
+  //public Friend friend1;
+  //public Friend friend2;
+  //public Friend friend3;
   public static boolean datenight = false;
+  public static boolean flix = false;
 
 
   private InputStreamReader isr;
@@ -52,8 +53,8 @@ public class Test {
   public boolean testDay() {
     player = new Normal("Player");
     crush = new Crush("Crush");
-    Personal personal = new Personal();
-    personal.date(player, crush);
+    Other other = new Other();
+    other.allNighter(player);
     return true;
   }
     //System.out.println(player.average);
