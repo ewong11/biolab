@@ -8,7 +8,7 @@ public class Personal {
 
   public static void netflix(Student a, Crush b) {
     Woo.flix = true;
-    Test.flix = true;
+    //Test.flix = true;
     String input = "";
     isr = new InputStreamReader( System.in );
     in = new BufferedReader( isr );

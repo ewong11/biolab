@@ -53,8 +53,8 @@ public class Test {
   public boolean testDay() {
     player = new Normal("Player");
     crush = new Crush("Crush");
-    Personal personal = new Personal();
-    personal.nap(player);
+    Other other = new Other();
+    other.allNighter(player);
     return true;
   }
     //System.out.println(player.average);
