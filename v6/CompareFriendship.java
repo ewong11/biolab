@@ -1,29 +1,25 @@
 import java.util.ArrayList;
 
 public class CompareFriendship {
-
   protected ArrayList<Comparable> _data;
   protected ArrayList names;
   //==========================================
 
-  public CompareFriendship(){
+  public CompareFriendship() {
     _data = new ArrayList<Comparable>();
     names = new ArrayList();
   }
 
-  public String toString()
-  {
+  public String toString() {
     return _data.toString();
   }
 
-  public int size()
-  {
+  public int size() {
     return _data.size();
   }
 
 
-  public Comparable get( int index )
-  {
+  public Comparable get( int index ) {
     return _data.get(index);
   }
 

@@ -2,37 +2,34 @@ import java.util.ArrayList;
 
 public class Badges {
 
-  public Badges<Comparable> badges;
+  public ArrayList<Comparable> badges;
 
   public Badges() {
     badges = new ArrayList<Comparable>();
   }
 //METHODS OF ArrayList-------------------
-    public String toString()
-    {
+    public String toString(){
       return badges.toString();
     }
 
+    public boolean add(Comparable x) {
+	badges.add(x);
+	return true; 
+    } 
 
-    public Comparable remove( int index )
-    {
+    public Comparable remove( int index ) {
       return badges.remove(index);
     }
 
-    public int size()
-    {
+    public int size() {
       return badges.size();
     }
 
-    public Comparable get( int index )
-    {
+    public Comparable get( int index ) {
       return badges.get(index);
     }
 //---------------------------------------
 
-//Overwritten compareTo()
-  public int compareTo(String a, String b) {
-    if ()
-  }
+    
 
 }
