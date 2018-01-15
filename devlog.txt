@@ -66,7 +66,21 @@ LESSONS LEARNED
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-2018-01-13 (met in person!!) 
+2018-01-15
+--------------------------------------------------------------
+eric :: UPDATE THIS
+susan :: UPDATE THIS
+kaitlin :: made Friends class and began work on class Social
+==============================================================
+
+2018-01-14
+--------------------------------------------------------------
+eric :: UPDATE THIS
+susan :: UPDATE THIS
+kaitlin :: made Friends class and began work on class Social
+==============================================================
+
+2018-01-13 (met in person!!)
 --------------------------------------------------------------
 eric :: completed two methods of class Personal
 susan :: completed three methods of class Academics
@@ -127,12 +141,12 @@ kaitlin :: created NPC.java
 --------------------------------------------------------------
 eric :: revised proposal accordingly; started uml diagram
 susan :: revised proposal accordingly; uploaded uml to repo
-kaitlin :: took a nap 
+kaitlin :: took a nap
 ==============================================================
 
 2018-01-02
 --------------------------------------------------------------
 eric :: brainstormed ideas; added classes/instance variables
 susan :: brainstormed ideas; added instantiation values for attributes
-kaitlin :: took a nap 
+kaitlin :: took a nap
 ==============================================================
