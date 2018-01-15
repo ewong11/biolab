@@ -212,17 +212,22 @@ public class Social {
     s += "\t2: do nothing. school is still a thing for you :( \n";
     System.out.println(s);
 
-    String ans = in.readLine();
-    if(ans == 1){
-      System.out.println("You had a great time today!\n");
-      System.out.println("Have a great year! <3");
-      p.mental += 0.5;
-      return 1;
+    int ans = 0;
+    try{
+      ans = Integer.parseInt(in.readLine());
+      if(ans == 1){
+        System.out.println("You had a great time today!\n");
+        System.out.println("Have a great year! <3");
+        p.mental += 0.5;
+        return 1;
+      }
+      else{
+        System.out.println("You go to school...\n");
+        return 0;
+      }
     }
-    else{
-      System.out.println("You go to school...\n");
-      return 0;
-    }
+  catch ( IOException e ) { }
+  return 0;
   }
 
   public static void rumors(Student p) {
@@ -267,8 +272,6 @@ public class Social {
         }
       }
       catch ( IOException e ) { }
-
-
 
     }
     else if (choice < 0.66) {
