@@ -12,13 +12,12 @@ public class Woo {
     public static int days;
     public static double luck;
     private int score;
-    public static int maxE;
     public static Friend[] yourFriends;
     public static Friend friend1;
     public static Friend friend2;
     public static Friend friend3;
     public static boolean datenight = false;
-    public static boolean flix = false; 
+    public static boolean flix = false;
 
     private InputStreamReader isr;
     private BufferedReader in;
@@ -45,8 +44,7 @@ public class Woo {
   //---------------------------------------------------------
 
   public Woo() {
-    days = 0;
-    maxE = (int)(Math.random() * 5);
+    days = 1;
     isr = new InputStreamReader( System.in );
     in = new BufferedReader( isr );
     newGame();
@@ -79,9 +77,34 @@ public class Woo {
     +  " |_____/ \\__|\\__,_|\\__, |______|_|_| \\___(_)      \n"
     +  "                    __/ |                         \n"
     +  "                   |___/                          \n";
-    s += "  \t \tF r e s h m a n  F r e n z y! \nBut first, let us know your name: ";
+    s += "  \t \tF r e s h m a n  F r e n z y! \n";
     System.out.println(s);
+    s = "~~~\n"
+    s += "It's been a week since you've submitted your college\n"
+    s += "apps. The past few months as a senior have been grueling.\n"
+    System.out.println(s);
+    confirm();
+    s = "You've discovered so much about yourself from analyzing\n"
+    s += "your whole Stuyvesant career for your essays. Before you\n"
+    s += "fell asleep last night, you began to wonder:\n"
+    s += "What if I could start over...\n"
+    s += "What if I could go back to first term Freshman Year?\n"
+    s += "Then you drifted off to sleep..."
+    System.out.println(s);
+    confirm();
+    s = "====================\n"
+    s += "How to play:\n"
+    s += "\t With each prompt, you will be asked to give some feedback!\n"
+    s += "\t The easiest way to do that is typing your answer\n"
+    s += "\t (usually 1,2,3... or y/n) then hitting ENTER!\n"
+    s += "\t Your goal is to make it through your first term of\n"
+    s += "\t FRESHMAN YEAR... DUN DUNN DUUUNNN!\n"
+    s += "\t We hope you get through and enjoy!\n"
+    s += "\t -Kaitlin, Eric and Susan\n"
+    System.out.println(s);
+    confirm();
 
+    System.out.println("But first, let us know your name: ");
     //try {
     name = sc.next();
     //}
@@ -182,7 +205,6 @@ public class Woo {
       normal += 1;
     }
     catch ( IOException e ) { }
-    System.out.print("\033[H\033[2J");
 
     // makes the player one of three characters
     int highest = Math.max(intelligence, Math.max(normal, social));
@@ -229,33 +251,32 @@ public class Woo {
     boolean done = false;
     if(!player.isDead()){
 
-      System.out.println(luck);
-
       while (done == false) {
         int ans = 0;
         String s = "";
         System.out.print("\033[H\033[2J");
-        System.out.println("==============================================\n");
+        System.out.println("==============================================");
         System.out.println("Day " + days);
+        System.out.println("==============================================");
         System.out.println("Good Morning " + player.name + "!");
         System.out.println("Please select one of the following:");
         s += "\t1: Show Your Status\n";
         s += "\t2. Rank my friends based on how close we are!\n";
-	s += "\t3: show me ma achievments\n"; 
+	s += "\t3: show me ma achievments\n";
         s += "\t4: Fortune Me! \n";
-        s += "\t5: INTO THE FRAY! \n"; 
+        s += "\t5: INTO THE FRAY! \n";
         s += "Selection: ";
         System.out.println(s);
 
 	if (days == 50)
 	    player.badges.add("50-days-50-states");
-	else if (days == 90) 
+	else if (days == 90)
 	    player.badges.add("halfway-and-halfbaked");
-	else if (days == 100) 
+	else if (days == 100)
 	    player.badges.add("100-days-100-lates");
 	else if (player.average > 95 && days > 45)
 	    player.badges.add("YO-AVERAGE-IS-NOT-DEAD");
-	player.updateBadges(player); 
+	player.updateBadges(player);
 
 	try {
 	    ans = Integer.parseInt( in.readLine() );
@@ -263,21 +284,21 @@ public class Woo {
 	    if (ans == 1){
 		System.out.println(player);
 		confirm();
-	    } 
+	    }
 	    else if (ans == 2) {
 		CompareFriendship compare = new CompareFriendship();
 		compare.populate(friend1);
 		compare.populate(friend2);
 		compare.populate(friend3);
 		compare.sort();
-		confirm(); 
+		confirm();
 	    }
 	    else if (ans == 3) {
 		System.out.println("---------------------------------");
 		System.out.println("badges: " + player.badges);
 		System.out.println("---------------------------------");
-		confirm(); 
-	    } 
+		confirm();
+	    }
 	    else if (ans == 4){
 		System.out.println("Fortune: ");
 		System.out.print(FORTUNES[(int)(Math.random() * 17)]);
@@ -291,14 +312,14 @@ public class Woo {
 	}
 	catch ( IOException e ) { }
       }
-      
+
       System.out.println("OK HERE WE GO \n");
       //Starting school
+
       int eNum = 0;
-      while(eNum <= maxE){
+      while(eNum <= 0){
 	  if (luck < 0.2){
 	      System.out.println("Nothing Special Happens...");
-	      System.out.println("**************");
 	      //No events
 	      break;
 	  }
@@ -313,7 +334,6 @@ public class Woo {
 		  Academic.project(player);
 	      else
 		  Academic.sleep(player);
-	      System.out.println("**************");
 	  }
 
 	  else if (luck < 0.6){
@@ -328,7 +348,6 @@ public class Woo {
 		  Social.birthday();
 	      else
 		  Social.rumors(player);
-	      System.out.println("**************");
 	  }
 
 
@@ -344,7 +363,6 @@ public class Woo {
 	      else
 		  Personal.nap(player);
 
-	      System.out.println("**************");
 	  }
 	  else{
 	      System.out.println("Special OTHER Event!");
@@ -357,13 +375,10 @@ public class Woo {
 		  Other.soulCycle(player);
 	      else
 		  Other.hqtrivia(player);
-	      System.out.println("**************");
 	  }
-
-	  eNum+= 1;
-	  luck = Math.random();
+	    eNum+= 1;
       }
-
+      confirm();
       return true;
     }
     done = false;
