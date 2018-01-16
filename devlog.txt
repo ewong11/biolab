@@ -11,7 +11,7 @@ Freshman Frenzy
 ------------------------------------------
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<Wow, we so BOSS bc...>
+creating a clearer, more fluid UI
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -24,19 +24,25 @@ COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 toString() can only be used to print out an instance of the class it's in
-- defines how the current class is printed
-- i learned this from my sister, a former student of yours!
+- defines how the current class is printed, not just any object
+System.out.print("\033[H\033[2J"); will "clear" the terminal
+
 
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -  We changed badges as just an instance variable to a wrapper class because it was easier
-   to implement what we had learned while taking advantage of the methods of ArrayList. 
+   to implement what we had learned while taking advantage of the methods of ArrayList.
+-  we made Crush extend Friend so that the user can imprive their relationship with crush in events   	 that originally occurred with Friends.
+-  we limited the number of friends you could interact with to 3, instead of our originally planned 10
+-  Making a separate class Friend
+-  removing class Teachers - we ran out of time
 
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- This was stressed before, but ALWAYS push before pull. even if you pulled a minute ago. 
+- This was stressed before, but ALWAYS push before pull. even if you pulled a minute ago.
+- Events take a looong time to write.
 
  ______   ______   __   __   __       ______   _______
 /_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\
@@ -50,14 +56,14 @@ LESSONS LEARNED
 
 2018-01-15
 --------------------------------------------------------------
-eric :: UPDATE THIS
+eric :: made UI improvements; added score functionality; fixed misc errors in Woo, Other, and Personal
 susan :: coded Badges + updated Woo.java 
 kaitlin :: updated woo.java
 ==============================================================
 
 2018-01-14
 --------------------------------------------------------------
-eric :: UPDATE THIS
+eric :: finshed class Personal ( 2 methods) and made class CompareFriendship + other minor additions + class Other
 susan :: finished + fixed bugs in Academic + Other 
 kaitlin :: finished social class +  fixed indentations
 ==============================================================
