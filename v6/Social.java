@@ -298,6 +298,7 @@ public class Social {
           System.out.println("You and " + currFriend.name + " have an intense argument...");
           System.out.println("Friendship level decreases...");
           currFriend.friendship -= 1;
+          player.friendCount -= 1;
         }
         else if (ans == 2){
           System.out.println("The rumor dies down and you continue with your life! :)");
@@ -306,6 +307,7 @@ public class Social {
           System.out.println("Oh no :( You've stopped talking to a lot of people");
           System.out.println("It's bad for all your friendships :(");
           AllFriendsChange("sub", 0.5);
+          player.friendCount -= 2;
         }
       }
       catch ( IOException e ) { }
@@ -328,11 +330,13 @@ public class Social {
           if (posorneg < 0.5){
             System.out.println("People think you're annoying :( Friendships lower");
             AllFriendsChange("sub", 0.5);
+            player.friendCount -= 1;
           }
           else{
             System.out.println("People think you're a role model!");
             System.out.println("Friendships go up!");
             AllFriendsChange("add", 0.5);
+            player.friendCount += 2;
           }
         }
         else if (ans == 2){
@@ -341,6 +345,7 @@ public class Social {
         else{
           System.out.println("The rumor gets to you :( Your friendships suffer...");
           AllFriendsChange("sub", 0.5);
+          player.friendCount -= 2;
         }
 
       }

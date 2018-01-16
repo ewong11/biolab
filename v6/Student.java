@@ -25,54 +25,54 @@ public abstract class Student extends Character {
       return ans;
     }
     public boolean isThere(Comparable a) {
-	boolean ans = false; 
+	boolean ans = false;
 	for (int x = 0; x < badges.size(); x++) {
 	    if (a.compareTo(badges.get(x)) == 0)
-		ans = true; 
+		ans = true;
 	}
-	return ans; 
-    } 
+	return ans;
+    }
 
     public void updateBadges(Student player) {
-  	if (player.sleep == 100 ) { 
+  	if (player.sleep == 100 ) {
 	    if (!(isThere("slept-for-more-than-4and1/16-days")))
 		player.badges.add("slept-for-more-than-4and1/16-days");
-	} 
-	else if (player.average < 65) { 
+	}
+	else if (player.average < 65) {
 	    if (!(isThere("failed-once-or-twice")))
 		player.badges.add("failed-once-or-twice");
-	} 
-	else if (player.friendCount == 5) { 
+	}
+	else if (player.friendCount == 5) {
 	    if (!(isThere("not-a-loner-anymore")))
 		player.badges.add("not-a-loner-anymore");
-	} 
+	}
 	else if (player.physical == 100) {
 	    if (!(isThere("can-climb-more-than-two-flights")))
 		player.badges.add("can-climb-more-than-two-flights");
-	} 
-	else if (player.mental == 100){ 
-	    if (!(isThere("in-a-golden-state-of-mind")))	       
+	}
+	else if (player.mental == 100){
+	    if (!(isThere("in-a-golden-state-of-mind")))
 		player.badges.add("in-a-golden-state-of-mind");
-	} 
+	}
 	else if (player.average > 90 && player.sleep > 90 && player.friendCount > 5) {
 	    if (!(isThere("stuy-triangle-achieved")))
 		player.badges.add("stuy-triangle-achieved");
-	} 
+	}
     }
 
 			//When any characteristic of the Student
 			//is below zero, then the Student is dead
     // Returns true if dead!
     public boolean isDead() {
-      return ((mental <= 0) || (physical <= 0));
+      return ((mental <= 0) || (physical <= 0) || (average <= 0) || (sleep <= 0) || (friendCount <= 0));
     }
 
     public void avgReset() {
 	if (average > 100)
 	    average = 100;
 	if (average < 0)
-	    average = 0; 
-    } 
+	    average = 0;
+    }
 
     //sets sleep to new number
     //returns old sleep
@@ -91,7 +91,7 @@ public abstract class Student extends Character {
     //returns old average
     public double setAverage(double newAvg) {
 	double old = average;
-	if (!(newAvg > 100)) 
+	if (!(newAvg > 100))
 	    average = newAvg;
 	return old;
     }
