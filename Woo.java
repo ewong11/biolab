@@ -295,7 +295,7 @@ public class Woo {
             player.badges.add("50-days-50-states");
           }
           else if (days == 10){
-            if (!(isThere("10-ten-to-10-ten"))){
+            if (!(isThere("10-ten-to-10-ten")))
               player.badges.add("10-ten-to-10-ten");
             }
 		else if (days == 90) {
@@ -439,11 +439,10 @@ public class Woo {
 	    confirm();
 	    return true;
 	}
-	done = false;
+  done = false;
   calcScore(player);
-	return false;
+  return false;
     }
-
     public void calcScore(Student player) {
       score = (int)(3*player.getIntel() + 10*player.getFriends() +
       5* player.getAverage() + 10 * (player.getMental() +player.getPhysical()));

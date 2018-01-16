@@ -1,4 +1,7 @@
-public class Friend extends NPC implements Comparable<Friend>{
+public class Friend implements Comparable<Friend>{
+
+  public String name;
+  public double friendship;
 
   public Friend() {
   }
@@ -7,6 +10,15 @@ public class Friend extends NPC implements Comparable<Friend>{
     name = n;
     friendship = 0;
   }
+
+  public String toString(){
+    return getName();
+  }
+
+  public String getName(){
+    return name;
+  }
+
 
   public String friendLev() {
     if (friendship < 0.5)
