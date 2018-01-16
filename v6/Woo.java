@@ -349,7 +349,11 @@ public class Woo {
 	  if (luck < 0.2){
 	      System.out.println("Nothing Special Happens...");
 	      //No events
-	      break;
+        double ifCrushGame = Math.random();
+        if(ifCrushGame > 0.5){
+          ImpressCrush tryLuck = new ImpressCrush();
+          tryLuck.playGame(crush);
+        }
 	  }
 	  else if (luck <= 0.4){
 	      System.out.println("Academic Event");
@@ -377,7 +381,7 @@ public class Woo {
 	  }
 
 
-	  else if (luck < 0.8 && luck > .06){
+	  else if (luck < 0.8 && luck > .6){
 	      System.out.println("Personal Event!");
 	      //Personal
 	      if(luck < 0.65)
