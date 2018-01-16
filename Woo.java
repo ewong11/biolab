@@ -383,11 +383,11 @@ public class Woo {
 		else if (luck <= 0.4){
 		    System.out.println("Academic Event");
 		    //Academic
-		    if(luck < 0.25)
+		    if(luck < 0.25 && luck >= .2)
 			Academic.test(player);
-		    else if (luck < 0.3)
+		    else if (luck < 0.3 && luck >= .25)
 			Academic.quiz(player);
-		    else if (luck < 0.35)
+		    else if (luck >= 0.3 && luck < .35)
 			Academic.project(player);
 		    else
 			Academic.sleep(player);
@@ -397,27 +397,27 @@ public class Woo {
 		    System.out.println("Social Event");
 		    //Social
 		    //friend // eatOut // brithday // rumors
-		    if(luck < 0.45)
+		    if(luck > 0.40 && luck <= .45)
 			Social.friend(player);
-		    else if (luck < 0.5)
+		    else if (luck < 0.5 && luck >= .45)
 			Social.eatOut(player);
-		    else if (luck < 0.55)
+		    else if (luck <= 0.60)
 			Social.rumors(player);
 		}
 
 
-		else if (luck < 0.8 && luck > .6){
+		else if (luck <= 0.8 && luck > .6){
 		    System.out.println("Personal Event!");
 		    //Personal
-		    if(luck < 0.65)
+		    if(luck > 0.60 && luck <= .7)
 			Personal.netflix(player, crush);
-		    else if (luck < 0.7) {
+		    else if (luck > 0.7 && luck <= .75) {
 			if (crush.friendship > 2.5)
 			    Personal.date(player, crush);
 			else
 			    System.out.println("...You think about going on a date with " + crush.name);
 		    }
-		    else if (luck < 0.75)
+		    else if (luck > 0.75)
 			Personal.sick(player,friend1,friend2,friend3);
 		    else
 			Personal.nap(player);
@@ -426,9 +426,9 @@ public class Woo {
 		else{
 		    System.out.println("Special OTHER Event!");
 		    //Other
-		    if(luck < 0.85)
+		    if(luck > 0.80 && luck <= .85)
 			Other.MTA(player);
-		    else if (luck < 0.9)
+		    else if (luck > 0.85 && luck <= .90)
 			Other.allNighter(player);
 		    else if (luck < 0.95)
 			Other.soulCycle(player);

@@ -73,7 +73,7 @@ public class FindClass {
     in = new BufferedReader( isr );
 
     //determines the time the player has to get to class
-    int time = (int)((.5 * s.sleep) + (int)(Woo.luck * 15));
+    int time = (int)((.5 * s.sleep) + (int)(Woo.luck * 8));
     int timeLeft = time;
 
     while (counter <= time) {
