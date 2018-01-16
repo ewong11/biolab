@@ -53,16 +53,16 @@ public class Test {
     yourFriends[2] = friend3;
 }
         public boolean isThere(Comparable a) {
-	boolean ans = false; 
+	boolean ans = false;
 	for (int x = 0; x < player.badges.size(); x++) {
 	    if (a.compareTo(player.badges.get(x)) == 0)
-		ans = true; 
+		ans = true;
 	}
-	return ans; 
-    } 
+	return ans;
+    }
   //sims a day, out of a possible 180 - we can put the methods in another class
   public boolean testDay() {
-      int days = 11; 
+      int days = 11;
     player = new Normal("Player");
     crush = new Crush("CrushName");
     //Social social = new Social();
@@ -70,11 +70,11 @@ public class Test {
     //Other other = new Other();
     //Other.hqtrivia(player);
 
-    //ImpressCrush tryLuck = new ImpressCrush();
-    //tryLuck.playGame(crush);
+    ImpressCrush tryLuck = new ImpressCrush();
+    tryLuck.playGame(crush);
     //return true;
 
-    return true; 
+    return true;
   }
     //System.out.println(player.average);
     //Lunch lunch = new Lunch();

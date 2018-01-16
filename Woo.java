@@ -359,7 +359,7 @@ public class Woo {
 
 	    int eNum = 0;
 	    if(days == birthday)
-		eNum += Social.birthday(player);
+      eNum += Social.birthday(player);
 
 	    while(eNum <= 0){
 		if (Math.random() * player.sleep < 3) {
@@ -369,13 +369,16 @@ public class Woo {
 		    System.out.print("\033[H\033[2J");
 		}
 		if (luck < 0.2){
-		    System.out.println("Nothing Special Happens...");
-		    //No events
-		    double ifCrushGame = Math.random();
+
 		    if(ifCrushGame > 0.5){
-			ImpressCrush tryLuck = new ImpressCrush();
-			tryLuck.playGame(crush);
+          double ifCrushGame = Math.random();
+          ImpressCrush tryLuck = new ImpressCrush();
+          tryLuck.playGame(crush);
 		    }
+        else{
+          //No events
+          System.out.println("Nothing Special Happens...");
+        }
 		}
 		else if (luck <= 0.4){
 		    System.out.println("Academic Event");
