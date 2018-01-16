@@ -6,25 +6,6 @@ Eric Wong
 pd 02
 ---------------------
 Freshman Frenzy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-USAGE:
-* Replace all fields, angle brackets included, with specified info.
-  eg, pd <pd#> --> pd 3
-* Delete these instructions once all teammates understand usage.
-  (from tilde bar above to tilde bar below)
-
-devlog--
-Use keyboard shortcut to jump to end,
- replicate entry template,
- modify appropriately.
-
-zone of reflection--
-Flesh out each category whenever necessary, appropriate.
- Need not be fully filled in until end of project,
- but best done as you go along.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
 
 /////////// Zone of Reflection \\\\\\\\\\\
 ------------------------------------------
@@ -42,19 +23,20 @@ maybe some of these will move into the Obs.Ovrcm section...
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-toString() can only be used to print out an instance of the class its in
+toString() can only be used to print out an instance of the class it's in
 - defines how the current class is printed
 - i learned this from my sister, a former student of yours!
 
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-We changed ___ to ___ bc...
+-  We changed badges as just an instance variable to a wrapper class because it was easier
+   to implement what we had learned while taking advantage of the methods of ArrayList. 
 
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<tales of wisdom gained...>
+- This was stressed before, but ALWAYS push before pull. even if you pulled a minute ago. 
 
  ______   ______   __   __   __       ______   _______
 /_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\
@@ -69,14 +51,14 @@ LESSONS LEARNED
 2018-01-15
 --------------------------------------------------------------
 eric :: UPDATE THIS
-susan :: UPDATE THIS
+susan :: coded Badges + updated Woo.java 
 kaitlin :: updated woo.java
 ==============================================================
 
 2018-01-14
 --------------------------------------------------------------
 eric :: UPDATE THIS
-susan :: UPDATE THIS
+susan :: finished + fixed bugs in Academic + Other 
 kaitlin :: finished social class +  fixed indentations
 ==============================================================
 
