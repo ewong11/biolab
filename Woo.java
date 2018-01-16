@@ -399,10 +399,10 @@ public class Woo {
 		    if(luck < 0.45)
 			     Social.friend(player);
 		    else if (luck < 0.5)
-			Social.eatOut(player);
-		    else if (luck < 0.55)
-			Social.rumors(player);
-		}
+          Social.eatOut(player);
+		    else
+          Social.rumors(player);
+      }
 
 
 		else if (luck < 0.8 && luck > .6){
