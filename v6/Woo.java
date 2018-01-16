@@ -421,7 +421,7 @@ public class Woo {
     return false;
   }
 
-    public static void main(String[] args) {
+public static void main(String[] args) {
 	Woo game = new Woo();
 
 	while(days <= 180){

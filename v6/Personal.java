@@ -30,9 +30,9 @@ public class Personal {
 	    s = "Before you know it, its ";
 	    s += time + "o'clock";
 	    s += " \nYou slowly drift off, with the sound of your TV in the background...";
-	    a.sleep -= time;
-	    a.intel -= 5;
-	    a.mental += 20;
+	    a.setSleep(a.getSleep() - time);
+	    a.setIntel(a.getIntel() - 5);
+	    a.setMental(a.getMental() - 20);
 	    System.out.println(s);
 
 	}
@@ -48,7 +48,7 @@ public class Personal {
 		    s += "\n" + num + ": (hang up)";
 		    num += 1;
       }
-		 if ((a.charisma + a.mental) > 140) {
+		 if ((a.getCharisma() + a.getMental()) > 140) {
 			s += "\n" + num + ": Hey, I happened to pick up your book on the way to your house...";
 			s += "\nCome over...we can write a new chapter together!";
 			num += 1;
@@ -70,10 +70,10 @@ public class Personal {
 		s = b.name + ": \"hello? hello?\"";
 		s += "\n (you struggle to get words out)";
 		s += "\n" + b.name + " hangs up, and you start to cry...";
-		a.charisma -= 5;
+		a.setCharisma(a.getCharisma() - 5);
 		a.mental -= 10;
 	    }
-	    else if (input.equals("1") && (a.charisma + a.mental) > 140 ) {
+	    else if (input.equals("1") && (a.getCharisma() + a.getMental()) > 140 ) {
 		s = b.name + ": \"wtf stalker...";
 		s += "\n (you stammer)";
 		s += "\n" + b.name + " :\"get away from me weirdo...\"";
@@ -95,14 +95,14 @@ public class Personal {
 
 	    else if (input.equals("2") && b.friendship > 1.75) {
 		s = "What'd you do that for? \nNow" + b.name + " probably thinks you're a weirdo...";
-		a.charisma -= 10;
-		a.mental -= 5;
+		a.setCharisma(a.getCharisma() - 10);
+		a.setMental(a.setMental() - 5);
 	    }
 
-	    else if (input.equals("2") && (a.charisma + a.mental) > 140 ) {
+	    else if (input.equals("2") && (a.getCharisma() + a.getMental()) > 140 ) {
 		s = b.name + ": \"...haha love me a mans with good puns haha... \"";
 		s += b.name + " hangs up...what did you do wrong?";
-		a.charisma -= 20;
+		a.setCharisma(a.getCharisma() - 20);
 	    }
 
 	    else if (input.equals("3")) {
@@ -117,7 +117,7 @@ public class Personal {
 	    else if (input.equals("4")) {
 		s = b.name + ": \"...haha love me a mans with good puns haha... \"";
 		s += b.name + " hangs up...what did you do wrong?";
-		a.charisma -= 20;
+		a.setCharisma(a.getCharisma() - 20);
 	    }
 
 	    else if (input.equals("5")) {
@@ -215,34 +215,34 @@ public class Personal {
 			    s += "\n it's dark outside.";
 			    s += "\n" + b.name + " and you had a great time!";
 			    b.friendship += .5;
-			    a.charisma += 5;
+			    a.setCharisma(a.getCharisma() + 5);
 			}
 			else {
 			    s = "You keep going easy, and " + b.name + "becomes bored.";
 			    s += "\nYour date had barely started, but" + b.name;
 			    s += "\n makes up an excuse and leaves..";
 			    b.friendship -= .2;
-			    a.charisma -= 5;
+			    a.setCharisma(a.getCharisma() - 5);
 			}
-                    }
-                    else {
-			s = "\n Even though you beat " + b.name +" easily," + b.name;
-			s += "\n becomes fired up!.";
-			s += "\n You guys lose track of time and before you know it,";
-			s += "\n it's dark outside.";
-			s += "\n" + b.name + " and you had a great time!";
-			b.friendship += .6;
-                    }
-                    System.out.println(s);
+    }
+      else {
+  			s = "\n Even though you beat " + b.name +" easily," + b.name;
+  			s += "\n becomes fired up!.";
+  			s += "\n You guys lose track of time and before you know it,";
+  			s += "\n it's dark outside.";
+  			s += "\n" + b.name + " and you had a great time!";
+  			b.friendship += .6;
+      }
+      System.out.println(s);
 		}
 		else  {
-                    if (Woo.luck > .3 && b.friendship > 2.5) {
-			s = "You guys are just playing Pac-Man, when you feel ";
-			s += "\n" + b.name + " leaning closer.";
-			s += "\n What do you do?\n";
-			s += "\t1. Go with the flow!\n";
-			s += "\t2. Push " + b.name + " away\n";
-			if (a.charisma > 80) {
+      if (Woo.luck > .3 && b.friendship > 2.5) {
+  			s = "You guys are just playing Pac-Man, when you feel ";
+  			s += "\n" + b.name + " leaning closer.";
+  			s += "\n What do you do?\n";
+  			s += "\t1. Go with the flow!\n";
+  			s += "\t2. Push " + b.name + " away\n";
+			if (a.getCharisma() > 80) {
 			    s += "\t3.Be aggressive!\n";
 			}
 			System.out.println(s);
@@ -250,36 +250,36 @@ public class Personal {
 			    input = in.readLine();
 			}
 			catch (IOException e) {}
-                        if (input.equals("1")) {
+      if (input.equals("1")) {
 			    s = "The night goes by in a whirlwind and you wake up in a daze...";
 			    s += "\nYou don't know what happened...";
 			    s += "\nMaybe you should ask!";
 			    Woo.datenight = true;
 			    b.friendship += 1;
-			    a.charisma += 10;
-			    a.mental -= 5;
+			    a.setCharisma(a.getCharisma() + 10);
+			    a.setMental(a.getMental() - 5);
                         }
-                        else if (input.equals("2")) {
+      else if (input.equals("2")) {
 			    s = b.name + ": ...";
 			    s += "\n" + b.name + " chuckles nervously and you guys keep playing Pac-Man";
 			    s += "\n The rest of the night goes by without incident, but ";
 			    s += "\n there is an undeniable awkwardness between you two";
 			    b.friendship -= 1.2;
                         }
-                        else if (input.equals(3) && a.charisma > 80) {
+      else if (input.equals(3) && a.getCharisma() > 80) {
 			    s = "You guys have the best night ever";
 			    s += "\nYou feel infinitely closer to" + b.name;
 			    b.friendship += 2.0;
                         }
-                        else {
+      else {
 			    s = "You just stand there...";
 			    s += "\nNothing happens and the date ends";
                         }
 		    }
 		    else {
-                        s = "Nothing special happens tonight.";
-                        s += "\nMaybe one of you wanted more, but no one made a move.";
-                        b.friendship += .2;
+          s = "Nothing special happens tonight.";
+          s += "\nMaybe one of you wanted more, but no one made a move.";
+          b.friendship += .2;
 		    }
 		    System.out.println(s);
 		}
@@ -298,7 +298,7 @@ public class Personal {
 		    s += "\nYou go home dejected and angry for picking the carnival";
 		    b.friendship -= 1;
 		}
-		else if (a.charisma > 80) {
+		else if (a.getCharisma() > 80) {
 		    s += "\n Even though " + b.name + " doesn't like carnivals, ";
 		    s += "\n your radiant personality makes the whole experience great!";
 		    s += "\n It was a surprisingly good date!";
@@ -327,7 +327,7 @@ public class Personal {
 		if (input.equals("1")) {
 		    s = "Everyone loves some action!";
 		    s += "\nYou have a good time";
-		    a.mental += 5;
+		    a.setMental(a.getMental() + 5);
 		    b.friendship += .2;
 		}
 		else if (input.equals("2")) {
@@ -337,14 +337,14 @@ public class Personal {
 		else if (input.equals("3")) {
 		    s = ";)";
 		    s += b.name + " (looks at you weird)";
-		    a.charisma += 20;
+		    a.setCharisma(a.getCharisma() + 20);
 		}
 		else {
 		    s = "Comedy it is!";
 		    s += "\nUnfortunately it's a cheesy comedy...";
-		    a.charisma += 10;
-		    a.mental -= 10;
-		    a.intel -= 10;
+		    a.setCharisma(a.getCharisma() + 10);
+		    a.setMental(a.getMental() + 10);
+		    a.setIntel(a.getMental() + 10);
 		    b.friendship += .2;
 		}
 		System.out.println(s);
@@ -365,7 +365,7 @@ public class Personal {
 	int input = 0;
 	String s = "";
 
-	a.physical -= 20;
+	a.setPhysical(a.getPhysical() - 20);
 	s = "You're sick...";
 	s += "\nThere's no way you can go to school today...\n";
 	s += "\t1. I need perfect attendance...to school it is!\n";
@@ -382,35 +382,35 @@ public class Personal {
 	    if (contagion > .7) {
 		s = "You go to school, but you're so sick that you can't focus...";
 		s += "\nWhat's worse, you spread the sickness to your close friends...";
-		a.physical -= 20;
+		a.setPhysical(a.getPhysical() - 20);
 		b.friendship -= .3;
 		c.friendship -= .3;
 		d.friendship -= .3;
 	    }
 	    else {
 		s = "You feel a bit worse and you can't really focus in class.";
-		a.physical -= 10;
-		a.intel -= 5;
+		a.setPhysical(a.getPhysical() - 10);
+		a.setIntel(a.getIntel() - 5);
 	    }
 	}
 	else if(input == 2) {
 	    s = "Good choice!";
 	    s += "\nIt's important to take a step back and care for yourself!";
 	    s += "\nYou feel much better as the day progresses";
-	    a.physical += 25;
-	    a.mental += 20;
+      a.setPhysical(a.getPhysical() + 20);
+  		a.setMentel(a.getMentel() + 25);
 	}
 	else if (input == 3) {
 	    s = "You see a doctor and he prescribes some nasty medicine...";
 	    if (Math.random() > .7) {
 		s += "\nIt works like magic! You feel better than ever!";
-		a.physical += 50;
-		a.intel -= 5;
+    a.setPhysical(a.getPhysical() + 50);
+		a.setIntel(a.getIntel() - 5);
 	    }
 	    else {
 		s += "\nIt doesn't work and you black out...";
-		a.physical -= 15;
-		a.intel -= 5;
+    a.setPhysical(a.getPhysical() + 50);
+		a.setIntel(a.getIntel() - 5);
 	    }
 	}
 	System.out.println(s);
@@ -446,18 +446,18 @@ public class Personal {
 		else if (a.sleep < 5 && Math.random() > .5) {
 		    s = "Oh no! You missed your alarm!";
 		    s += "\nYou couldn't get any work done, but at least you got enough sleep!";
-		    a.sleep += 8;
-		    a.physical += 20;
-		    a.mental += 20;
-		    a.average -= 2.5;
+		    a.setSleep(a.getSleep() - 8);
+		    a.setPhysical(a.getPhysical() + 20);
+		    a.setMental(a.getMental() + 20);
+		    a.setAverage(a.getAverage() - 2.5);
 		    ans = true;
 		}
 		else {
 		    s = "You took a nap for " + time + " minutes!";
-		    a.sleep += (time/60);
-		    a.average -= (time*.01);
-		    a.mental += (time*.1);
-		    a.physical += (time*.1);
+		    a.setSleep(time/60);
+		    a.setAverage(time*.01);
+		    a.setMental(time*.1);
+		    a.setPhysical(time*.1);
 		    ans = true;
 		}
 	    }
