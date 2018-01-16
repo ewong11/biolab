@@ -67,6 +67,13 @@ public abstract class Student extends Character {
       return ((mental <= 0) || (physical <= 0));
     }
 
+    public void avgReset() {
+	if (average > 100)
+	    average = 100;
+	if (average < 0)
+	    average = 0; 
+    } 
+
     //sets sleep to new number
     //returns old sleep
     public double setSleep(double s) {
@@ -84,7 +91,8 @@ public abstract class Student extends Character {
     //returns old average
     public double setAverage(double newAvg) {
 	double old = average;
-	average = newAvg;
+	if (!(newAvg > 100)) 
+	    average = newAvg;
 	return old;
     }
 
