@@ -269,36 +269,35 @@ public class Woo {
 
     //sims a day, out of a possible 180 - we can put the methods in another class
     public boolean simDay() {
-	luck = Math.random();
-	boolean done = false;
-	if(!player.isDead()){
+      luck = Math.random();
+      boolean done = false;
+      if(!player.isDead()){
+        while (done == false) {
+          int ans = 0;
+          String s = "";
+          player.avgReset();
+          System.out.print("\033[H\033[2J");
+          System.out.println("==============================================");
+          System.out.println("Day " + days);
+      		System.out.println("==============================================");
+      		System.out.println("Good Morning " + player.name + "!");
+      		System.out.println("Please select one of the following:");
+      		s += "\t1: Show Your Status\n";
+      		s += "\t2. Judge ma fwends!\n";
+      		s += "\t3: show me ma achievments\n";
+      		s += "\t4: Fortune Me! \n";
+      		s += "\t5: INTO THE FRAY! \n";
+      		s += "Selection: ";
+      		System.out.println(s);
 
-	    while (done == false) {
-		int ans = 0;
-		String s = "";
-		player.avgReset();
-		System.out.print("\033[H\033[2J");
-		System.out.println("==============================================");
-		System.out.println("Day " + days);
-		System.out.println("==============================================");
-		System.out.println("Good Morning " + player.name + "!");
-		System.out.println("Please select one of the following:");
-		s += "\t1: Show Your Status\n";
-		s += "\t2. Judge ma fwends!\n";
-		s += "\t3: show me ma achievments\n";
-		s += "\t4: Fortune Me! \n";
-		s += "\t5: INTO THE FRAY! \n";
-		s += "Selection: ";
-		System.out.println(s);
-
-		if (days == 50) {
-		    if (!(isThere("50-days-50-states")))
-			player.badges.add("50-days-50-states");
-		}
-		else if (days == 10){
-		    if (!(isThere("10-ten-to-10-ten")))
-			player.badges.add("10-ten-to-10-ten");
-		}
+          if (days == 50) {
+            if (!(isThere("50-days-50-states")))
+            player.badges.add("50-days-50-states");
+          }
+          else if (days == 10){
+            if (!(isThere("10-ten-to-10-ten"))){
+              player.badges.add("10-ten-to-10-ten");
+            }
 		else if (days == 90) {
 		    if (!(isThere("halfway-and-halfbaked")))
 			player.badges.add("halfway-and-halfbaked");

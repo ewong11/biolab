@@ -10,7 +10,7 @@ public class Social {
     isr = new InputStreamReader( System.in );
     in = new BufferedReader( isr );
     //Chooses which friend to interact with
-    int choiceF = (int)(Math.random() * 3);
+    int choiceF = (int)(Math.random() * 4);
     Friend currFriend;
     //References friend with currFriend
     currFriend = Woo.yourFriends[choiceF];
