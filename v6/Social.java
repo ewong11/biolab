@@ -36,6 +36,7 @@ public class Social {
         else if (ans == 2){
           System.out.println(currFriend + " feels a little closer to you now");
           currFriend.friendship += 1;
+          player.friendCount += 1;
         }
 
         else{
@@ -61,10 +62,12 @@ public class Social {
         if (ans == 1){
           System.out.println(currFriend + " is a little offended and will \nremember your actions....");
           currFriend.friendship -= 1;
+          player.friendCount -= 1;
         }
         else if (ans == 2){
           System.out.println(currFriend + " finishes their homework and gets 100!\nThey owe it all to you :)");
           currFriend.friendship += 1.5;
+          player.friendCount += 1;
         }
 
         else{
@@ -72,13 +75,14 @@ public class Social {
           //Get caught copying!!
           if(caughtChance < 0.3){
             System.out.println(currFriend + " gets caught copying your homework... \nYour average goes down 5 points but you and " + currFriend + " are closer than ever!");
-            player.average -= 5;
+            player.average -= 10;
             currFriend.friendship += 2;
           }
           //Just increases.
           else{
             System.out.println(currFriend + " appreciates you.");
             currFriend.friendship += 2;
+
           }
         }
       }
@@ -168,6 +172,7 @@ public class Social {
         System.out.println("Average does down slightly but friendship all goes up!");
         p.average =+ 0.5;
         AllFriendsChange("add", 0.3);
+        player.friendCount += 3;
       }
       else{
         int newOne = 0;
@@ -180,6 +185,7 @@ public class Social {
           System.out.println("Grades go up... Friends go down :(");
           p.average += .5;
           AllFriendsChange("sub", 0.3);
+          player.friendCount -= 2;
         }
         else{
           System.out.println("The best sleep yet!");
@@ -188,6 +194,7 @@ public class Social {
           System.out.println("\t: At least now I know who my real friends are!");
           AllFriendsChange("sub", 0.3);
           p.sleep += 2;
+          player.friendCount -= 2;
         }
       }
     }
