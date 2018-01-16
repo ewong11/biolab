@@ -25,23 +25,44 @@ public abstract class Student extends Character {
       return ans;
     }
 
+    public boolean isThere(String a) {
+	boolean ans = false; 
+	for (String b: badges) {
+	    if (a.compareTo(b) == 0)
+		ans = true; 
+	}
+	return ans; 
+    } 
+
     public void updateBadges(Student player) {
-  	if (player.sleep == 100)
-  	    player.badges.add("slept-for-more-than-4and1/16-days");
-  	else if (player.average < 65)
-  	    player.badges.add("failed-once-or-twice");
-  	else if (player.friendCount == 5)
-  	    player.badges.add("not-a-loner-anymore");
-  	else if (player.physical == 100)
-  	    player.badges.add("can-climb-more-than-two-flights");
-  	else if (player.mental == 100)
-  	    player.badges.add("in-a-golden-state-of-mind");
-  	else if (player.average > 90 && player.sleep > 90 && player.friendCount > 5)
-  	  player.badges.add("stuy-triangle-achieved");
+  	if (player.sleep == 100 ) { 
+	    if (!(isThere("slept-for-more-than-4and1/16-days")))
+		player.badges.add("slept-for-more-than-4and1/16-days");
+	} 
+	else if (player.average < 65) { 
+	    if (!(isThere("failed-once-or-twice")))
+		player.badges.add("failed-once-or-twice");
+	} 
+	else if (player.friendCount == 5) { 
+	    if (!(isThere("not-a-loner-anymore")))
+		player.badges.add("not-a-loner-anymore");
+	} 
+	else if (player.physical == 100) {
+	    if (!(isThere("can-climb-more-than-two-flights")))
+		player.badges.add("can-climb-more-than-two-flights");
+	} 
+	else if (player.mental == 100){ 
+	    if (!(isThere("in-a-golden-state-of-mind")))	       
+		player.badges.add("in-a-golden-state-of-mind");
+	} 
+	else if (player.average > 90 && player.sleep > 90 && player.friendCount > 5) {
+	    if (!(isThere("stuy-triangle-achieved")))
+		player.badges.add("stuy-triangle-achieved");
+	} 
     }
 
-    //When any characteristic of the Student
-    //is below zero, then the Student is dead
+			//When any characteristic of the Student
+			//is below zero, then the Student is dead
     // Returns true if dead!
     public boolean isDead() {
       return ((mental <= 0) || (physical <= 0));
@@ -50,9 +71,9 @@ public abstract class Student extends Character {
     //sets sleep to new number
     //returns old sleep
     public double setSleep(double s) {
-	     double old = sleep;
-	     sleep = s;
-	     return old;
+	double old = sleep;
+	sleep = s;
+	return old;
     }
 
     //gets sleep
@@ -63,9 +84,9 @@ public abstract class Student extends Character {
     //sets average to new number
     //returns old average
     public double setAverage(double newAvg) {
-	     double old = average;
-	     average = newAvg;
-  	   return old;
+	double old = average;
+	average = newAvg;
+	return old;
     }
 
     //returns average
@@ -95,9 +116,13 @@ public abstract class Student extends Character {
     }
 
     //returns Mental
-    public void getMental(){
+    public int getMental(){
       return mental;
     }
+
+    public int getPhysical() {
+	return physical; 
+    } 
 
     //sets physical to new number
     //returns old physical
