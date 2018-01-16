@@ -10,9 +10,9 @@ public abstract class Student extends Character {
     protected static Badges badges;
 
     public Student() {
-	badges = new Badges(); 
-    } 
-    
+	badges = new Badges();
+    }
+
     public String toString() {
 	System.out.print("\033[H\033[2J");
 	String ans = "";
@@ -35,20 +35,19 @@ public abstract class Student extends Character {
 	else if (player.physical == 100)
 	    player.badges.add("can-climb-more-than-two-flights");
 	else if (player.mental == 100)
-	    player.badges.add("in-a-golden-state-of-mind"); 
+	    player.badges.add("in-a-golden-state-of-mind");
 	else if (player.average > 90 && player.sleep > 90 && player.friendCount > 5)
-	  player.badges.add("stuy-triangle-achieved"); 
-    } 
+	  player.badges.add("stuy-triangle-achieved");
+    }
 
     //When any characteristic of the Student
     //is below zero, then the Student is dead
     // Returns true if dead!
     public boolean isDead() {
-	return sleep == 0 ||
-	    mental == 0 ||
-	    physical == 0 ||
-	    average == 0 ||
-	    friendCount == 0;
+	return
+	    mental <= 0 ||
+	    physical <= 0 ||
+	    
     }
 
     //sets sleep to new number
