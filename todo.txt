@@ -1,22 +1,22 @@
 Rough timeline:
-V1: 
+V1:
 Create compilable classes //done
 Have all the classes (student etc), their variables and methods done //finished classes except for mini game classes
-V2: 
+V2:
 Completed character quiz //done
 Have basic storyline //in progress
-V3: 
-Incorporated badge earning 
-Completed minigames 
-Incorporated NPS interaction 
-V4: 
-Incorporated dialogue 
-Completed storyline 
+V3:
+Incorporated badge earning
+Completed minigames
+Incorporated NPS interaction
+V4:
+Incorporated dialogue
+Completed storyline
 V5:
 ALL DONE!!! FULLY FUNCTIONAL!!!
-complete base project by 01-14-2018 
-editing + game testing on 01-15-2018 
-final revisions + game check on 01-16-2018 
+complete base project by 01-14-2018
+editing + game testing on 01-15-2018
+final revisions + game check on 01-16-2018
 
 To do:
 (immediate)
@@ -26,5 +26,7 @@ To do:
 	- will each have its own class?
 
 
-NOTEBOARD TO TEAM: 
-	
+NOTEBOARD TO TEAM:
+
+
+	WE ARE FINISHED :))))))))))))))))))))))
