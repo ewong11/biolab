@@ -70,14 +70,14 @@ LESSONS LEARNED
 --------------------------------------------------------------
 eric :: UPDATE THIS
 susan :: UPDATE THIS
-kaitlin :: made Friends class and began work on class Social
+kaitlin :: updated woo.java
 ==============================================================
 
 2018-01-14
 --------------------------------------------------------------
 eric :: UPDATE THIS
 susan :: UPDATE THIS
-kaitlin :: made Friends class and began work on class Social
+kaitlin :: finished social class +  fixed indentations
 ==============================================================
 
 2018-01-13 (met in person!!)

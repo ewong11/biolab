@@ -10,14 +10,14 @@ public class Crush extends Friend {
   }
   public String friendLev() {
     if (friendship < 0.5)
-    return "stranger";
+      return "stranger";
     else if (friendship <= 2 && friendship >= .05)
-    return "acquaintance";
+      return "acquaintance";
     else if (friendship <= 3 && friendship > 2)
-    return "close friend";
-    else if (friendship > 3)
-    return "best fwend";
+      return "close friend";
+    else if (friendship > 3 && friendship < 4)
+      return "best fwend";
     else
-    return "lovebwds";
+      return "lovebwds";
   }
 }
