@@ -55,15 +55,16 @@ public class Test {
   //sims a day, out of a possible 180 - we can put the methods in another class
   public boolean testDay() {
     player = new Normal("Player");
-    crush = new Crush("Crush");
+    crush = new Crush("CrushName");
     //Social social = new Social();
     //social.friend(player);
     //Other other = new Other();
     //Other.hqtrivia(player);
 
-    FindClass a = new FindClass();
-    a.runToClass(player);
+    ImpressCrush tryLuck = new ImpressCrush();
+    tryLuck.playGame(crush);
     return true;
+
   }
     //System.out.println(player.average);
     //Lunch lunch = new Lunch();
