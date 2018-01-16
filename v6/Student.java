@@ -24,11 +24,10 @@ public abstract class Student extends Character {
       ans += "physical strength: " + physical + "\n";
       return ans;
     }
-
-    public boolean isThere(String a) {
+    public boolean isThere(Comparable a) {
 	boolean ans = false; 
-	for (String b: badges) {
-	    if (a.compareTo(b) == 0)
+	for (int x = 0; x < badges.size(); x++) {
+	    if (a.compareTo(badges.get(x)) == 0)
 		ans = true; 
 	}
 	return ans; 
@@ -68,6 +67,13 @@ public abstract class Student extends Character {
       return ((mental <= 0) || (physical <= 0));
     }
 
+    public void avgReset() {
+	if (average > 100)
+	    average = 100;
+	if (average < 0)
+	    average = 0; 
+    } 
+
     //sets sleep to new number
     //returns old sleep
     public double setSleep(double s) {
@@ -85,7 +91,8 @@ public abstract class Student extends Character {
     //returns old average
     public double setAverage(double newAvg) {
 	double old = average;
-	average = newAvg;
+	if (!(newAvg > 100)) 
+	    average = newAvg;
 	return old;
     }
 
@@ -116,15 +123,6 @@ public abstract class Student extends Character {
     }
 
     //returns Mental
-<<<<<<< HEAD
-    public int getMental(){
-      return mental;
-    }
-
-    public int getPhysical() {
-	return physical; 
-    } 
-=======
     public int getMental() {
       return mental;
     }
@@ -133,7 +131,6 @@ public abstract class Student extends Character {
     public int getPhysical(){
       return physical;
     }
->>>>>>> 04262995ce0b9af9be00bd9013c6c9357ae0499a
 
     //sets physical to new number
     //returns old physical

@@ -59,10 +59,10 @@ public class Woo {
 	sc.nextLine();
     }
 
-    public boolean isThere(String a) {
+    public boolean isThere(Comparable a) {
 	boolean ans = false; 
-	for (String b: badges) {
-	    if (a.compareTo(b) == 0)
+	for (int x = 0; x < player.badges.size(); x++) {
+	    if (a.compareTo(player.badges.get(x)) == 0)
 		ans = true; 
 	}
 	return ans; 
@@ -275,6 +275,7 @@ public class Woo {
 	    while (done == false) {
 		int ans = 0;
 		String s = "";
+		player.avgReset(); 
 		System.out.print("\033[H\033[2J");
 		System.out.println("==============================================");
 		System.out.println("Day " + days);
@@ -292,6 +293,10 @@ public class Woo {
 		if (days == 50) {
 		    if (!(isThere("50-days-50-states")))
 			player.badges.add("50-days-50-states");
+		}
+		else if (days == 10){ 
+		    if (!(isThere("10-ten-to-10-ten")))
+			player.badges.add("10-ten-to-10-ten");
 		} 
 		else if (days == 90) {
 		    if (!(isThere("halfway-and-halfbaked")))
@@ -300,9 +305,9 @@ public class Woo {
 		else if (days == 100){ 
 		    if (!(isThere("100-days-100-lates")))
 			player.badges.add("100-days-100-lates");
-		} 
+		}
 		else if (player.average > 95 && days > 45) {
-		    if (!(isThere()))
+		    if (!(isThere("YO-AVERAGE-IS-NOT-DEAD")))
 			player.badges.add("YO-AVERAGE-IS-NOT-DEAD");
 		} 
 		player.updateBadges(player);
