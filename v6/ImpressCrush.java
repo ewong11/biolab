@@ -110,7 +110,7 @@ public class ImpressCrush {
     return false;
   }
 
-  public void playGame(Crush crush)
+  public void playGame(Friend crush)
   {
     System.out.println("Wow... " + crush.name + " has been running through your mind.");
     System.out.println("Last night you wished to a geenie... I wish I could change how");
