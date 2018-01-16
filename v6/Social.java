@@ -13,7 +13,7 @@ public class Social {
     int choiceF = (int)(Math.random() * 3);
     Friend currFriend;
     //References friend with currFriend
-    currFriend = Woo.yourFriends[3];
+    currFriend = Woo.yourFriends[choiceF];
     //Which FriendEvent to do?
     double choice = Math.random();
 

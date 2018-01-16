@@ -10,7 +10,7 @@ public class Woo {
     public static int days;
     public static int birthday;
     public static double luck;
-    private int score;
+    private static int score;
     public static Friend crush;
     public static Friend[] yourFriends;
     public static Friend friend1;
@@ -60,13 +60,13 @@ public class Woo {
     }
 
     public boolean isThere(Comparable a) {
-	boolean ans = false; 
+	boolean ans = false;
 	for (int x = 0; x < player.badges.size(); x++) {
 	    if (a.compareTo(player.badges.get(x)) == 0)
-		ans = true; 
+		ans = true;
 	}
-	return ans; 
-    } 
+	return ans;
+    }
 
     //---------CREATES NEW GAME--------------------
     public void newGame() {
@@ -275,7 +275,7 @@ public class Woo {
 	    while (done == false) {
 		int ans = 0;
 		String s = "";
-		player.avgReset(); 
+		player.avgReset();
 		System.out.print("\033[H\033[2J");
 		System.out.println("==============================================");
 		System.out.println("Day " + days);
@@ -294,22 +294,22 @@ public class Woo {
 		    if (!(isThere("50-days-50-states")))
 			player.badges.add("50-days-50-states");
 		}
-		else if (days == 10){ 
+		else if (days == 10){
 		    if (!(isThere("10-ten-to-10-ten")))
 			player.badges.add("10-ten-to-10-ten");
-		} 
+		}
 		else if (days == 90) {
 		    if (!(isThere("halfway-and-halfbaked")))
 			player.badges.add("halfway-and-halfbaked");
-		} 
-		else if (days == 100){ 
+		}
+		else if (days == 100){
 		    if (!(isThere("100-days-100-lates")))
 			player.badges.add("100-days-100-lates");
 		}
 		else if (player.average > 95 && days > 45) {
 		    if (!(isThere("YO-AVERAGE-IS-NOT-DEAD")))
 			player.badges.add("YO-AVERAGE-IS-NOT-DEAD");
-		} 
+		}
 		player.updateBadges(player);
 
 		try {
@@ -410,7 +410,7 @@ public class Woo {
 		    else if (luck < 0.7) {
 			if (crush.friendship > 2.5)
 			    Personal.date(player, crush);
-			else 
+			else
 			    System.out.println("...You think about going on a date with " + crush.name);
 		    }
 		    else if (luck < 0.75)
@@ -437,18 +437,27 @@ public class Woo {
 	    return true;
 	}
 	done = false;
+  calcScore(player);
 	return false;
     }
 
-    public static void main(String[] args) {
+    public void calcScore(Student player) {
+      score = (int)(3*player.getIntel() + 10*player.getFriends() +
+      5* player.getAverage() + 10 * (player.getMental() +player.getPhysical()));
+    }
+
+public static void main(String[] args) {
 	Woo game = new Woo();
 
 	while(days <= 180){
-	    if(!game.simDay())
+	    if(!game.simDay()) {
+
+      }
 		break;
 	    days++;
 	    System.out.println("");
 	}
+  System.out.println(score);
 	//}
     }
 }
