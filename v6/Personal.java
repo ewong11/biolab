@@ -96,7 +96,7 @@ public class Personal {
 	    else if (input.equals("2") && b.friendship > 1.75) {
 		s = "What'd you do that for? \nNow" + b.name + " probably thinks you're a weirdo...";
 		a.setCharisma(a.getCharisma() - 10);
-		a.setMental(a.setMental() - 5);
+		a.setMental(a.getMental() - 5);
 	    }
 
 	    else if (input.equals("2") && (a.getCharisma() + a.getMental()) > 140 ) {
@@ -398,7 +398,7 @@ public class Personal {
 	    s += "\nIt's important to take a step back and care for yourself!";
 	    s += "\nYou feel much better as the day progresses";
       a.setPhysical(a.getPhysical() + 20);
-  		a.setMentel(a.getMentel() + 25);
+  		a.setMental(a.getMental() + 25);
 	}
 	else if (input == 3) {
 	    s = "You see a doctor and he prescribes some nasty medicine...";
@@ -456,8 +456,8 @@ public class Personal {
 		    s = "You took a nap for " + time + " minutes!";
 		    a.setSleep(time/60);
 		    a.setAverage(time*.01);
-		    a.setMental(time*.1);
-		    a.setPhysical(time*.1);
+		    a.setMental((int)(time*.1));
+		    a.setPhysical((int)(time*.1));
 		    ans = true;
 		}
 	    }

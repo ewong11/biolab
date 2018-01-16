@@ -77,7 +77,7 @@ public abstract class Student extends Character {
     }
 
     //gets sleep
-    public void getSleep(){
+    public double getSleep(){
       return sleep;
     }
 
@@ -90,7 +90,7 @@ public abstract class Student extends Character {
     }
 
     //returns average
-    public void getAverage(){
+    public double getAverage(){
       return average;
     }
 
@@ -103,7 +103,7 @@ public abstract class Student extends Character {
     }
 
     //returns number of friends
-    public void getFriends(){
+    public int getFriends(){
       return friendCount;
     }
 
@@ -116,6 +116,7 @@ public abstract class Student extends Character {
     }
 
     //returns Mental
+<<<<<<< HEAD
     public int getMental(){
       return mental;
     }
@@ -123,6 +124,16 @@ public abstract class Student extends Character {
     public int getPhysical() {
 	return physical; 
     } 
+=======
+    public int getMental() {
+      return mental;
+    }
+
+    //returns physical
+    public int getPhysical(){
+      return physical;
+    }
+>>>>>>> 04262995ce0b9af9be00bd9013c6c9357ae0499a
 
     //sets physical to new number
     //returns old physical
@@ -130,6 +141,17 @@ public abstract class Student extends Character {
       int old = physical;
       physical = newPhys;
       return old;
+    }
+
+    //changes intel
+    public int setIntel(int i) {
+      int old = intel;
+      intel = i;
+      return old;
+    }
+
+    public int getIntel(){
+      return intel;
     }
 
     public String getSched() {
