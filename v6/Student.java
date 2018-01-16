@@ -44,11 +44,10 @@ public abstract class Student extends Character {
     //is below zero, then the Student is dead
     // Returns true if dead!
     public boolean isDead() {
-	return {
+	return
 	    mental <= 0 ||
-	    physical <= 0 ||
+	    physical <= 0
     }
-  }
 
     //sets sleep to new number
     //returns old sleep
