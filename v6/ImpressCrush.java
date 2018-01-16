@@ -52,7 +52,7 @@ public class ImpressCrush {
     public String toString()
     {
         String rtrString = "";
-        System.out.println("~~~~~~~~~~~~~~~~~~ GEENIE MACHINE ~~~~~~~~~~~~~~~~~~");
+        System.out.println("~~~~~~~~~~~~~~~~~~ GENIE MACHINE ~~~~~~~~~~~~~~~~~~");
         System.out.println("||" + _levels[0] + "||\t ||" + _levels[1] + "||\t|| " + _levels[2] + "||");
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         return rtrString;
@@ -113,8 +113,8 @@ public class ImpressCrush {
   public void playGame(Friend crush)
   {
     System.out.println("Wow... " + crush.name + " has been running through your mind.");
-    System.out.println("Last night you wished to a geenie... I wish I could change how");
-    System.out.println(crush.name + " thought about me. The geenie being a geenie took it");
+    System.out.println("Last night you wished to a genie... I wish I could change how");
+    System.out.println(crush.name + " thought about me. The genie being a geenie took it");
     System.out.println("with a twist. You never said HOW you wanted to change it...");
     System.out.println();
     System.out.println("Now it's up to this slot machine to decide your fate...");
