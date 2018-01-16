@@ -443,7 +443,7 @@ public class Personal {
 		    s = "Thats a lot of minutes...";
 		    s += "This is a nap, you know.";
 		}
-		else if (a.sleep < 5 && Math.random() > .5) {
+		else if (a.sleep < 6 && Math.random() > .5) {
 		    s = "Oh no! You missed your alarm!";
 		    s += "\nYou couldn't get any work done, but at least you got enough sleep!";
 		    a.setSleep(a.getSleep() - 8);
@@ -454,10 +454,10 @@ public class Personal {
 		}
 		else {
 		    s = "You took a nap for " + time + " minutes!";
-		    a.setSleep(time/60);
-		    a.setAverage(time*.01);
-		    a.setMental((int)(time*.1));
-		    a.setPhysical((int)(time*.1));
+		    a.setSleep(a.getSleep() + time/60);
+		    a.setAverage(a.getAverage() - time*.01);
+		    a.setMental(a.getMental() + (int)(time*.1));
+		    a.setPhysical(a.getPhysical() + (int)(time*.1));
 		    ans = true;
 		}
 	    }

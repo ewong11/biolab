@@ -64,6 +64,17 @@ public abstract class Student extends Character {
 			//is below zero, then the Student is dead
     // Returns true if dead!
     public boolean isDead() {
+      if (mental <= 0)
+      Woo.dieMessage += "\nYou become mentally overwhelmed, unable to keep up with Stuy life";
+      else if (physical <= 0)
+      Woo.dieMessage += "\nStuy destroys you physically, and you are now a walking shell of yourself";
+      else if (average <= 0)
+      Woo.dieMessage += "\nYou have failed your classes! How are you going to get into college?";
+      else if (sleep <= 0)
+      Woo.dieMessage += "\nSleep deprivation kills, ya know";
+      else if (friendCount <= 0)
+      Woo.dieMessage += "\nYou can't survive Stuy with no friends :(";
+
       return ((mental <= 0) || (physical <= 0) || (average <= 0) || (sleep <= 0) || (friendCount <= 0));
     }
 

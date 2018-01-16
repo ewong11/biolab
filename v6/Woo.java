@@ -18,6 +18,7 @@ public class Woo {
     public static Friend friend3;
     public static boolean datenight = false;
     public static boolean flix = false;
+    public static String dieMessage = "...It be like this sometimes...\nStuy has destroyed you...";
 
     private InputStreamReader isr;
     private BufferedReader in;
@@ -451,13 +452,14 @@ public static void main(String[] args) {
 
 	while(days <= 180){
 	    if(!game.simDay()) {
-
-      }
-		break;
+    dieMessage += "\nGame Over.";
+    System.out.println(dieMessage);
+    break;
+  }
 	    days++;
 	    System.out.println("");
 	}
-  System.out.println(score);
+  System.out.println("Score: " + score);
 	//}
     }
 }
