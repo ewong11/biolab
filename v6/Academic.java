@@ -105,7 +105,7 @@ public class Academic {
 	if (score < 65)
 	    a.average -= 5;
 	else if (score > 95)
-	    a.average += 1; 
+	    a.average += 3; 
     }
     public static void quiz(Student a) {
 	isr = new InputStreamReader(System.in);
@@ -153,9 +153,9 @@ public class Academic {
 	System.out.println("========= END OF QUIZ ========");
 	System.out.println("your score: " + score);
 	if (score < 65)
-	    a.average -= 2;
+	    a.average -= 3;
 	else if (score > 90)
-	    a.average += 1; 
+	    a.average += 2; 
     }
     public static void project(Student a) {
 	isr = new InputStreamReader(System.in);
@@ -196,17 +196,20 @@ public class Academic {
 		catch (IOException e) {}
 		if (ans == 1){
 		    System.out.print("\033[H\033[2J");
-		    System.out.print("you got a hundred! woooooo!");
-		    a.average += 2; 
+		    System.out.print("you got a hundred! woooooo!\n");
+		    System.out.print("plus 3 to average\n");
+		    a.average += 3; 
 		}
 		else if (ans == 2) {
 		    System.out.print("\033[H\033[2J");
 		    System.out.print("you got a zero because you were too busy in the bathroom to show up.\n");
+		    System.out.print("minue 5 from average :( \n");
 		    a.average -= 5; 
 		}
 		else {
 		    System.out.print("\033[H\033[2J");
 		    System.out.print("you ended up late and got 20 points deducted\n");
+		    System.out.print("minus 2 to average \n");
 		    a.average -= 2; 
 		} 
 	    } 
@@ -225,22 +228,27 @@ public class Academic {
 		if (ans == 1){
 		    System.out.print("\033[H\033[2J");
 		    System.out.print("you got a hundred! woooooo! thank you mom, dad, Jamie FoxPickle the dog\n");
-		    a.average += 2; 
+		    System.out.print("plus 3 to average \n");
+		    a.average += 3; 
 		}
 		else if (ans == 2) {
 		    System.out.print("\033[H\033[2J");
 		    System.out.print("you got a zero. you didn't email the teacher for a makeup\n");
+		    System.out.print("minue 5 from average :( \n");
+
 		    a.average -= 5; 
 		}
 		else {
 		    System.out.print("\033[H\033[2J");
 		    System.out.print("you had to make up the presentation and got 20 points deducted\n");
+		    System.out.print("minus 2 to average \n");
 		    a.average -= 2; 
 		} 
 	    } 
 	    else {
 		System.out.print("\033[H\033[2J");
 		System.out.print("you got a zero\n");
+		System.out.print("minus 5 to average :( \n");
 		a.average -= 5; 
 	    } 
 	}
@@ -282,7 +290,8 @@ public class Academic {
 		    if (ans == 1) {
 			System.out.print("\033[H\033[2J");
 			System.out.println("your teacher loves it so much he gives you extra credit for being you. 105!\n");
-			a.average += 2; 
+			System.out.print("plus 3.5 to average \n");
+			a.average += 3.5; 
 		    }
 		    else if (ans == 2) {
 			System.out.print("\033[H\033[2J");
@@ -322,17 +331,20 @@ public class Academic {
 			if (ans == 1) {
 			    System.out.print("\033[H\033[2J");
 			    System.out.println("turns out you were supposed to have strep throat. you confess and get a 0\n");
+			    System.out.print("minus 5 to average :( \n");
 			    a.average -= 5;
 			    a.charisma -= 1; 
 			}
 			else if (ans == 2) {
 			    System.out.print("\033[H\033[2J");
 			    System.out.println("you charm your teacher and get away with it. rascal.\n");
+			    System.out.print("plus 3 to average \n");
 			    a.average += 3; 
 			}
 			else {
 			    System.out.print("\033[H\033[2J");
 			    System.out.println("you confess your sins and feel better. an empty average is better than an empty soul\n");
+			    System.out.print("minus 3 to average \n");
 			    a.average -= 3;
 			    a.mental += 2; 
 			} 
@@ -340,6 +352,8 @@ public class Academic {
 		    else if (ans == 2) {
 			System.out.print("\033[H\033[2J");
 			System.out.println(" you lose a couple points in score but your teacher trusts you now\n");
+			System.out.print("minus 1 to average \n");
+			a.average -= 1;
 			a.charisma += 1;
 			a.mental += 1; 
 			
@@ -347,6 +361,7 @@ public class Academic {
 		    else {
 			System.out.print("\033[H\033[2J");
 			System.out.println("you had to be hospitalized for malnutrition and sleep deprivation. your mom makes you rest for a month\n");
+			System.out.print("minus 3 to average \n");
  			a.average -= 3;
 			a.mental -= 5;
 			a.physical -= 10; 
@@ -355,6 +370,7 @@ public class Academic {
 		else {
 		    System.out.print("\033[H\033[2J");
 		    System.out.print("you got a zero\n");
+		    System.out.print("minus 5 to average :( \n");
 		    a.average -= 5; 
 		}
 	    }   
@@ -362,6 +378,7 @@ public class Academic {
 	else {
 	    System.out.print("\033[H\033[2J");
 	    System.out.print("you got a zero\n");
+	    System.out.print("minus 5 to average :( \n");
 	    a.average -= 5; 
 	} 
     }
@@ -425,7 +442,7 @@ public class Academic {
 		}
 		else {
 		    System.out.print("\033[H\033[2J");
-		    System.out.println("okay, you barely manage by skimming, but it works and you finish everything and sprinting to school\n");
+		    System.out.println("okay, you barely manage by skimming, but it works \n and you finish everything and sprinting to school\n");
 		    a.mental += 1;
 		    a.physical += 1;
 		    a.sleep += 4; 
@@ -489,7 +506,7 @@ public class Academic {
 
 	    if (ans == 1) {
 		System.out.print("\033[H\033[2J");
-		System.out.println("oh no. the coffee makes you want to pee and you had no fiber so you end up with a tummy ache. you miss class. your teacher thinks you cut");
+		System.out.println("oh no. the coffee makes you want to pee \n and you had no fiber so you end up with a tummy ache. you miss class. your teacher thinks you cut");
 		a.average -= 1;
 		a.physical -= 1;
 		a.sleep += 6; 
