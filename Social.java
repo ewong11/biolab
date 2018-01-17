@@ -118,6 +118,7 @@ public class Social {
 
         else{
           double caughtChance = Math.random();
+          //depends on your friendship!
           if(currFriend.friendship < 2){
             System.out.println(currFriend + " understands your situation. \nYour friendship goes up!");
             currFriend.friendship += 0.5;
@@ -132,6 +133,7 @@ public class Social {
     }
   }
 
+  //Sometimes EVERYONE needs a little change :D
   public static void AllFriendsChange(String change, double amt){
     if(change.equals("add")){
       Woo.friend1.friendship += amt;
