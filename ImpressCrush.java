@@ -1,6 +1,8 @@
 import java.io.*;
 import java.util.*;
 
+//Repurposed Homework 26 - Slots :)
+
 //For this game, you will be using slots to try and CHANGE
 //your crush level. Therefore, you will either go up or down
 //There are different classes there and then if you get
@@ -38,7 +40,7 @@ public class ImpressCrush {
       _levels[i] = LEVELS[i];
     }
 
-    //How many SPINS you get
+    //How many SPINS you get!! :)
     randNum = (int) (Math.random() * 6);
 
   }
@@ -87,6 +89,7 @@ public class ImpressCrush {
       swap( i, (int)( Math.random() * _levels.length) );
   }
 
+  //For User to follow :)
   public static void confirm() {
     String out = "(press 'Enter' to continue)";
     Scanner sc = new Scanner(System.in);
