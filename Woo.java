@@ -279,6 +279,7 @@ public class Woo {
           System.out.print("\033[H\033[2J");
           System.out.println("==============================================");
           System.out.println("Day " + days);
+          System.out.println(luck);
       		System.out.println("==============================================");
       		System.out.println("Good Morning " + player.name + "!");
       		System.out.println("Please select one of the following:");
@@ -396,9 +397,9 @@ public class Woo {
 		    System.out.println("Social Event");
 		    //Social
 		    //friend // eatOut // brithday // rumors
-		    if(luck < 0.45)
+		    if(luck < 0.5)
 			     Social.friend(player);
-		    else if (luck < 0.5)
+		    else if (luck < 0.55)
           Social.eatOut(player);
 		    else
           Social.rumors(player);

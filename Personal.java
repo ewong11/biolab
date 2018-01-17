@@ -25,10 +25,10 @@ public class Personal {
 	}
 	catch (IOException e) {};
 
-	int time = (int)(Math.random() * 6);
+	int time = (int)(Math.random() * 5) + 1;
 	if (input.equals("1")) {
 	    s = "Before you know it, its ";
-	    s += time + "o'clock";
+	    s += time + " o'clock!";
 	    s += " \nYou slowly drift off, with the sound of your TV in the background...";
 	    a.setSleep(a.getSleep() - time);
 	    a.setIntel(a.getIntel() - 5);

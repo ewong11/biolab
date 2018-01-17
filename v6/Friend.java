@@ -1,4 +1,6 @@
-public class Friend extends NPC implements Comparable<Friend>{
+public class Friend extends Character implements Comparable<Friend>{
+
+  protected double friendship;
 
   public Friend() {
   }

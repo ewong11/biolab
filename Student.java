@@ -1,5 +1,5 @@
 public abstract class Student extends Character {
-  protected static String name ;
+  
     protected static int intel;
     protected static int friendCount;
     protected static double average;

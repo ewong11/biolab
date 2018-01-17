@@ -1,4 +1,4 @@
-public class Friend implements Comparable<Friend>{
+public class Friend extends Character implements Comparable<Friend>{
 
   public String name;
   public double friendship;

@@ -35,13 +35,14 @@ public class Social {
         }
         else if (ans == 2){
           System.out.println(currFriend + " feels a little closer to you now");
-          currFriend.friendship += 1;
+          currFriend.friendship += .5;
           player.friendCount += 1;
         }
 
         else{
           System.out.println(currFriend + " loves the conversation! \nYour friendship shoots up but you're late to class....");
           player.average -= 1;
+          currFriend.friendship += 1;
         }
       }
       catch ( IOException e ){ }
