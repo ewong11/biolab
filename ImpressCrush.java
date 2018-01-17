@@ -119,18 +119,22 @@ public class ImpressCrush {
     System.out.println();
     System.out.println("Now it's up to this slot machine to decide your fate...");
     System.out.println("It might not even work! :P");
+    System.out.println("If you get 3 of the SAME ");
     confirm();
     System.out.print("\033[H\033[2J");
     int spun = 0;
     System.out.println();
-    System.out.println( "TRY YOUR LUCK with a SPIN!\n" + this );
+    System.out.println( "Your vision fades to white and this weird machine appears...\n");
+    System.out.println("~TRY YOUR LUCK WITH A SPIN!~");
+    System.out.println(this);
     confirm();
     System.out.print("\033[H\033[2J");
 
     while(spun <= randNum){
-      System.out.println(  "TRY YOUR LUCK with a SPIN!\n");
       this.spinOnce();
-      System.out.println(this );
+      System.out.println("After Spinning... It looks like this!");
+      System.out.println("~TRY YOUR LUCK WITH A SPIN!~");
+      System.out.println(this);
       if(this.jackpot() == true){
         System.out.println("Hmmm... It matched. Somehow.");
         System.out.println("Your crush level is now: " + _levels[0] );
@@ -155,6 +159,9 @@ public class ImpressCrush {
           crush.friendship = 4.5;
         }
         spun = randNum + 1;
+      }
+      else{
+        System.out.println("Seems like it wasn't a match! Sorry bud <3");
       }
       spun++;
       confirm();
