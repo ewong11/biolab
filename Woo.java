@@ -241,7 +241,7 @@ public class Woo {
 
 	}
 
-	//Bithday!
+	//Birthday!
 	birthday = (int)(Math.random() * 150);
 	System.out.println("Your birthday is: " + birthday + "\n");
 	System.out.println("Your crush is " + crush.name + "!\n");
@@ -296,21 +296,21 @@ public class Woo {
             player.badges.add("50-days-50-states");
           }
           else if (days == 10){
-            if (!(isThere("10-ten-to-10-ten")))
-              player.badges.add("10-ten-to-10-ten");
-            }
-		else if (days == 90) {
-		    if (!(isThere("halfway-and-halfbaked")))
-			player.badges.add("halfway-and-halfbaked");
-		}
-		else if (days == 100){
-		    if (!(isThere("100-days-100-lates")))
-			player.badges.add("100-days-100-lates");
-		}
-		else if (player.average > 95 && days > 45) {
-		    if (!(isThere("YO-AVERAGE-IS-NOT-DEAD")))
-			player.badges.add("YO-AVERAGE-IS-NOT-DEAD");
-		}
+	      if (!(isThere("10-ten-to-10-ten")))
+		  player.badges.add("10-ten-to-10-ten");
+	  }
+	  else if (days == 90) {
+	      if (!(isThere("halfway-and-halfbaked")))
+		  player.badges.add("halfway-and-halfbaked");
+	  }
+	  else if (days == 100){
+	      if (!(isThere("100-days-100-lates")))
+		  player.badges.add("100-days-100-lates");
+	  }
+	  else if (player.average > 95 && days > 45) {
+	      if (!(isThere("YO-AVERAGE-IS-NOT-DEAD")))
+		  player.badges.add("YO-AVERAGE-IS-NOT-DEAD");
+	  }
 		player.updateBadges(player);
 
 		try {
@@ -359,7 +359,7 @@ public class Woo {
 
 	    int eNum = 0;
 	    if(days == birthday)
-      eNum += Social.birthday(player);
+		eNum += Social.birthday(player);
 
 	    while(eNum <= 0){
 		if (Math.random() * player.sleep < 3) {
@@ -369,11 +369,11 @@ public class Woo {
 		    System.out.print("\033[H\033[2J");
 		}
 		if (luck < 0.2){
-      double ifCrushGame = Math.random();
-      if(ifCrushGame > 0.5){
+		    double ifCrushGame = Math.random();
+		    if(ifCrushGame > 0.5){
 
-          ImpressCrush tryLuck = new ImpressCrush();
-          tryLuck.playGame(crush);
+			ImpressCrush tryLuck = new ImpressCrush();
+			tryLuck.playGame(crush);
 		    }
         else{
           //No events
@@ -398,12 +398,12 @@ public class Woo {
 		    //Social
 		    //friend // eatOut // brithday // rumors
 		    if(luck < 0.5)
-			     Social.friend(player);
+			Social.friend(player);
 		    else if (luck < 0.55)
-          Social.eatOut(player);
+			Social.eatOut(player);
 		    else
-          Social.rumors(player);
-      }
+			Social.rumors(player);
+		}
 
 
 		else if (luck < 0.8 && luck > .6){
@@ -449,7 +449,7 @@ public class Woo {
       5* player.getAverage() + 10 * (player.getMental() +player.getPhysical()));
     }
 
-public static void main(String[] args) {
+    public static void main(String[] args) {
 	Woo game = new Woo();
 
 	while(days <= 180){
