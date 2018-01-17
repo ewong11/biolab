@@ -33,8 +33,10 @@ MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -  We changed badges as just an instance variable to a wrapper class because it was easier
    to implement what we had learned while taking advantage of the methods of ArrayList.
--  we made Crush extend Friend so that the user can imprive their relationship with crush in events   	 that originally occurred with Friends.
--  we limited the number of friends you could interact with to 3, instead of our originally planned 10
+-  we made Crush extend Friend so that the user can improve their relationship with crush    
+   in events that originally occurred with Friends.
+-  we limited the number of friends you could interact with to 3, instead of our 
+   originally planned 10
 -  Making a separate class Friend
 -  removing class Teachers - we ran out of time
 
@@ -43,6 +45,8 @@ LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - This was stressed before, but ALWAYS push before pull. even if you pulled a minute ago.
 - Events take a looong time to write.
+- use a skeleton for long, repetitive code. even when you do, your brackets can still be 
+  off but they'll be less off  
 
  ______   ______   __   __   __       ______   _______
 /_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\
@@ -53,6 +57,13 @@ LESSONS LEARNED
     \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+2018-01-16
+--------------------------------------------------------------
+eric :: debugged 
+susan :: updated flowchart 
+kaitlin :: updated uml
+==============================================================
 
 2018-01-15
 --------------------------------------------------------------
