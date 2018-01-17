@@ -139,7 +139,6 @@ public class Woo {
 	System.out.println("your name: " + name);
 	System.out.println(crush.name);
 
-	//we can add a check here at the end aka "are you sure?"
 	System.out.print("\033[H\033[2J");
 	System.out.println("Cool, nice to meet you, " + name + "!");
 	s = "To start, let us figure out what type of person you are!";
@@ -263,8 +262,6 @@ public class Woo {
 	yourFriends[2] = friend3;
 	yourFriends[3] = crush;
 
-
-
     }
 
     //sims a day, out of a possible 180 - we can put the methods in another class
@@ -279,7 +276,6 @@ public class Woo {
           System.out.print("\033[H\033[2J");
           System.out.println("==============================================");
           System.out.println("Day " + days);
-          System.out.println(luck);
       		System.out.println("==============================================");
       		System.out.println("Good Morning " + player.name + "!");
       		System.out.println("Please select one of the following:");

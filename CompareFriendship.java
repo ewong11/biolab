@@ -25,11 +25,20 @@ public class CompareFriendship {
 
   //--------------------------------------------
 
-
+//-----------------------------------------------
+//PRECONDITION: ArrayList _data and ArrayList names
+//POSTCONDTION: add value of friendship to _data
+//and name of corresponding friend to names
+//-----------------------------------------------
   public void populate(Friend a) {
     _data.add(a.friendship);
     names.add(a.name);
   }
+  //-----------------------------------------------
+  //PRECONDITION: ArrayList _data and ArrayList names
+  //POSTCONDTION: sorts values of friendship from greatest to least
+  //sorts names corresponding to _data
+  //-----------------------------------------------
   public void sort() {
     for (int pos = 0; pos < _data.size(); pos ++) {
       for (int index = _data.size()-1; index > 0; index--)

@@ -87,7 +87,7 @@ public class Personal {
 	    else if (input.equals("1")) {
 		if (Math.random() > .5) {
 		    s = "on my way!";
-		    b.friendship += .1;
+		    b.friendship += .3;
 		}
 		else {
 		    s = "Sorry...I'm busy. How about another time!";
@@ -106,6 +106,17 @@ public class Personal {
 		s += b.name + " hangs up...what did you do wrong?";
 		a.setCharisma(a.getCharisma() - 20);
 	    }
+
+      else if (input.equals("3") && b.friendship > 3) {
+        if (Math.random() > .5) {
+            s = "on my way!";
+            b.friendship += .3;
+        }
+        else {
+            s = "Sorry...I'm busy. How about another time!";
+            b.friendship += .1;
+        }
+      }
 
 	    else if (input.equals("3")) {
 		s = b.name + ": \"wtf stalker...";
