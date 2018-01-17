@@ -26,17 +26,18 @@ public class Personal {
 	catch (IOException e) {};
 
 	int time = (int)(Math.random() * 5) + 1;
-	if (input.equals("1")) {
+	if (input.equals("1")) { //if user picks 1 as their choice - branches out
 	    s = "Before you know it, its ";
 	    s += time + " o'clock!";
 	    s += " \nYou slowly drift off, with the sound of your TV in the background...";
+      //changes attributes of player
 	    a.setSleep(a.getSleep() - time);
 	    a.setIntel(a.getIntel() - 5);
 	    a.setMental(a.getMental() - 20);
 	    System.out.println(s);
 
 	}
-	else if (input.equals("2")) {
+	else if (input.equals("2")) { // if user picks 2 as their choice
 	    int num = 1;
 	    s = "You begin to call " + b.name;
 	    if (b.friendship > .2) {
@@ -48,6 +49,7 @@ public class Personal {
 		    s += "\n" + num + ": (hang up)";
 		    num += 1;
       }
+      // condition - will only occur if the player has a certain charisma and mental status
 		 if ((a.getCharisma() + a.getMental()) > 140) {
 			s += "\n" + num + ": Hey, I happened to pick up your book on the way to your house...";
 			s += "\nCome over...we can write a new chapter together!";
@@ -65,8 +67,8 @@ public class Personal {
 	    }
 	    catch (IOException e) {}
 
-
-	    if (input.equals("1") && b.friendship < 1.75) {
+    // different responses to each corresponding choice
+	 if (input.equals("1") && b.friendship < 1.75) {
 		s = b.name + ": \"hello? hello?\"";
 		s += "\n (you struggle to get words out)";
 		s += "\n" + b.name + " hangs up, and you start to cry...";

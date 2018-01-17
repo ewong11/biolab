@@ -1,4 +1,3 @@
-
 biolab
 Susan Lin
 Kaitlin Wan
@@ -15,17 +14,18 @@ creating a clearer, more fluid UI
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<
-blah blah pesky bug...
-maybe some of these will move into the Obs.Ovrcm section...
->
+in FindClass, you may start at your destination
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 toString() can only be used to print out an instance of the class it's in
 - defines how the current class is printed, not just any object
+
 System.out.print("\033[H\033[2J"); will "clear" the terminal
+this is an ASCII escape code.
+'H' means move to top of the screen
+'2J' means "clear entire screen"
 
 
 
@@ -33,16 +33,17 @@ MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -  We changed badges as just an instance variable to a wrapper class because it was easier
    to implement what we had learned while taking advantage of the methods of ArrayList.
--  we made Crush extend Friend so that the user can imprive their relationship with crush in events   	 that originally occurred with Friends.
+-  we made Crush extend Friend so that the user can improve their relationship with crush in events   	 that originally occurred with Friends.
 -  we limited the number of friends you could interact with to 3, instead of our originally planned 10
--  Making a separate class Friend
 -  removing class Teachers - we ran out of time
+-  addition of a friend sorter so the user can gauge their friendship levels with each friend without 	 knowing the exact value
 
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - This was stressed before, but ALWAYS push before pull. even if you pulled a minute ago.
 - Events take a looong time to write.
+- importance of flowcharts and UMLs
 
  ______   ______   __   __   __       ______   _______
 /_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\
