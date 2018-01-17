@@ -11,6 +11,8 @@ Freshman Frenzy
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 creating a clearer, more fluid UI
+making the choice number shift depending on which choices the user is presented with (based on their attributes)
+	- the response given also had to account of the shift in choice numbers
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

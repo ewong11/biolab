@@ -38,7 +38,7 @@ public class Personal {
 
 	}
 	else if (input.equals("2")) { // if user picks 2 as their choice
-	    int num = 1;
+	    int num = 1; //used so that the choice number will shift depending on which choices are presented to user
 	    s = "You begin to call " + b.name;
 	    if (b.friendship > .2) {
 		s += "..." + b.name + " picks up!";
@@ -133,16 +133,6 @@ public class Personal {
 		a.setCharisma(a.getCharisma() - 20);
 	    }
 
-	    else if (input.equals("5")) {
-		if (Math.random() > .5) {
-		    s = "on my way!";
-		    b.friendship += .1;
-		}
-		else {
-		    s = "Sorry...I'm busy. How about another time!";
-		    b.friendship += .1;
-		}
-	    }
     }
     else {
       s = "...no answer :(";

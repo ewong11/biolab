@@ -210,6 +210,7 @@ public class Other {
 	}
     }
 
+//different possible event
     public static void allNighter(Student a) {
 	boolean question = false;
 	isr = new InputStreamReader(System.in);
@@ -256,6 +257,8 @@ public class Other {
 	    System.out.println(out);
 	}
     }
+
+    //another event
     public static void soulCycle(Student a) {
 	isr = new InputStreamReader(System.in);
 	in = new BufferedReader( isr);
@@ -363,6 +366,8 @@ public class Other {
 	    }
 	}
     }
+
+    //final event
     public static void hqtrivia(Student a) {
 	//Woo.trivia = true;
 	String s = "Sorry, that's incorrect :(\nGame Over";
