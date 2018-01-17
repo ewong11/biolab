@@ -443,7 +443,7 @@ public class Personal {
 		    s = "Thats a lot of minutes...";
 		    s += "This is a nap, you know.";
 		}
-		else if (a.sleep < 6 && Math.random() > .5) {
+		else if (a.sleep < 8 && Math.random() > .5) {
 		    s = "Oh no! You missed your alarm!";
 		    s += "\nYou couldn't get any work done, but at least you got enough sleep!";
 		    a.setSleep(a.getSleep() - 8);

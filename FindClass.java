@@ -8,8 +8,8 @@ public class FindClass {
   public String[][] map; //initiliazes 2D array that will represent a 'map' to your classroom
   int curCol = (int) (Math.random() * 5); //sets starting column of student
   int curRow = (int) (Math.random() * 5); //sets starting row of student
-  int finalCol = (int) (Math.random() * 4); //sets destination column of student
-  int finalRow = (int) (Math.random() * 4); //set destination row of student
+  int finalCol = (int) (Math.random() * 5); //sets destination column of student
+  int finalRow = (int) (Math.random() * 5); //set destination row of student
 
   private InputStreamReader isr;
   private BufferedReader in;

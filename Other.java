@@ -10,7 +10,7 @@ public class Other {
 	in = new BufferedReader( isr);
 	String out = "";
 	int ans = 0;
-	
+
 	out += a.name + ", the train is running late! What's your plan?\n";
 	out += "\t1: take a cab. my life revolves around school.\n";
 	out += "\t2: wait it out. the train will come eventually.\n";
@@ -23,7 +23,7 @@ public class Other {
 
 	if (ans == 1) {
 	    System.out.print("\033[H\033[2J");
-	    out = "the morning traffic holds the cab driver up. ";
+	    out = "the morning traffic holds the cab driver up.";
 	    out += "you have 5 minutes left and you're at canal street. \n";
 	    out += "what do you do?\n";
 	    out += "\t1: ask him to drop you off. you'll run.\n";
@@ -76,27 +76,27 @@ public class Other {
 	    }
 	    catch (IOException e) { }
 
-	    if (ans == 1) { 
+	    if (ans == 1) {
 		System.out.print("\033[H\033[2J");
 		System.out.println("it's all good. you come in right on time.\n");
 	    }
 	    else if (ans == 2) {
 		System.out.print("\033[H\033[2J");
-                System.out.println("oh no! you trip but then again, what did you think would happen?\n");
-                a.physical -= 1;
-                a.charisma -= 1;
+    System.out.println("oh no! you trip but then again, what did you think would happen?\n");
+    a.physical -= 1;
+    a.charisma -= 1;
 	    }
 	    else {
 		System.out.print("\033[H\033[2J");
-                System.out.println("you're ahead of schedule by a minute. \n
-ahhh the feeling of making it.\n");
-                a.charisma += 1;
+    System.out.println("you're ahead of schedule by a minute.");
+    System.out.println("ahhh the feeling of making it.");
+    a.charisma += 1;
 	    }
 	}
 	    else {
 		System.out.print("\033[H\033[2J");
-		System.out.println("you had a great day eating food 
-\n and having fun buuuut your mom gets a call and now you're in trouble\n");
+		System.out.println("you had a great day eating food");
+    System.out.println("and having fun buuuut your mom gets a call and now you're in trouble\n");
 		a.charisma -= 1;
 		a.average -= 1;
 	    }
@@ -118,22 +118,24 @@ ahhh the feeling of making it.\n");
 
 	    if (ans == 1) {
 		System.out.print("\033[H\033[2J");
-		System.out.println("you're late but the only questions you get
-\n are from your mom when you say the trainwas late 40 minutes");
+		out = "you're late but the only questions you get";
+    out += "\n are from your mom when you say the trainwas late 40 minutes";
+    System.out.println(out);
 	    }
 
 	    else if (ans == 2) {
 		System.out.print("\033[H\033[2J");
-		System.out.println("you go, glen coco! 
-\n your teacher, however, does not appreciate your effort as much");
+		out = "you go, glen coco!";
+    out += "\n your teacher, however, does not appreciate your effort as much";
 		a.average -= 1;
 		a.charisma += 1;
+    System.out.println(out);
 	    }
 	    else {
 		System.out.print("\033[H\033[2J");
 		System.out.println("welp. just another day i guess.");
 	    }
-	} 
+	}
 	else {
 	    System.out.print("\033[H\033[2J");
 	    out = "okay, you're at Times Square 42nd on the delayed 2 train. \n";
@@ -150,16 +152,17 @@ ahhh the feeling of making it.\n");
 
 	    if (ans == 1) {
 		System.out.print("\033[H\033[2J");
-		System.out.println("the ACE is even more delayed,
-\n if that's possible, and you get to school an hour late.\n");
+		out = "the ACE is even more delayed,";
+    out += "\nif that's possible, and you get to school an hour late.\n";
 		a.average -= 1;
 		a.mental -= 1;
 		a.charisma -= 1;
+    System.out.println(out);
 	    }
 	    else if (ans == 2) {
 		System.out.print("\033[H\033[2J");
-		out = "the local 1 gets you there just on time. 
-\ndo you go to your locker to put away your coat and get your books?\n";
+		out = "the local 1 gets you there just on time.";
+    out += "\ndo you go to your locker to put away your coat and get your books?\n";
 		out += "\t1: no, late is bad. you'll just take notes on looseleaf and carry your coat\n";
 		out += "\t2: yes, you need your books. you sprint there\n";
 		out += "\t3: yes, the coat is heavy and you are being slowed down by it.\n";
@@ -172,19 +175,21 @@ ahhh the feeling of making it.\n");
 
 		if (ans == 1) {
 		    System.out.print("\033[H\033[2J");
-		    System.out.println("oof. you end up having a notebook quiz 
-\nbut you don't have your notes. bad quiz grade.");
+		    out = "oof. you end up having a notebook quiz";
+        out += "\nbut you don't have your notes. bad quiz grade.";
 		    a.average -= 2;
 		    a.mental -= 1;
 		    a.physical += 1;
+        System.out.println(out);
 		}
 		else if (ans == 2) {
 		    System.out.print("\033[H\033[2J");
-		    System.out.println("WHOOOOOO. everything is swell even if 
-\nyour hair is a little matted with sweat.\n");
+		    out = "WHOOOOOO. everything is swell even if";
+        out += "\nyour hair is a little matted with sweat.\n";
 		    a.physical += 1;
 		    a.mental += 1;
 		    a.charisma += 1;
+        System.out.println(out);
 		}
 		else {
 		    System.out.print("\033[H\033[2J");
@@ -196,10 +201,11 @@ ahhh the feeling of making it.\n");
 	    }
 	    else {
 		System.out.print("\033[H\033[2J");
-		System.out.println("you're late, but not as late as you could've
-\n been so you decide to just go on with the day.\n");
+		out = "you're late, but not as late as you could've";
+    out += "\nbeen so you decide to just go on with the day.\n";
 		a.charisma += 1;
 		a.physical += 1;
+    System.out.println(out);
 	    }
 	}
     }
@@ -273,8 +279,7 @@ ahhh the feeling of making it.\n");
 	if (ans == 1) {
 	    a.physical += 2;
 	    System.out.print("\033[H\033[2J");
-	    out = "whooa. soulcycle was so intense. 
-\nnow you decide to get a snack after the work out. what do you get?\n";
+	    out = "whooa. soulcycle was so intense.\nnow you decide to get a snack after the work out. what do you get?\n";
 	    out += "\t1: mcDonalds\n";
 	    out += "\t2: bubble tea from Kung Fu Tea\n";
 	    out += "\t3: one of those insane green drinks because why not\n";
@@ -293,8 +298,7 @@ ahhh the feeling of making it.\n");
 	    }
 	    else if (ans == 2) {
 		System.out.print("\033[H\033[2J");
-		System.out.println("good choice. you even meet a friend there 
-\nand talked. soulcycle was a good choice");
+		System.out.println("good choice. you even meet a friend there\nand talked. soulcycle was a good choice");
 		a.charisma += 1;
 		a.mental += 1;
 	    }
@@ -307,15 +311,17 @@ ahhh the feeling of making it.\n");
 	}
 	else if (ans == 2) {
 	    System.out.print("\033[H\033[2J");
-	    System.out.println("you go but because you've never had to climb up
-\n more than 2 flights at a time, it hurts\n");
+	    out = "you go but because you've never had to climb up";
+      out += "\n more than 2 flights at a time, it hurts\n";
 	    a.charisma += 1;
 	    a.physical += 2;
+      System.out.println(out);
 	}
 	else if (ans == 3) {
 	    System.out.print("\033[H\033[2J");
-	    System.out.println("Dr. MArkova is disappointed, but you told her 
-\nyou exercise every day so she lets it go");
+	    out = "Dr. Markova is disappointed, but you told her";
+      out += "\nyou exercise every day so she lets it go";
+      System.out.println(out);
 	    a.charisma += 1;
 	}
 	else {
@@ -346,10 +352,10 @@ ahhh the feeling of making it.\n");
 		System.out.println("she says ahhhh... I understand. \nsee you in physical education! \n");
 		a.charisma -= 1;
 	    }
-	    else if (ans == 2) { 
+	    else if (ans == 2) {
 		System.out.print("\033[H\033[2J");
 		System.out.println("what luck! she totally sympathizes with you and even tells you to join track!");
-	    } 
+	    }
 	    else {
 		System.out.println("she makes a few quips about people faking attendence in gym class :(( \n");
 		a.charisma -= 1;
