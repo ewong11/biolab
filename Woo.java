@@ -111,7 +111,7 @@ public class Woo {
 	    + "\t With each prompt, you will be asked to give some feedback!\n"
 	    + "\t The easiest way to do that is typing your answer\n"
 	    + "\t (usually 1,2,3... or y/n) then hitting ENTER!\n"
-	    + "\t Your goal is to make it through your first term of\n"
+	    + "\t Your goal is to make it through your\n"
 	    + "\t FRESHMAN YEAR... DUN DUNN DUUUNNN!\n"
 	    + "\t We hope you get through and enjoy!\n"
 	    + "\t -Kaitlin, Eric and Susan\n";
