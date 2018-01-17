@@ -22,11 +22,12 @@ public class Woo {
 
     private InputStreamReader isr;
     private BufferedReader in;
-
+    //possible friend names
     final String[] NAMES1 = {"Joe", "Gaby", "Beauford", "Marge", "Dwight", "Kat"};
     final String[] NAMES2 = {"Michael", "Pam", "Erin", "Felix", "Homer", "Ryan"};
-    final String[] NAMES3 = {"Bart", "Lisa", "Manny", "Jim", "Phyllis", "Oscar"};//possible names for NPCS
-
+    final String[] NAMES3 = {"Bart", "Lisa", "Manny", "Jim", "Phyllis", "Oscar"};
+    //======================
+    //possible fortunes
     final String[] FORTUNES = {"a friend asks only for your time, not your money\n",
 			       "you learn from your mistakes. you will learn a lot today\n",
 			       "if you have something good in your life, don't let it go!\n",
@@ -79,7 +80,7 @@ public class Woo {
 	int social = 0;
 	int normal = 0;
 	Scanner sc = new Scanner(System.in);
-	System.out.print("\033[H\033[2J");
+	System.out.print("\033[H\033[2J"); //ASCII code that will 'clear' the terminal
 	s = "Welcome to\n";
 	s += "   _____ _               _      _  __             \n"
 	    +  "  / ____| |             | |    (_)/ _|    _       \n"
@@ -121,7 +122,7 @@ public class Woo {
 
 	System.out.println("But first, let us know your name: ");
 	try {
-	    name = in.readLine();
+	    name = in.readLine(); //name is set to user input
 	}
 	catch ( IOException e ) { }
 
@@ -130,14 +131,14 @@ public class Woo {
 	System.out.println(s);
 
 	try {
-	    cname = in.readLine();
+	    cname = in.readLine(); //user names their crush
 	}
 	catch ( IOException e ) { }
 
 	crush = new Crush(cname);
 
-	System.out.println("your name: " + name);
-	System.out.println(crush.name);
+	//System.out.println("your name: " + name);
+	//System.out.println(crush.name);
 
 	System.out.print("\033[H\033[2J");
 	System.out.println("Cool, nice to meet you, " + name + "!");
@@ -145,7 +146,7 @@ public class Woo {
 	System.out.print("\033[H\033[2J");
 	System.out.println(s);
 
-	//ADD QUIZ HERE----------------------------------------------
+	//personality quiz designed to determine what subclass of student you are
 	int ans = 0;
 	s = "What is your favorite aspect of school? \n";
 	s += "\t1: I like Homework!\n";
