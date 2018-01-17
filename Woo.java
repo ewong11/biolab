@@ -264,12 +264,12 @@ public class Woo {
 
     }
 
-    //sims a day, out of a possible 180 - we can put the methods in another class
+    //sims a day
     public boolean simDay() {
-      luck = Math.random();
+      luck = Math.random(); //random luck used to decide which events occur
       boolean done = false;
-      if(!player.isDead()){
-        while (done == false) {
+      if(!player.isDead()){ //checks if player is dead
+        while (done == false) { //allows the user to return to their home page until they decide to sim day
           int ans = 0;
           String s = "";
           player.avgReset();
@@ -277,22 +277,23 @@ public class Woo {
           System.out.println("==============================================");
           System.out.println("Day " + days);
       		System.out.println("==============================================");
+          //'HOME PAGE' where the user can make choices
       		System.out.println("Good Morning " + player.name + "!");
       		System.out.println("Please select one of the following:");
       		s += "\t1: Show Your Status\n";
-      		s += "\t2. Judge ma fwends!\n";
+      		s += "\t2. Judge ma fwends!\n"; //shows a list of friends, ranked
       		s += "\t3: show me ma achievments\n";
       		s += "\t4: Fortune Me! \n";
-      		s += "\t5: INTO THE FRAY! \n";
+      		s += "\t5: INTO THE FRAY! \n"; //sims a day - random occurrences
       		s += "Selection: ";
       		System.out.println(s);
-
-          if (days == 50) {
-            if (!(isThere("50-days-50-states")))
-            player.badges.add("50-days-50-states");
-          }
-          else if (days == 10){
-	      if (!(isThere("10-ten-to-10-ten")))
+//adds badges based on how far youve gone
+    if (days == 50) {
+      if (!(isThere("50-days-50-states")))
+      player.badges.add("50-days-50-states");
+    }
+    else if (days == 10){
+	    if (!(isThere("10-ten-to-10-ten")))
 		  player.badges.add("10-ten-to-10-ten");
 	  }
 	  else if (days == 90) {
@@ -308,13 +309,14 @@ public class Woo {
 		  player.badges.add("YO-AVERAGE-IS-NOT-DEAD");
 	  }
 		player.updateBadges(player);
-
+//------------------------------------------------------
 		try {
 		    ans = Integer.parseInt( in.readLine() );
 		    String let;
 		    if (ans == 1){
 			System.out.println(player);
 			confirm();
+      //each of the following corresponds with the answer choice chosen by user
 		    }
 		    else if (ans == 2) {
 			System.out.print("\033[H\033[2J");
@@ -440,16 +442,19 @@ public class Woo {
   calcScore(player);
   return false;
     }
+    //calculares the final score for the player, based on major attributes
     public void calcScore(Student player) {
       score = (int)(3*player.getIntel() + 10*player.getFriends() +
       5* player.getAverage() + 10 * (player.getMental() +player.getPhysical()));
     }
 
-    public static void main(String[] args) {
+//runs the GAME!
+public static void main(String[] args) {
 	Woo game = new Woo();
 
 	while(days <= 180){
-	    if(!game.simDay()) {
+    //checks if player is dead
+	 if(!game.simDay()) {
     dieMessage += "\nGame Over.";
     System.out.println(dieMessage);
     break;
